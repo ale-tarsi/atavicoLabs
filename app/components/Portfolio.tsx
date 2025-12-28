@@ -86,7 +86,7 @@ export default function Portfolio() {
 
                   {/* Metrics Box */}
                     <div className="border border-grigio/20 p-4 space-y-3">
-                    <div className="text-[10px] uppercase tracking-wider text-grigio/70 font-light">METRICHE PROGETTO</div>
+                    <div className="text-[10px] uppercase tracking-wider text-grigio/70 font-light">PROJECT METRICS · INTERNAL BENCHMARK</div>
                     <div className={`grid ${isFeatured ? 'grid-cols-2 sm:grid-cols-3' : 'grid-cols-2'} gap-4 text-[11px]`}>
                       {/* Shared metrics */}
                       <div>
@@ -121,11 +121,11 @@ export default function Portfolio() {
                           </div>
                           <div>
                             <div className="text-grigio/70">Performance</div>
-                            <div className="text-oliva">98/100</div>
+                            <div className="text-oliva">95+/100</div>
                           </div>
                           <div>
                             <div className="text-grigio/70">Uptime</div>
-                            <div className="text-oliva">99.9%</div>
+                            <div className="text-oliva">99%+</div>
                           </div>
                         </>
                       ) : (

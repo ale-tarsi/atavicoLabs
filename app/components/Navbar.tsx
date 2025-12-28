@@ -94,25 +94,25 @@ export default function Navbar() {
               {t('sprint')}
             </Link>
             <a
-              href="#about"
+              href={`/${locale}#about`}
               className="text-[13px] font-medium tracking-wide text-sabbia/90 hover:text-accent-primary focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent-primary/60 focus-visible:ring-offset-2 focus-visible:ring-offset-bg-primary transition-colors duration-300"
             >
               {t('about')}
             </a>
             <a
-              href="#portfolio"
+              href={`/${locale}#portfolio`}
               className="text-[13px] font-medium tracking-wide text-sabbia/90 hover:text-accent-primary focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent-primary/60 focus-visible:ring-offset-2 focus-visible:ring-offset-bg-primary transition-colors duration-300"
             >
               {t('work')}
             </a>
             <a
-              href="#process"
+              href={`/${locale}#process`}
               className="text-[13px] font-medium tracking-wide text-sabbia/90 hover:text-accent-primary focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent-primary/60 focus-visible:ring-offset-2 focus-visible:ring-offset-bg-primary transition-colors duration-300"
             >
               {t('process')}
             </a>
             <a
-              href="#blog"
+              href={`/${locale}#blog`}
               className="text-[13px] font-medium tracking-wide text-sabbia/90 hover:text-accent-primary focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent-primary/60 focus-visible:ring-offset-2 focus-visible:ring-offset-bg-primary transition-colors duration-300"
             >
               {t('insights')}

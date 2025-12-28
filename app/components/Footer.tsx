@@ -1,12 +1,13 @@
 'use client';
 
 import Link from 'next/link';
-import { useTranslations } from 'next-intl';
+import { useTranslations, useLocale } from 'next-intl';
 import { useReveal } from '../hooks/useReveal';
 
 export default function Footer() {
   const currentYear = new Date().getFullYear();
   const t = useTranslations('footer');
+  const locale = useLocale();
   const { ref, isRevealed } = useReveal();
 
   return (
@@ -35,26 +36,26 @@ export default function Footer() {
 
           {/* Column 2: Services */}
           <div>
-            <h4 className="text-[11px] uppercase tracking-[0.15em] text-grigio/60 mb-4 font-light">Servizi</h4>
+            <h4 className="text-[11px] uppercase tracking-[0.15em] text-grigio/60 mb-4 font-light">{t('quickLinks.title')}</h4>
             <ul className="space-y-3">
               <li>
-                <Link href="#services" className="text-[13px] text-sabbia/70 hover:text-oliva transition-colors duration-300">
-                  UX/UI Design
+                <Link href={`/${locale}#services`} className="text-[13px] text-sabbia/70 hover:text-oliva transition-colors duration-300">
+                  {t('services.uxui')}
                 </Link>
               </li>
               <li>
-                <Link href="#services" className="text-[13px] text-sabbia/70 hover:text-oliva transition-colors duration-300">
-                  Sviluppo Web & Mobile
+                <Link href={`/${locale}#services`} className="text-[13px] text-sabbia/70 hover:text-oliva transition-colors duration-300">
+                  {t('services.webMobile')}
                 </Link>
               </li>
               <li>
-                <Link href="#services" className="text-[13px] text-sabbia/70 hover:text-oliva transition-colors duration-300">
-                  Full-Stack Development
+                <Link href={`/${locale}#services`} className="text-[13px] text-sabbia/70 hover:text-oliva transition-colors duration-300">
+                  {t('services.fullStack')}
                 </Link>
               </li>
               <li>
-                <Link href="#services" className="text-[13px] text-sabbia/70 hover:text-oliva transition-colors duration-300">
-                  AI & Automazione
+                <Link href={`/${locale}#services`} className="text-[13px] text-sabbia/70 hover:text-oliva transition-colors duration-300">
+                  {t('services.ai')}
                 </Link>
               </li>
             </ul>
@@ -62,25 +63,25 @@ export default function Footer() {
 
           {/* Column 3: Resources */}
           <div>
-            <h4 className="text-[11px] uppercase tracking-[0.15em] text-grigio/60 mb-4 font-light">Risorse</h4>
+            <h4 className="text-[11px] uppercase tracking-[0.15em] text-grigio/60 mb-4 font-light">{t('resources.title')}</h4>
             <ul className="space-y-3">
               <li>
-                <Link href="#portfolio" className="text-[13px] text-sabbia/70 hover:text-oliva transition-colors duration-300">
+                <Link href={`/${locale}#portfolio`} className="text-[13px] text-sabbia/70 hover:text-oliva transition-colors duration-300">
                   {t('quickLinks.portfolio')}
                 </Link>
               </li>
               <li>
-                <Link href="#process" className="text-[13px] text-sabbia/70 hover:text-oliva transition-colors duration-300">
+                <Link href={`/${locale}#process`} className="text-[13px] text-sabbia/70 hover:text-oliva transition-colors duration-300">
                   {t('quickLinks.process')}
                 </Link>
               </li>
               <li>
-                <Link href="#blog" className="text-[13px] text-sabbia/70 hover:text-oliva transition-colors duration-300">
-                  Approfondimenti
+                <Link href={`/${locale}#blog`} className="text-[13px] text-sabbia/70 hover:text-oliva transition-colors duration-300">
+                  {t('resources.insights')}
                 </Link>
               </li>
               <li>
-                <Link href="#contact" className="text-[13px] text-sabbia/70 hover:text-oliva transition-colors duration-300">
+                <Link href={`/${locale}#contact`} className="text-[13px] text-sabbia/70 hover:text-oliva transition-colors duration-300">
                   {t('quickLinks.contact')}
                 </Link>
               </li>
@@ -89,25 +90,25 @@ export default function Footer() {
 
           {/* Column 4: Newsletter */}
           <div>
-            <h4 className="text-[11px] uppercase tracking-[0.15em] text-grigio/60 mb-4 font-light">Newsletter</h4>
+            <h4 className="text-[11px] uppercase tracking-[0.15em] text-grigio/60 mb-4 font-light">{t('newsletter.title')}</h4>
             <p className="text-[12px] text-sabbia/60 leading-[1.6] mb-4">
-              Aggiornamenti mensili su design, sviluppo e best practice.
+              {t('newsletter.description')}
             </p>
             <form className="space-y-3">
               <input
                 type="email"
-                placeholder="La tua email"
+                placeholder={t('newsletter.placeholder')}
                 className="w-full bg-grafite border border-grigio/20 px-3 py-2 text-[13px] text-sabbia placeholder:text-grigio/40 rounded-sm focus:border-oliva/60 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-oliva/60 focus-visible:ring-offset-2 focus-visible:ring-offset-carbone transition-colors"
               />
               <button
                 type="submit"
                 className="w-full border border-sabbia/40 text-sabbia text-[11px] uppercase tracking-wider py-2 rounded-sm hover:border-oliva hover:text-oliva hover:bg-oliva/5 transition-all duration-300 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-oliva/60 focus-visible:ring-offset-2 focus-visible:ring-offset-carbone"
               >
-                Iscriviti
+                {t('newsletter.submit')}
               </button>
             </form>
             <p className="text-[10px] text-grigio/50 mt-3">
-              Join 1,200+ subscribers
+              {t('newsletter.subscribers')}
             </p>
           </div>
         </div>
@@ -119,7 +120,7 @@ export default function Footer() {
               {t('copyright', {year: currentYear})}
             </p>
             <p className="text-[10px] font-mono text-grigio/30">
-              Built with Next.js • Hosted on Vercel • P.IVA 01234567890
+              {t('builtWith')}
             </p>
           </div>
           <div className="flex gap-6 text-[11px]">

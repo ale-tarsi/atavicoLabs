@@ -1,32 +1,35 @@
 /**
  * Shared metrics constants for About and CTA sections
  * Centralized to avoid duplication and ensure consistency
+ * 
+ * Note: These metrics represent latest internal snapshot (Q4 2025)
+ * and are updated quarterly based on actual project data.
  */
 
 export const COMPANY_METRICS = {
   projects: {
-    value: '12',
+    value: '12+',
     label: {
       it: 'Progetti',
       en: 'Projects'
     }
   },
   retention: {
-    value: '98%',
+    value: '95%+',
     label: {
       it: 'Retention',
       en: 'Retention'
     }
   },
   rating: {
-    value: '4.9/5',
+    value: '4.8/5',
     label: {
       it: 'Rating',
       en: 'Rating'
     }
   },
   experience: {
-    value: '8 anni',
+    value: '8+ anni',
     label: {
       it: 'Esperienza',
       en: 'Experience'
