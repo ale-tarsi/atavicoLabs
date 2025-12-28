@@ -87,6 +87,12 @@ export default function Navbar() {
 
           {/* Center Navigation - Desktop */}
           <div className="hidden lg:flex items-center gap-8">
+            <Link
+              href={`/${locale}/sprint`}
+              className="text-[13px] font-medium tracking-wide text-sabbia/90 hover:text-accent-primary focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent-primary/60 focus-visible:ring-offset-2 focus-visible:ring-offset-bg-primary transition-colors duration-300"
+            >
+              {t('sprint')}
+            </Link>
             <a
               href="#about"
               className="text-[13px] font-medium tracking-wide text-sabbia/90 hover:text-accent-primary focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent-primary/60 focus-visible:ring-offset-2 focus-visible:ring-offset-bg-primary transition-colors duration-300"
@@ -113,8 +119,15 @@ export default function Navbar() {
             </a>
           </div>
 
-          {/* CTA Button - Desktop */}
-          <div className="hidden lg:block">
+          {/* CTA Buttons - Desktop */}
+          <div className="hidden lg:flex items-center gap-3">
+            <a
+              href="#contact"
+              className="inline-flex items-center gap-2 px-5 py-2 text-[13px] font-medium tracking-[0.02em] transition-all duration-300 hover:text-accent-primary focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent-primary/60 focus-visible:ring-offset-2 focus-visible:ring-offset-bg-primary"
+              style={{ color: '#E8E5DC' }}
+            >
+              {t('contact')}
+            </a>
             <a
               href="#contact"
               className="inline-flex items-center gap-2 px-6 py-2.5 border text-[13px] font-medium tracking-[0.02em] transition-all duration-300 hover:translate-y-[-1px] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent-primary/60 focus-visible:ring-offset-2 focus-visible:ring-offset-bg-primary"
@@ -131,7 +144,7 @@ export default function Navbar() {
                 e.currentTarget.style.backgroundColor = 'transparent';
               }}
             >
-              {t('contact')}
+              {t('bookingCTA')}
               <svg className="w-3.5 h-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}>
                 <path strokeLinecap="round" strokeLinejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3" />
               </svg>
@@ -238,6 +251,15 @@ export default function Navbar() {
 
             {/* Navigation Links */}
             <nav className="flex-1 flex flex-col" style={{ gap: '2rem' }}>
+              <Link
+                href={`/${locale}/sprint`}
+                onClick={() => setMenuOpen(false)}
+                className="text-[32px] font-light tracking-[-0.02em] text-sabbia hover:text-oliva transition-colors duration-200"
+                tabIndex={menuOpen ? 0 : -1}
+              >
+                {t('sprint')}
+              </Link>
+              
               <a
                 href={`/${locale}#about`}
                 onClick={() => setMenuOpen(false)}
@@ -276,6 +298,22 @@ export default function Navbar() {
 
               {/* Divider */}
               <div className="h-px bg-grigio/20" style={{ margin: '1rem 0' }} />
+
+              {/* Booking CTA Button */}
+              <a
+                href={`/${locale}#contact`}
+                onClick={() => setMenuOpen(false)}
+                className="inline-flex items-center justify-center gap-2 px-6 py-4 border-2 border-oliva/40 text-[15px] font-medium tracking-[0.02em] text-sabbia hover:border-oliva hover:bg-oliva/10 transition-all duration-200"
+                tabIndex={menuOpen ? 0 : -1}
+              >
+                {t('bookingCTA')}
+                <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}>
+                  <path strokeLinecap="round" strokeLinejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3" />
+                </svg>
+              </a>
+
+              {/* Divider */}
+              <div className="h-px bg-grigio/20" style={{ margin: '0.5rem 0' }} />
 
               {/* Contact Button */}
               <a

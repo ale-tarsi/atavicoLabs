@@ -5,11 +5,14 @@
     "keywords": "software development, web apps, mobile apps, ux design, mvp, full-stack development, digital consulting"
   },
   "navbar": {
+    "tagline": "DIGITAL PRODUCT STUDIO",
+    "sprint": "Sprint",
     "about": "About",
     "work": "Case studies",
     "process": "Process",
     "insights": "Insights",
-    "contact": "Contact"
+    "contact": "Contact",
+    "bookingCTA": "Book 20 min call"
   },
   "hero": {
     "label": "Design. Development. Release.",
@@ -221,11 +224,19 @@
     ]
   },
   "cta": {
+    "label": "Get in touch",
     "title": "Let's build something solid.",
     "subtitle": "Whether it's a new product or an existing platform, we can help you design, develop and release concrete solutions.",
     "nextSteps": "We get back to you within one business day with a couple of focused questions and, if it makes sense, suggest a 30-minute exploratory call.",
     "cta": "Let's talk",
-    "email": "contact@atavicolabs.com"
+    "email": "contact@atavicolabs.com",
+    "availability": "Available for new projects",
+    "emailLabel": "Email",
+    "workModeLabel": "Work mode",
+    "workMode": "Remote-first \u2022 On-site on request",
+    "responseTimeLabel": "Response time",
+    "responseTime": "Within 24 hours",
+    "responseTimeDetail": "Guaranteed response within one business day"
   },
   "footer": {
     "brand": "AtavicoLabs",
@@ -237,11 +248,29 @@
       "process": "Process",
       "contact": "Contact"
     },
+    "services": {
+      "uxui": "UX/UI Design",
+      "webMobile": "Web & Mobile Development",
+      "fullStack": "Full-Stack Development",
+      "ai": "AI & Automation"
+    },
+    "resources": {
+      "title": "Resources",
+      "insights": "Insights"
+    },
+    "newsletter": {
+      "title": "Newsletter",
+      "description": "Monthly updates on design, development and best practices.",
+      "placeholder": "Your email",
+      "submit": "Subscribe",
+      "subscribers": "Join 1,200+ subscribers"
+    },
     "contact": {
       "title": "Contact",
       "location": "Italy"
     },
-    "copyright": "© {year} AtavicoLabs",
+    "copyright": "\u00a9 {year} AtavicoLabs",
+    "builtWith": "Built with Next.js \u2022 Hosted on Vercel",
     "legal": {
       "privacy": "Privacy",
       "terms": "Terms"
@@ -584,10 +613,6 @@
         "title": "Tech Stack",
         "stack": "Mobile: Flutter (Dart), secure storage, biometrics API · Backend: Node.js, PostgreSQL, JWT + rotating refresh tokens · Security: device-bound keys · TLS pinning · AES-256 encrypted vault · Platform: iOS, Android · CI/CD: GitHub Actions · Fastlane"
       },
-      "gallery": {
-        "title": "Gallery",
-        "placeholder": "Placeholder for mobile screens"
-      },
       "cta": {
         "title": "Ready to build your secure mobile product?",
         "description": "Let's talk about how we can help you create a reliable, secure authentication experience for your users.",
@@ -674,10 +699,6 @@
       "tech": {
         "title": "Tech Stack",
         "stack": "Frontend: Next.js, React, Tailwind, Zustand · Backend: Node.js, PostgreSQL, Redis, WebSocket task streams · AI: LLM routing, embeddings, vector DB (pgvector), fine-tuning pipeline · Orchestration: Event-driven microflows · retry policies · audit logging · Deployment: Docker · GitHub Actions · Load-balanced Node clusters"
-      },
-      "gallery": {
-        "title": "Gallery",
-        "placeholder": "Placeholder for dashboard screens"
       },
       "cta": {
         "title": "Ready to streamline your operations with intelligent automation?",
@@ -766,10 +787,6 @@
         "title": "Tech Stack",
         "stack": "Mobile: Flutter (Dart), Provider/Bloc, local caching, offline mode · Backend: Node.js, PostgreSQL, WebSocket sync layer, REST API · AI: Constraint solver + heuristic scheduling engine + LLM for conflict explanation · Notifications: Push (FCM/APNS), event-driven alerts · Deployment: Docker · GitHub Actions · multi-env staging"
       },
-      "gallery": {
-        "title": "Gallery",
-        "placeholder": "Placeholder for mobile screens"
-      },
       "cta": {
         "title": "Ready to build your mobile product?",
         "description": "Let's talk about how we can help you create a powerful, intuitive mobile experience for your team.",
@@ -856,10 +873,6 @@
       "tech": {
         "title": "Tech Stack",
         "stack": "Frontend: Next.js, React, Tailwind, Recharts / custom visualizations · Backend: Node.js, PostgreSQL + TimescaleDB, Redis caching · Real-Time: WebSocket update streams · AI: anomaly detection (z-score, isolation forest), LLM insight summaries · Deployment: Docker, auto-scaling runtimes, CDN caching for static assets"
-      },
-      "gallery": {
-        "title": "Gallery",
-        "placeholder": "Placeholder for dashboard screens"
       },
       "cta": {
         "title": "Ready to turn your data into insight?",
@@ -948,15 +961,170 @@
         "title": "Tech Stack",
         "stack": "Frontend: React, Next.js, Canvas/WebGL, Zustand, custom rendering engine · Real-Time: WebSocket sync layer, delta updates, presence tracking, cursor broadcasting · Backend: Node.js, Redis pub/sub, PostgreSQL · Collaboration: CRDT-inspired merge logic, version history, operation log · Deployment: Docker, scalable node clusters"
       },
-      "gallery": {
-        "title": "Gallery",
-        "placeholder": "Placeholder for canvas screens"
-      },
       "cta": {
         "title": "Ready to build your collaborative product?",
         "description": "Let's talk about how we can help you create a powerful, real-time collaborative experience for your team.",
         "button": "Start your project"
       }
+    }
+  },
+  "sprint": {
+    "metadata": {
+      "title": "Launch Sprint — Live Product in 14 Days | AtavicoLabs",
+      "description": "We turn your idea into a working product in 2 weeks: UX/UI, design system, Next.js build, deploy and complete handoff."
+    },
+    "hero": {
+      "label": "LAUNCH SPRINT",
+      "title": "Live product in 14 days",
+      "subtitle": "From concept to live product: design, development and deployment in a controlled process. No delays, no surprises.",
+      "ctaPrimary": "Book 20 min call",
+      "ctaSecondary": "View deliverables"
+    },
+    "deliverables": {
+      "title": "What's included in the Sprint",
+      "subtitle": "Five deliverables, one clear flow.",
+      "items": [
+        {
+          "number": "01",
+          "title": "UX/UI Design",
+          "description": "Wireframes, user flows and final interfaces. Every screen designed, approved and ready for development."
+        },
+        {
+          "number": "02",
+          "title": "Mini Design System",
+          "description": "Reusable components, color palette, typography and spacing. Consistency guaranteed across every view."
+        },
+        {
+          "number": "03",
+          "title": "Next.js Build",
+          "description": "Production-ready code: clean architecture, configured SEO, optimized performance. No prototypes: real app."
+        },
+        {
+          "number": "04",
+          "title": "Quality Baseline",
+          "description": "Functional tests, accessibility check, cross-browser verification. No critical bugs in production."
+        },
+        {
+          "number": "05",
+          "title": "Deploy & Handoff",
+          "description": "Deploy to Vercel/Netlify, technical documentation and operational guide. Full product control from day 1."
+        }
+      ]
+    },
+    "timeline": {
+      "title": "Timeline: 14 days",
+      "subtitle": "A structured process, zero surprises.",
+      "phases": [
+        {
+          "days": "Days 1–3",
+          "title": "Discovery & UX",
+          "description": "In-depth brief, flow mapping, low-fidelity wireframes. You approve the architecture before moving to design."
+        },
+        {
+          "days": "Days 4–6",
+          "title": "UI Design",
+          "description": "High-fidelity interfaces, design system, final approval. Zero surprises in development."
+        },
+        {
+          "days": "Days 7–11",
+          "title": "Development",
+          "description": "Frontend build, API integrations, application logic. Daily checks, continuous feedback."
+        },
+        {
+          "days": "Days 12–13",
+          "title": "Test & Refinement",
+          "description": "Complete QA, bug fixes, performance optimization. Testing on real devices."
+        },
+        {
+          "days": "Day 14",
+          "title": "Deploy & Handoff",
+          "description": "Go-live, documentation delivered, training session. Operational product."
+        }
+      ]
+    },
+    "forWho": {
+      "title": "Who it's for (and who it's not)",
+      "isFor": {
+        "title": "✓ Perfect if",
+        "items": [
+          "You have a clear concept and want to validate it quickly with a real product",
+          "You need a working MVP to raise funding or test the market",
+          "Your team needs a quality product without managing internal development",
+          "You want to avoid delays and unexpected costs typical of custom projects"
+        ]
+      },
+      "notFor": {
+        "title": "✗ Not suitable if",
+        "items": [
+          "You need an enterprise app with complex integrations and articulated workflows",
+          "The project requires custom backend, complex relational databases or microservices",
+          "You don't have starting materials (brief, references, content) ready for day 1",
+          "You're looking for strategic consulting or repositioning of an existing product"
+        ]
+      }
+    },
+    "pricing": {
+      "title": "Investment",
+      "sprint": {
+        "label": "Launch Sprint",
+        "price": "€7,500",
+        "vat": "+ VAT",
+        "description": "One-time payment. Includes all deliverables, no hidden costs.",
+        "includes": [
+          "Complete UX/UI design",
+          "Mini design system",
+          "Production-ready Next.js build",
+          "Quality assurance",
+          "Deploy and documentation"
+        ]
+      },
+      "care": {
+        "label": "Care Plan (optional)",
+        "price": "€1,200",
+        "period": "/month",
+        "description": "Ongoing post-launch support: bug fixes, small changes, monitoring.",
+        "includes": [
+          "8 hours/month of development",
+          "Responses within 24h",
+          "Uptime monitoring",
+          "Security updates"
+        ]
+      }
+    },
+    "faq": {
+      "title": "FAQ",
+      "items": [
+        {
+          "question": "Is the scope fixed or can I change my mind during the Sprint?",
+          "answer": "The scope is defined and approved in the first 3 days. After design approval, we don't accept structural changes to maintain the deadline. Small visual adjustments are manageable."
+        },
+        {
+          "question": "What do you need from me to start?",
+          "answer": "Clear brief with product goals, target audience and main features. Text content (if applicable). Visual references or competitor benchmarks. Availability for 2–3 alignment calls during the sprint."
+        },
+        {
+          "question": "Who owns the code and design?",
+          "answer": "You do. At the end of the Sprint you receive full access to the GitHub repository, Figma files and all documentation. Unlimited commercial license."
+        },
+        {
+          "question": "What happens after the 14 days?",
+          "answer": "The product is yours and operational. You can manage it internally, activate a Care Plan for ongoing support, or commission new features with a dedicated project."
+        },
+        {
+          "question": "What's not included in the Sprint?",
+          "answer": "Complex custom backends, enterprise integrations, native mobile apps, content (copy, photos, videos), team training. If needed, we can quote them separately."
+        },
+        {
+          "question": "Can I see examples of products built in a Sprint?",
+          "answer": "Yes, during the introductory call we share relevant case studies and show you products similar to yours in scope and complexity."
+        }
+      ]
+    },
+    "finalCta": {
+      "title": "Ready to launch your product?",
+      "subtitle": "Book a 20-minute introductory call. We'll analyze your project and verify if the Sprint is the right solution.",
+      "cta": "Book 20 min call",
+      "note": "No commitment. Get an honest assessment of your project."
     }
   }
 }
