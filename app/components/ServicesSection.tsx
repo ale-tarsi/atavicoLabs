@@ -1,11 +1,12 @@
 'use client';
 
-import { useTranslations } from 'next-intl';
+import { useTranslations, useLocale } from 'next-intl';
 import { useReveal } from '../hooks/useReveal';
 import { useState, useEffect, useRef } from 'react';
 
 export default function ServicesSection() {
   const t = useTranslations('services');
+  const locale = useLocale();
   const { ref, isRevealed } = useReveal();
   
   // per-card reveal
@@ -106,25 +107,22 @@ export default function ServicesSection() {
                 {service.description}
               </p>
 
-              {/* Micro-CTA towards contact */}
+              {/* CTA towards Sprint page */}
               <a
-                href="#contact"
+                href={`/${locale}/sprint`}
                 className="inline-flex items-center px-2 py-1 text-body-sm text-accent-primary hover:text-accent-strong focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent-primary focus-visible:ring-offset-2 focus-visible:ring-offset-bg-secondary transition-colors mb-5"
               >
-                Scopri se è il servizio giusto per te
+                {t('sprintDetails')}
                 <svg className="w-4 h-4 ml-1" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}>
                   <path strokeLinecap="round" strokeLinejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3" />
                 </svg>
               </a>
-              
-              {/* Timeline */}
+
+              {/* Status Badge */}
               <div className="text-body-sm text-text-muted mb-5">
-                <span className="uppercase tracking-wider font-medium">Tempistiche: </span>
-                <span className="text-text-secondary">
-                  {i === 0 && '2–4 settimane'}
-                  {i === 1 && '4–8 settimane'}
-                  {i === 2 && '6–12 settimane'}
-                  {i === 3 && '3–6 settimane'}
+                <span className="uppercase tracking-wider font-medium">Status: </span>
+                <span className="text-accent-primary">
+                  Incluso nello Sprint
                 </span>
               </div>
               
