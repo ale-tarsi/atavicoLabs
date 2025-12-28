@@ -1,10 +1,12 @@
 'use client';
 
-import { useTranslations } from 'next-intl';
+import { useTranslations, useLocale } from 'next-intl';
 import { useReveal } from '../hooks/useReveal';
+import Link from 'next/link';
 
 export default function Blog() {
   const t = useTranslations('blog');
+  const locale = useLocale();
   const { ref, isRevealed } = useReveal();
 
   return (
@@ -42,14 +44,16 @@ export default function Blog() {
               2: 'border-grigio/30 text-grigio/70' // Design
             };
             
+            const slugs = ['ai-powered-development-future', 'cloud-native-architecture-best-practices', 'ux-design-principles-modern-web'];
+            
             return (
               <article
                 key={index}
                 className={`group fade-up ${isRevealed ? 'revealed' : ''}`}
                 style={{ animationDelay: `${index * 100 + 200}ms` }}
               >
-                <a
-                  href="#"
+                <Link
+                  href={`/${locale}/insights/${slugs[index]}`}
                   className="block h-full focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-oliva/60 focus-visible:ring-offset-2 focus-visible:ring-offset-carbone"
                 >
                   <div className="border-l border-grigio/40 pl-6 py-8 group-hover:border-oliva/80 transition-colors duration-250 h-full flex flex-col min-h-[280px]">
@@ -75,7 +79,7 @@ export default function Blog() {
                       <span>{new Date(t(`items.${index}.date`)).toLocaleDateString('it-IT', { day: 'numeric', month: 'short', year: 'numeric' })}</span>
                     </div>
                   </div>
-                </a>
+                </Link>
               </article>
             );
           })}

@@ -32,7 +32,12 @@ body {
   /* Prevent horizontal scroll on mobile */
   max-width: 100vw;
   /* Hide default cursor - custom cursor only on desktop */
-  cursor: none;
+  cursor: none !important;
+}
+
+/* Hide default cursor on ALL elements for custom cursor */
+*, *::before, *::after {
+  cursor: none !important;
 }
 
 /* Restore cursor pointer for interactive elements */

@@ -32,7 +32,7 @@ export default function CTA() {
         {/* Left Column - Content */}
         <div className="space-y-8">
           {/* Micro Label */}
-          <div className="text-[11px] uppercase tracking-[0.15em] text-grigio/60 font-light mb-4">Get in touch</div>
+          <div className="text-[11px] uppercase tracking-[0.15em] text-grigio/60 font-light mb-4">{t('label')}</div>
 
           {/* Title */}
           <h2 
@@ -96,14 +96,14 @@ export default function CTA() {
             {/* Availability Indicator */}
             <div className="flex items-center gap-2 text-[13px] text-sabbia/70 pb-6 border-b border-grigio/20">
               <div className="w-2 h-2 rounded-full bg-oliva animate-pulse"></div>
-              <span className="uppercase tracking-wider">Disponibili per nuovi progetti</span>
+              <span className="uppercase tracking-wider">{t('availability')}</span>
             </div>
 
             {/* Contact Details */}
             <div className="space-y-4">
               {/* Email */}
               <div>
-                <div className="text-[11px] uppercase tracking-[0.15em] text-grigio/60 mb-1">Email</div>
+                <div className="text-[11px] uppercase tracking-[0.15em] text-grigio/60 mb-1">{t('emailLabel')}</div>
                 <a 
                   href={`mailto:${t('email')}`}
                   className="text-[15px] text-sabbia hover:text-oliva transition-colors"
@@ -114,14 +114,20 @@ export default function CTA() {
 
               {/* Location */}
               <div>
-                <div className="text-[11px] uppercase tracking-[0.15em] text-grigio/60 mb-1">Modalità lavoro</div>
-                <div className="text-[15px] text-sabbia/70">Remote-first • On-site su richiesta</div>
+                <div className="text-[11px] uppercase tracking-[0.15em] text-grigio/60 mb-1">{t('workModeLabel')}</div>
+                <div className="text-[15px] text-sabbia/70">{t('workMode')}</div>
               </div>
 
-              {/* Response Time */}
-              <div>
-                <div className="text-[11px] uppercase tracking-[0.15em] text-grigio/60 mb-1">Tempo di risposta</div>
-                <div className="text-[15px] text-sabbia/70">Entro 24 ore</div>
+              {/* Response Time - Highlighted */}
+              <div className="bg-oliva/10 border border-oliva/30 p-4 -mx-2">
+                <div className="flex items-center gap-2 mb-2">
+                  <svg className="w-4 h-4 text-oliva" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+                    <path strokeLinecap="round" strokeLinejoin="round" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
+                  </svg>
+                  <div className="text-[11px] uppercase tracking-[0.15em] text-oliva font-medium">{t('responseTimeLabel')}</div>
+                </div>
+                <div className="text-[16px] font-medium text-sabbia">{t('responseTime')}</div>
+                <div className="text-[12px] text-sabbia/60 mt-1">{t('responseTimeDetail')}</div>
               </div>
             </div>
           </div>
