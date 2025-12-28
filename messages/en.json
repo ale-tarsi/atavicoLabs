@@ -15,16 +15,42 @@
     "bookingCTA": "Book 20 min call"
   },
   "hero": {
-    "label": "Design. Development. Release.",
-    "title": "Solid digital products, crafted with care.",
-    "description": "End-to-end solutions for companies seeking quality, transparency and on-time releases.",
-    "ctaPrimary": "View projects",
-    "ctaSecondary": "How we work",
+    "label": "Launch Sprint",
+    "title": "Live product in 14 days",
+    "description": "UX/UI + build + deploy of a core flow, with closed scope and complete handoff.",
+    "ctaPrimary": "Book 20 min call",
+    "ctaSecondary": "Discover Sprint",
     "available": "Available for projects",
     "since": "Since 2017",
     "remote": "Remote-first",
     "onsite": "On-site on request",
     "deliveryNote": "Remote delivery, on-site support only for critical phases."
+  },
+  "outcomes": {
+    "title": "What you get in 14 days",
+    "subtitle": "Concrete outputs, ready to use from day 1.",
+    "items": [
+      {
+        "title": "Deploy on custom domain",
+        "description": "Live app on Vercel/Netlify with DNS configured, SSL and monitoring active."
+      },
+      {
+        "title": "Complete GitHub repository",
+        "description": "Production-ready code, documented and transferred to your account. Full ownership."
+      },
+      {
+        "title": "Structured backlog",
+        "description": "Roadmap of next features with priorities and estimates. Ready for your team or ours."
+      },
+      {
+        "title": "Analytics and tracking",
+        "description": "Google Analytics, custom events and basic dashboard to monitor real usage."
+      },
+      {
+        "title": "Auth and roles (if needed)",
+        "description": "Login, registration and basic permission management if the flow requires it."
+      }
+    ]
   },
   "about": {
     "title": "Care, precision, continuity.",
@@ -34,8 +60,8 @@
     ]
   },
   "services": {
-    "title": "One team, one process, consistent quality.",
-    "subtitle": "We build end-to-end products: design, engineering and release in a continuous flow.",
+    "title": "Capabilities — what we use to ship Sprints",
+    "subtitle": "Full-stack expertise, proven processes and modern stack. Everything needed to take your product from zero to live.",
     "cta": "Explore portfolio",
     "items": [
       {
@@ -59,6 +85,7 @@
   "portfolio": {
     "title": "Real case studies, measurable results.",
     "subtitle": "Each project starts from a concrete need. Here are five real cases where we made processes smoother, decisions faster and teams' work more solid.",
+    "viewAll": "View all case studies",
     "items": [
       {
         "title": "HostID",

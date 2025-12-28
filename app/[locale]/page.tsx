@@ -1,5 +1,6 @@
 import {getTranslations} from 'next-intl/server';
 import Hero from '@/app/components/Hero';
+import Outcomes from '@/app/components/Outcomes';
 import About from '@/app/components/About';
 import Services from '@/app/components/Services';
 import ServicesSection from '@/app/components/ServicesSection';
@@ -77,33 +78,36 @@ export default function HomePage() {
       {/* Navbar - Fixed glass effect */}
       <Navbar />
       
-      {/* 1. Hero - Ispirazione */}
+      {/* 1. Hero - Launch Sprint offer */}
       <Hero />
       
-      {/* 2. Services - Le nostre competenze al lavoro */}
-      <section id="services" className="scroll-mt-24">
-        <ServicesSection />
-      </section>
+      {/* 2. Outcomes - What you get in 14 days */}
+      <Outcomes />
       
-      {/* 3. Portfolio - Prova concreta */}
+      {/* 3. Portfolio - Selected case studies (3 max) */}
       <section id="portfolio" className="scroll-mt-24">
         <Portfolio />
       </section>
       
-      {/* 4. Process - Coinvolgimento (How We Work) */}
+      {/* 4. Services - Capabilities */}
+      <section id="services" className="scroll-mt-24">
+        <ServicesSection />
+      </section>
+      
+      {/* 5. Process - How We Work */}
       <section id="process" className="scroll-mt-24">
         <Process />
       </section>
       
-      {/* 5. About - Credibilità sintetica (Chi Siamo) */}
+      {/* 6. About - Who We Are */}
       <section id="about" className="scroll-mt-24">
         <About />
       </section>
       
-      {/* 6. Testimonials - Fiducia */}
+      {/* 7. Testimonials - Trust */}
       <Testimonials />
       
-      {/* 7. Blog - Valore */}
+      {/* 8. Blog - Value */}
       <section id="blog" className="scroll-mt-24">
         <Blog />
       </section>
@@ -111,7 +115,7 @@ export default function HomePage() {
       {/* Newsletter - Disabled */}
       {/* <Newsletter /> */}
       
-      {/* 8. CTA finale - Conversione */}
+      {/* 9. CTA finale - Conversion */}
       <section id="contact" className="scroll-mt-24">
         <CTA />
       </section>

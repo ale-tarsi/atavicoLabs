@@ -15,16 +15,42 @@
     "bookingCTA": "Prenota call 20 min"
   },
   "hero": {
-    "label": "Design. Sviluppo. Rilascio.",
-    "title": "Prodotti digitali solidi, progettati con cura.",
-    "description": "Soluzioni end-to-end per aziende che cercano qualità, trasparenza e rilasci puntuali.",
-    "ctaPrimary": "Vedi i progetti",
-    "ctaSecondary": "Scopri il processo",
+    "label": "Launch Sprint",
+    "title": "Prodotto operativo in 14 giorni",
+    "description": "UX/UI + build + deploy di un flusso core, con scope chiuso e handoff completo.",
+    "ctaPrimary": "Prenota call 20 min",
+    "ctaSecondary": "Scopri lo Sprint",
     "available": "Disponibili per progetti",
     "since": "Dal 2017",
     "remote": "Remote-first",
     "onsite": "On-site su richiesta",
     "deliveryNote": "Delivery da remoto, supporto in presenza solo per fasi critiche."
+  },
+  "outcomes": {
+    "title": "Cosa ottieni in 14 giorni",
+    "subtitle": "Output concreti, pronti per l'uso dal giorno 1.",
+    "items": [
+      {
+        "title": "Deploy su dominio custom",
+        "description": "App live su Vercel/Netlify con DNS configurato, SSL e monitoring attivi."
+      },
+      {
+        "title": "Repository GitHub completo",
+        "description": "Codice production-ready, documentato e trasferito al tuo account. Ownership totale."
+      },
+      {
+        "title": "Backlog strutturato",
+        "description": "Roadmap delle prossime feature con priorità e stime. Pronto per il tuo team o per noi."
+      },
+      {
+        "title": "Analytics e tracking",
+        "description": "Google Analytics, eventi custom e dashboard basic per monitorare usage reale."
+      },
+      {
+        "title": "Auth e ruoli (se necessario)",
+        "description": "Login, registrazione e gestione permessi base se il flusso lo richiede."
+      }
+    ]
   },
   "about": {
     "title": "Cura, precisione, continuità.",
@@ -34,8 +60,8 @@
     ]
   },
   "services": {
-    "title": "Un team, un processo, qualità costante.",
-    "subtitle": "Costruiamo prodotti end-to-end: design, ingegneria e rilascio in un flusso continuo.",
+    "title": "Capabilities — cosa usiamo per realizzare Sprint",
+    "subtitle": "Competenze full-stack, processi collaudati e stack moderni. Tutto quello che serve per portare il tuo prodotto da zero a operativo.",
     "cta": "Scopri il portfolio",
     "items": [
       {
@@ -59,6 +85,7 @@
   "portfolio": {
     "title": "Case study reali, risultati misurabili.",
     "subtitle": "Ogni progetto nasce da un'esigenza concreta. Qui trovi cinque casi reali in cui abbiamo reso più fluidi i processi, più rapide le decisioni e più solido il lavoro dei team.",
+    "viewAll": "Vedi tutti i case study",
     "items": [
       {
         "title": "HostID",

@@ -1,11 +1,12 @@
 'use client';
 
-import { useTranslations } from 'next-intl';
+import { useTranslations, useLocale } from 'next-intl';
 import { useReveal } from '../hooks/useReveal';
 import { ArrowRight, ArrowUpRight } from 'lucide-react';
 
 export default function Hero() {
   const t = useTranslations('hero');
+  const locale = useLocale();
   const { ref, isRevealed } = useReveal({ threshold: 0.1, once: true });
 
   return (
@@ -75,18 +76,18 @@ export default function Hero() {
               className={`flex flex-col sm:flex-row gap-4 mb-10 fade-up ${isRevealed ? 'revealed' : ''}`}
               style={{ animationDelay: '300ms' }}
             >
-              {/* Primary CTA */}
+              {/* Primary CTA - Booking */}
               <a
-                href="#portfolio"
+                href="#contact"
                 className="group inline-flex items-center justify-center gap-3 px-8 py-4 bg-oliva text-carbone text-[14px] font-medium tracking-wide hover:bg-oliva/90 hover:-translate-y-1 transition-all duration-300 shadow-xl hover:shadow-2xl focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-oliva/60 focus-visible:ring-offset-2 focus-visible:ring-offset-carbone"
               >
                 {t('ctaPrimary')}
                 <ArrowRight className="w-4 h-4 transition-transform group-hover:translate-x-1" strokeWidth={2} />
               </a>
 
-              {/* Secondary CTA */}
+              {/* Secondary CTA - Sprint page */}
               <a
-                href="#process"
+                href={`/${locale}/sprint`}
                 className="group inline-flex items-center justify-center gap-3 px-8 py-4 border border-sabbia/30 bg-transparent text-[14px] font-medium text-sabbia tracking-wide hover:border-oliva/50 hover:bg-oliva/5 hover:-translate-y-1 transition-all duration-300 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-oliva/60 focus-visible:ring-offset-2 focus-visible:ring-offset-carbone"
               >
                 {t('ctaSecondary')}

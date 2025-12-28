@@ -187,6 +187,20 @@ export default function Portfolio() {
           );
           })}
         </div>
+
+        {/* View All Link */}
+        <div 
+          className={`mt-10 text-center fade-up ${isRevealed ? 'revealed' : ''}`}
+          style={{ animationDelay: '500ms' }}
+        >
+          <a
+            href={`/${locale}#portfolio`}
+            className="inline-flex items-center gap-2 text-[14px] text-sabbia hover:text-oliva transition-colors duration-300 font-medium tracking-wide group"
+          >
+            {t('viewAll')}
+            <ArrowUpRight className="w-4 h-4 transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5" strokeWidth={2} />
+          </a>
+        </div>
       </div>
     </section>
   );
