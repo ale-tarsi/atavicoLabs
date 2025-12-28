@@ -122,7 +122,7 @@ export default function ServicesSection() {
               <div className="text-body-sm text-text-muted mb-5">
                 <span className="uppercase tracking-wider font-medium">Status: </span>
                 <span className="text-accent-primary">
-                  Incluso nello Sprint
+                  {t('includedInSprint')}
                 </span>
               </div>
               

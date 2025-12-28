@@ -24,7 +24,11 @@
     "since": "Since 2017",
     "remote": "Remote-first",
     "onsite": "On-site on request",
-    "deliveryNote": "Remote delivery, on-site support only for critical phases."
+    "deliveryNote": "Remote delivery, on-site support only for critical phases.",
+    "statusLabel": "Internal Snapshot",
+    "statusBuild": "Build",
+    "statusTests": "Tests",
+    "statusPerf": "Perf"
   },
   "outcomes": {
     "title": "What you get in 14 days",
@@ -64,6 +68,7 @@
     "subtitle": "Full-stack expertise, proven processes and modern stack. Everything needed to take your product from zero to live.",
     "cta": "Explore portfolio",
     "sprintDetails": "Sprint Details",
+    "includedInSprint": "Included in Sprint",
     "items": [
       {
         "title": "UX/UI Design",
@@ -87,6 +92,7 @@
     "title": "Real case studies, measurable results.",
     "subtitle": "Each project starts from a concrete need. Here are five real cases where we made processes smoother, decisions faster and teams' work more solid.",
     "viewAll": "View all case studies",
+    "readCase": "Read case study",
     "items": [
       {
         "title": "HostID",

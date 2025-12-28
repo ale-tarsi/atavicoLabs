@@ -138,7 +138,7 @@ export default function Hero() {
               <div className="flex items-center gap-2">
                 <span className="w-1.5 h-1.5 rounded-full bg-oliva/60"></span>
                 <span className="text-[11px] font-mono uppercase tracking-wider text-sabbia/60">
-                  System Status
+                  {t('statusLabel')}
                 </span>
               </div>
 
@@ -147,19 +147,19 @@ export default function Hero() {
                 {/* Build */}
                 <div className="flex items-center gap-2">
                   <span className="text-oliva text-[14px]">✓</span>
-                  <span className="text-[12px] text-sabbia/70 font-light">Build</span>
+                  <span className="text-[12px] text-sabbia/70 font-light">{t('statusBuild')}</span>
                 </div>
 
                 {/* Tests */}
                 <div className="flex items-center gap-2">
                   <span className="text-oliva text-[14px]">✓</span>
-                  <span className="text-[12px] text-sabbia/70 font-light font-mono">Tests 127/127</span>
+                  <span className="text-[12px] text-sabbia/70 font-light font-mono">{t('statusTests')} 120+</span>
                 </div>
 
                 {/* Performance */}
                 <div className="flex items-center gap-2">
                   <span className="text-oliva text-[14px]">✓</span>
-                  <span className="text-[12px] font-medium text-oliva font-mono">Perf 98/100</span>
+                  <span className="text-[12px] font-medium text-oliva font-mono">{t('statusPerf')} 95+/100</span>
                 </div>
               </div>
             </div>

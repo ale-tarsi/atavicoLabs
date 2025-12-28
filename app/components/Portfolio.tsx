@@ -178,7 +178,7 @@ export default function Portfolio() {
 
                   {/* Case Study Link */}
                   <div className="flex items-center gap-2 text-[12px] text-oliva pt-3 font-medium">
-                    <span>Leggi caso studio</span>
+                    <span>{t('readCase')}</span>
                     <ArrowUpRight className="w-3.5 h-3.5" strokeWidth={1.5} />
                   </div>
                 </div>

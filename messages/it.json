@@ -24,7 +24,11 @@
     "since": "Dal 2017",
     "remote": "Remote-first",
     "onsite": "On-site su richiesta",
-    "deliveryNote": "Delivery da remoto, supporto in presenza solo per fasi critiche."
+    "deliveryNote": "Delivery da remoto, supporto in presenza solo per fasi critiche.",
+    "statusLabel": "Snapshot Interno",
+    "statusBuild": "Build",
+    "statusTests": "Test",
+    "statusPerf": "Perf"
   },
   "outcomes": {
     "title": "Cosa ottieni in 14 giorni",
@@ -64,6 +68,7 @@
     "subtitle": "Competenze full-stack, processi collaudati e stack moderni. Tutto quello che serve per portare il tuo prodotto da zero a operativo.",
     "cta": "Scopri il portfolio",
     "sprintDetails": "Dettagli Sprint",
+    "includedInSprint": "Incluso nello Sprint",
     "items": [
       {
         "title": "Progettazione UX/UI",
@@ -87,6 +92,7 @@
     "title": "Case study reali, risultati misurabili.",
     "subtitle": "Ogni progetto nasce da un'esigenza concreta. Qui trovi cinque casi reali in cui abbiamo reso più fluidi i processi, più rapide le decisioni e più solido il lavoro dei team.",
     "viewAll": "Vedi tutti i case study",
+    "readCase": "Leggi caso studio",
     "items": [
       {
         "title": "HostID",
