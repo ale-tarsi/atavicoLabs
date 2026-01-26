@@ -3,14 +3,20 @@
 import { useState, useEffect } from 'react';
 import Link from 'next/link';
 import { useTranslations, useLocale } from 'next-intl';
+import { usePathname } from 'next/navigation';
 import LanguageSwitcher from './LanguageSwitcher';
 
 export default function Navbar() {
   const [isScrolled, setIsScrolled] = useState(false);
   const [menuOpen, setMenuOpen] = useState(false);
   const [menuMounted, setMenuMounted] = useState(false);
+  const [activeSection, setActiveSection] = useState<string | null>(null);
   const t = useTranslations('navbar');
   const locale = useLocale();
+  const pathname = usePathname();
+
+  // Check if we're on homepage
+  const isHomepage = pathname === `/${locale}` || pathname === '/';
 
   // Pre-mount menu on first render to avoid layout shift
   useEffect(() => {
@@ -34,6 +40,43 @@ export default function Navbar() {
     window.addEventListener('scroll', onScroll, { passive: true });
     return () => window.removeEventListener('scroll', onScroll);
   }, []);
+
+  // Active section tracking with IntersectionObserver (homepage only)
+  useEffect(() => {
+    if (!isHomepage) {
+      setActiveSection(null);
+      return;
+    }
+
+    const sections = ['starting-points', 'process'];
+    const observers: IntersectionObserver[] = [];
+
+    const observerOptions = {
+      root: null,
+      rootMargin: '-100px 0px -60% 0px', // Trigger when section is near top
+      threshold: 0,
+    };
+
+    sections.forEach((sectionId) => {
+      const element = document.getElementById(sectionId);
+      if (!element) return;
+
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            setActiveSection(sectionId);
+          }
+        });
+      }, observerOptions);
+
+      observer.observe(element);
+      observers.push(observer);
+    });
+
+    return () => {
+      observers.forEach((observer) => observer.disconnect());
+    };
+  }, [isHomepage]);
 
   // Lock body scroll when menu is open - iOS Safari compatible
   useEffect(() => {
@@ -87,36 +130,34 @@ export default function Navbar() {
 
           {/* Center Navigation - Desktop */}
           <div className="hidden lg:flex items-center gap-8">
-            <a
-              href="#about"
-              className="text-[13px] font-medium tracking-wide text-sabbia/90 hover:text-accent-primary focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent-primary/60 focus-visible:ring-offset-2 focus-visible:ring-offset-bg-primary transition-colors duration-300"
-            >
-              {t('about')}
-            </a>
-            <a
-              href="#portfolio"
+            <Link
+              href={`/${locale}/projects`}
               className="text-[13px] font-medium tracking-wide text-sabbia/90 hover:text-accent-primary focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent-primary/60 focus-visible:ring-offset-2 focus-visible:ring-offset-bg-primary transition-colors duration-300"
             >
               {t('work')}
-            </a>
-            <a
-              href="#process"
-              className="text-[13px] font-medium tracking-wide text-sabbia/90 hover:text-accent-primary focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent-primary/60 focus-visible:ring-offset-2 focus-visible:ring-offset-bg-primary transition-colors duration-300"
+            </Link>
+            <Link
+              href={`/${locale}#process`}
+              className={`text-[13px] font-medium tracking-wide hover:text-accent-primary focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent-primary/60 focus-visible:ring-offset-2 focus-visible:ring-offset-bg-primary transition-colors duration-300 ${
+                activeSection === 'process' ? 'text-oliva' : 'text-sabbia/90'
+              }`}
             >
               {t('process')}
-            </a>
-            <a
-              href="#blog"
-              className="text-[13px] font-medium tracking-wide text-sabbia/90 hover:text-accent-primary focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent-primary/60 focus-visible:ring-offset-2 focus-visible:ring-offset-bg-primary transition-colors duration-300"
+            </Link>
+            <Link
+              href={`/${locale}#starting-points`}
+              className={`text-[13px] font-medium tracking-wide hover:text-accent-primary focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent-primary/60 focus-visible:ring-offset-2 focus-visible:ring-offset-bg-primary transition-colors duration-300 ${
+                activeSection === 'starting-points' ? 'text-oliva' : 'text-sabbia/90'
+              }`}
             >
-              {t('insights')}
-            </a>
+              {t('startHere')}
+            </Link>
           </div>
 
           {/* CTA Button - Desktop */}
           <div className="hidden lg:block">
-            <a
-              href="#contact"
+            <Link
+              href={`/${locale}/contact`}
               className="inline-flex items-center gap-2 px-6 py-2.5 border text-[13px] font-medium tracking-[0.02em] transition-all duration-300 hover:translate-y-[-1px] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent-primary/60 focus-visible:ring-offset-2 focus-visible:ring-offset-bg-primary"
               style={{ 
                 borderColor: 'rgba(157, 154, 142, 0.25)',
@@ -131,11 +172,11 @@ export default function Navbar() {
                 e.currentTarget.style.backgroundColor = 'transparent';
               }}
             >
-              {t('contact')}
+              {t('requestAudit')}
               <svg className="w-3.5 h-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}>
                 <path strokeLinecap="round" strokeLinejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3" />
               </svg>
-            </a>
+            </Link>
           </div>
 
           {/* Mobile Menu Button */}
@@ -238,57 +279,48 @@ export default function Navbar() {
 
             {/* Navigation Links */}
             <nav className="flex-1 flex flex-col" style={{ gap: '2rem' }}>
-              <a
-                href={`/${locale}#about`}
+              <Link
+                href={`/${locale}#starting-points`}
                 onClick={() => setMenuOpen(false)}
                 className="text-[32px] font-light tracking-[-0.02em] text-sabbia hover:text-oliva transition-colors duration-200"
                 tabIndex={menuOpen ? 0 : -1}
               >
-                {t('about')}
-              </a>
+                {t('startHere')}
+              </Link>
               
-              <a
-                href={`/${locale}#portfolio`}
+              <Link
+                href={`/${locale}/projects`}
                 onClick={() => setMenuOpen(false)}
                 className="text-[32px] font-light tracking-[-0.02em] text-sabbia hover:text-oliva transition-colors duration-200"
                 tabIndex={menuOpen ? 0 : -1}
               >
                 {t('work')}
-              </a>
+              </Link>
               
-              <a
+              <Link
                 href={`/${locale}#process`}
                 onClick={() => setMenuOpen(false)}
                 className="text-[32px] font-light tracking-[-0.02em] text-sabbia hover:text-oliva transition-colors duration-200"
                 tabIndex={menuOpen ? 0 : -1}
               >
                 {t('process')}
-              </a>
-              
-              <a
-                href={`/${locale}#blog`}
-                onClick={() => setMenuOpen(false)}
-                className="text-[32px] font-light tracking-[-0.02em] text-sabbia hover:text-oliva transition-colors duration-200"
-                tabIndex={menuOpen ? 0 : -1}
-              >
-                {t('insights')}
-              </a>
+              </Link>
 
               {/* Divider */}
               <div className="h-px bg-grigio/20" style={{ margin: '1rem 0' }} />
 
               {/* Contact Button */}
-              <a
-                href={`/${locale}#contact`}
+              <Link
+                href={`/${locale}/contact`}
                 onClick={() => setMenuOpen(false)}
                 className="inline-flex items-center justify-center gap-2 px-6 py-4 border border-sabbia/20 text-[15px] font-normal tracking-[0.02em] text-sabbia hover:border-oliva hover:bg-oliva/10 transition-all duration-200"
                 tabIndex={menuOpen ? 0 : -1}
               >
-                {t('contact')}
+                {t('requestAudit')}
                 <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}>
                   <path strokeLinecap="round" strokeLinejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3" />
                 </svg>
-              </a>
+              </Link>
             </nav>
 
             {/* Footer: Language Switcher + Meta */}

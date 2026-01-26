@@ -1,12 +1,13 @@
 'use client';
 
 import Link from 'next/link';
-import { useTranslations } from 'next-intl';
+import { useTranslations, useLocale } from 'next-intl';
 import { useReveal } from '../hooks/useReveal';
 
 export default function Footer() {
   const currentYear = new Date().getFullYear();
   const t = useTranslations('footer');
+  const locale = useLocale();
   const { ref, isRevealed } = useReveal();
 
   return (
@@ -35,26 +36,23 @@ export default function Footer() {
 
           {/* Column 2: Services */}
           <div>
-            <h4 className="text-[11px] uppercase tracking-[0.15em] text-grigio/60 mb-4 font-light">Servizi</h4>
+            <h4 className="text-[14px] font-medium text-sabbia mb-4 uppercase tracking-wider">
+              {locale === 'it' ? 'Offerte' : 'Offers'}
+            </h4>
             <ul className="space-y-3">
               <li>
-                <Link href="#services" className="text-[13px] text-sabbia/70 hover:text-oliva transition-colors duration-300">
-                  UX/UI Design
+                <Link href={`/${locale}/offers/ops-quick-win`} className="text-[13px] text-sabbia/70 hover:text-oliva transition-colors duration-300">
+                  Ops Quick Win
                 </Link>
               </li>
               <li>
-                <Link href="#services" className="text-[13px] text-sabbia/70 hover:text-oliva transition-colors duration-300">
-                  Sviluppo Web & Mobile
+                <Link href={`/${locale}/offers/continuity-retainer`} className="text-[13px] text-sabbia/70 hover:text-oliva transition-colors duration-300">
+                  Continuity Retainer
                 </Link>
               </li>
               <li>
-                <Link href="#services" className="text-[13px] text-sabbia/70 hover:text-oliva transition-colors duration-300">
-                  Full-Stack Development
-                </Link>
-              </li>
-              <li>
-                <Link href="#services" className="text-[13px] text-sabbia/70 hover:text-oliva transition-colors duration-300">
-                  AI & Automazione
+                <Link href={`/${locale}/offers/product-build`} className="text-[13px] text-sabbia/70 hover:text-oliva transition-colors duration-300">
+                  Product Build
                 </Link>
               </li>
             </ul>
@@ -62,25 +60,27 @@ export default function Footer() {
 
           {/* Column 3: Resources */}
           <div>
-            <h4 className="text-[11px] uppercase tracking-[0.15em] text-grigio/60 mb-4 font-light">Risorse</h4>
+            <h4 className="text-[14px] font-medium text-sabbia mb-4 uppercase tracking-wider">
+              {locale === 'it' ? 'Risorse' : 'Resources'}
+            </h4>
             <ul className="space-y-3">
               <li>
-                <Link href="#portfolio" className="text-[13px] text-sabbia/70 hover:text-oliva transition-colors duration-300">
+                <Link href={`/${locale}#portfolio`} className="text-[13px] text-sabbia/70 hover:text-oliva transition-colors duration-300">
                   {t('quickLinks.portfolio')}
                 </Link>
               </li>
               <li>
-                <Link href="#process" className="text-[13px] text-sabbia/70 hover:text-oliva transition-colors duration-300">
+                <Link href={`/${locale}#process`} className="text-[13px] text-sabbia/70 hover:text-oliva transition-colors duration-300">
                   {t('quickLinks.process')}
                 </Link>
               </li>
               <li>
-                <Link href="#blog" className="text-[13px] text-sabbia/70 hover:text-oliva transition-colors duration-300">
-                  Approfondimenti
+                <Link href={`/${locale}#blog`} className="text-[13px] text-sabbia/70 hover:text-oliva transition-colors duration-300">
+                  {locale === 'it' ? 'Approfondimenti' : 'Insights'}
                 </Link>
               </li>
               <li>
-                <Link href="#contact" className="text-[13px] text-sabbia/70 hover:text-oliva transition-colors duration-300">
+                <Link href={`/${locale}/contact`} className="text-[13px] text-sabbia/70 hover:text-oliva transition-colors duration-300">
                   {t('quickLinks.contact')}
                 </Link>
               </li>

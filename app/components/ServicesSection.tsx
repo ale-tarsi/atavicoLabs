@@ -3,10 +3,14 @@
 import { useTranslations } from 'next-intl';
 import { useReveal } from '../hooks/useReveal';
 import { useState, useEffect, useRef } from 'react';
+import { ArrowRight } from 'lucide-react';
 
 export default function ServicesSection() {
-  const t = useTranslations('services');
+  const t = useTranslations('capabilities');
   const { ref, isRevealed } = useReveal();
+  
+  // Get locale from path for CTA link
+  const locale = typeof window !== 'undefined' ? window.location.pathname.split('/')[1] || 'it' : 'it';
   
   // per-card reveal
   const itemRefs = useRef<Array<HTMLDivElement | null>>([]);
@@ -62,7 +66,7 @@ export default function ServicesSection() {
       <div className="relative max-w-content mx-auto">
         {/* Header - max-width 780px */}
         <div className="max-w-text mb-20">
-          <div className="text-label uppercase text-text-muted font-medium mb-6">What we do</div>
+          <div className="text-label uppercase text-text-muted font-medium mb-6">{t('label')}</div>
           <h2 className="font-display text-h1 lg:text-h2 text-text-primary mb-5">
             {t('title')}
           </h2>
@@ -105,28 +109,6 @@ export default function ServicesSection() {
               <p className="text-body text-text-secondary mb-7">
                 {service.description}
               </p>
-
-              {/* Micro-CTA towards contact */}
-              <a
-                href="#contact"
-                className="inline-flex items-center px-2 py-1 text-body-sm text-accent-primary hover:text-accent-strong focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent-primary focus-visible:ring-offset-2 focus-visible:ring-offset-bg-secondary transition-colors mb-5"
-              >
-                Scopri se è il servizio giusto per te
-                <svg className="w-4 h-4 ml-1" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}>
-                  <path strokeLinecap="round" strokeLinejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3" />
-                </svg>
-              </a>
-              
-              {/* Timeline */}
-              <div className="text-body-sm text-text-muted mb-5">
-                <span className="uppercase tracking-wider font-medium">Tempistiche: </span>
-                <span className="text-text-secondary">
-                  {i === 0 && '2–4 settimane'}
-                  {i === 1 && '4–8 settimane'}
-                  {i === 2 && '6–12 settimane'}
-                  {i === 3 && '3–6 settimane'}
-                </span>
-              </div>
               
               {/* Skill Tags */}
               <div className="flex flex-wrap gap-2 mt-auto pt-6 border-t border-text-ghost/15">
@@ -137,6 +119,17 @@ export default function ServicesSection() {
               </div>
             </div>
           ))}
+        </div>
+
+        {/* Section-level CTA */}
+        <div className="mt-16 text-center">
+          <a
+            href={`/${locale}/contact`}
+            className="inline-flex items-center gap-2 text-body text-accent-primary hover:text-accent-strong transition-colors group"
+          >
+            {t('sectionCta')}
+            <ArrowRight className="w-4 h-4 transition-transform group-hover:translate-x-1" strokeWidth={2} />
+          </a>
         </div>
       </div>
     </section>

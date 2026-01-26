@@ -4,9 +4,12 @@ import { useTranslations } from 'next-intl';
 import { useLocale } from 'next-intl';
 import { useReveal } from '../hooks/useReveal';
 import { getMetrics } from '../constants/metrics';
+import { CALENDLY_URL } from '../constants/links';
+import { Calendar } from 'lucide-react';
 
 export default function CTA() {
   const t = useTranslations('cta');
+  const tContact = useTranslations('contact.form');
   const locale = useLocale() as 'it' | 'en';
   const { ref, isRevealed } = useReveal();
 
@@ -57,19 +60,29 @@ export default function CTA() {
             {t('nextSteps')}
           </p>
 
-          {/* CTA Button */}
+          {/* CTA Buttons */}
           <div 
-            className={`pt-4 fade-up ${isRevealed ? 'revealed' : ''}`}
+            className={`pt-4 flex flex-col sm:flex-row gap-4 fade-up ${isRevealed ? 'revealed' : ''}`}
             style={{ animationDelay: '200ms' }}
           >
             <a
-              href={`mailto:${t('email')}`}
+              href={`/${locale}/contact`}
               className="inline-flex w-full sm:w-auto items-center justify-center gap-3 px-7 py-3.5 border border-sabbia/30 text-sabbia text-[13px] tracking-wide hover:border-oliva hover:text-oliva hover:bg-oliva/5 transition-all duration-300 uppercase"
             >
               {t('cta')}
               <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
                 <path strokeLinecap="round" strokeLinejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3" />
               </svg>
+            </a>
+            
+            <a
+              href={CALENDLY_URL}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex w-full sm:w-auto items-center justify-center gap-2 px-7 py-3.5 text-sabbia/70 text-[13px] tracking-wide hover:text-oliva transition-all duration-300 uppercase"
+            >
+              {tContact('bookCall')}
+              <Calendar size={16} />
             </a>
           </div>
 

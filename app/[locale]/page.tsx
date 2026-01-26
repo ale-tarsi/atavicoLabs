@@ -1,3 +1,4 @@
+import Link from 'next/link';
 import {getTranslations} from 'next-intl/server';
 import Hero from '@/app/components/Hero';
 import About from '@/app/components/About';
@@ -12,6 +13,11 @@ import CTA from '@/app/components/CTA';
 import Footer from '@/app/components/Footer';
 import LanguageSwitcher from '@/app/components/LanguageSwitcher';
 import Navbar from '@/app/components/Navbar';
+import OfferCard from '@/app/components/OfferCard';
+import ProofsSection from '@/app/components/ProofsSection';
+import { OFFERS } from '@/app/constants/offers';
+import { FEATURES } from '@/app/constants/features';
+import { ArrowRight } from 'lucide-react';
 
 export async function generateMetadata({params}: {params: Promise<{locale: string}>}) {
   const {locale} = await params;
@@ -71,7 +77,11 @@ export async function generateMetadata({params}: {params: Promise<{locale: strin
   };
 }
 
-export default function HomePage() {
+export default async function HomePage({ params }: { params: Promise<{ locale: string }> }) {
+  const { locale } = await params;
+  const tHome = await getTranslations({ locale, namespace: 'home' });
+  const tOffers = await getTranslations({ locale, namespace: 'offers' });
+
   return (
     <main className="min-h-screen">
       {/* Navbar - Fixed glass effect */}
@@ -80,8 +90,61 @@ export default function HomePage() {
       {/* 1. Hero - Ispirazione */}
       <Hero />
       
-      {/* 2. Services - Le nostre competenze al lavoro */}
-      <section id="services" className="scroll-mt-24">
+      {/* 2. Ways to Start - Entry points */}
+      <section id="starting-points" className="relative py-20 lg:py-28 px-6 lg:px-16 bg-grafite border-y border-grigio/20 scroll-mt-24">
+        <div className="max-w-6xl mx-auto">
+          {/* Header */}
+          <div className="text-center mb-12">
+            <div className="text-[11px] uppercase tracking-[0.15em] text-grigio/60 mb-4">
+              {tHome('startingPoints.eyebrow')}
+            </div>
+            <h2 className="font-display text-[36px] lg:text-[48px] font-medium text-sabbia mb-4 leading-[1.1]">
+              {tHome('startingPoints.title')}
+            </h2>
+            <p className="text-[16px] leading-[1.65] text-sabbia/70 font-light max-w-2xl mx-auto">
+              {tHome('startingPoints.description')}
+            </p>
+          </div>
+
+          {/* Offers Grid */}
+          <div className="grid grid-cols-1 gap-6 md:grid-cols-2 xl:grid-cols-3 items-stretch">
+            {OFFERS.map((offer, index) => (
+              <OfferCard
+                key={offer.id}
+                slug={offer.slug}
+                title={tOffers(offer.titleKey)}
+                tagline={tOffers(offer.taglineKey)}
+                promise={tOffers(offer.promiseKey)}
+                timeline={tOffers(offer.timelineKey)}
+                priceRange={tOffers(offer.priceKey)}
+                badge={offer.badgeKey ? tOffers(offer.badgeKey) : undefined}
+                timelineLabel={tOffers('hub.meta.timeline')}
+                priceLabel={tOffers('hub.meta.from')}
+                locale={locale}
+                featured={false}
+                delay={index * 100}
+                detailsLabel={tHome('startingPoints.learnMore')}
+              />
+            ))}
+          </div>
+
+          <div className="mt-12 flex justify-center">
+            <Link
+              href={`/${locale}/contact?interest=other`}
+              className="inline-flex items-center gap-2 px-7 py-3 bg-oliva text-carbone text-[14px] font-medium hover:bg-oliva/90 transition-all focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-oliva/60 focus-visible:ring-offset-2 focus-visible:ring-offset-carbone"
+            >
+              {tHome('startingPoints.requestAudit')}
+              <ArrowRight size={16} />
+            </Link>
+          </div>
+        </div>
+      </section>
+      
+      {/* 2.5. Automation Proofs - Proof of reliability */}
+      <ProofsSection />
+      
+      {/* 3. Capabilities - Le nostre competenze al lavoro */}
+      <section id="capabilities" className="scroll-mt-24">
         <ServicesSection />
       </section>
       
@@ -100,13 +163,15 @@ export default function HomePage() {
         <About />
       </section>
       
-      {/* 6. Testimonials - Fiducia */}
-      <Testimonials />
+      {/* 6. Testimonials - Fiducia (disabled: placeholder data) */}
+      {FEATURES.TESTIMONIALS_ENABLED && <Testimonials />}
       
-      {/* 7. Blog - Valore */}
-      <section id="blog" className="scroll-mt-24">
-        <Blog />
-      </section>
+      {/* 7. Blog - Valore (disabled: placeholder articles) */}
+      {FEATURES.BLOG_ENABLED && (
+        <section id="blog" className="scroll-mt-24">
+          <Blog />
+        </section>
+      )}
       
       {/* Newsletter - Disabled */}
       {/* <Newsletter /> */}

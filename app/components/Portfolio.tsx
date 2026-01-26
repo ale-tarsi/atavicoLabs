@@ -4,14 +4,15 @@ import Link from 'next/link';
 import { useTranslations, useLocale } from 'next-intl';
 import { ArrowUpRight } from 'lucide-react';
 import { useReveal } from '../hooks/useReveal';
+import { PROJECTS } from '../constants/projects';
 
 export default function Portfolio() {
   const t = useTranslations('portfolio');
   const locale = useLocale();
   const { ref, isRevealed } = useReveal();
 
-  // Project slugs for routing
-  const projectSlugs = ['hostid', 'helixops', 'pulseshift', 'insightgrid', 'flowcanvas'];
+  // Project slugs for routing (first 3 projects from constants)
+  const projectSlugs = PROJECTS.slice(0, 3).map(p => p.slug);
 
   return (
     <section 
@@ -43,6 +44,8 @@ export default function Portfolio() {
         <div className="space-y-1">
           {[0, 1, 2].map((index) => {
             const isFeatured = index === 0;
+            const projectMeta = PROJECTS[index];
+            
             return (
             <Link 
               key={index}
@@ -74,6 +77,17 @@ export default function Portfolio() {
 
                 {/* Content */}
                 <div className="flex-1 space-y-4">
+                  {/* Category & Badge Labels */}
+                  <div className="flex items-center gap-2 text-[10px] uppercase tracking-wider">
+                    <span className="text-oliva/70">{t(`labels.${projectMeta.category}`)}</span>
+                    {projectMeta.badge && (
+                      <>
+                        <span className="text-grigio/40">•</span>
+                        <span className="text-grigio/60">{t(`badges.${projectMeta.badge}`)}</span>
+                      </>
+                    )}
+                  </div>
+
                   {/* Title */}
                   <h3 className="text-[24px] font-medium text-sabbia leading-[1.3]">
                     {t(`items.${index}.title`)}

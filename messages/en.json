@@ -6,22 +6,187 @@
   },
   "navbar": {
     "about": "About",
-    "work": "Case studies",
+    "work": "Projects",
     "process": "Process",
     "insights": "Insights",
-    "contact": "Contact"
+    "startHere": "Start here",
+    "offers": "Offers",
+    "contact": "Contact",
+    "cta": "Request a 30-min audit",
+    "requestAudit": "Request 30-min audit"
+  },
+  "contact": {
+    "meta": {
+      "title": "Contact",
+      "description": "Let's talk about your project. Free 30-minute audit to identify the best solution."
+    },
+    "eyebrow": "Contact",
+    "title": "Request a 30-min audit",
+    "description": "Book a free 30-minute call. We analyze your critical process and tell you how to automate it or build the product you need.",
+    "form": {
+      "name": "Name",
+      "namePlaceholder": "John Doe",
+      "email": "Email",
+      "emailPlaceholder": "john@company.com",
+      "company": "Company",
+      "companyPlaceholder": "Your company (optional)",
+      "interest": "Interested in",
+      "interestPlaceholder": "Select an offer",
+      "options": {
+        "quickWin": "Ops Quick Win (7 days)",
+        "retainer": "Continuity Retainer (monthly)",
+        "product": "Product Build (6-14 weeks)",
+        "other": "Other / Not sure yet"
+      },
+      "workflow": "Describe the critical workflow to automate",
+      "workflowPlaceholder": "E.g., Every time we receive an email from a customer, I need to enter data into a spreadsheet and send a Slack notification...",
+      "tools": "Which tools do you already use? (optional)",
+      "toolOptions": {
+        "sheets": "Google Sheets",
+        "slack": "Slack",
+        "notion": "Notion",
+        "crm": "HubSpot/CRM",
+        "jira": "Jira",
+        "email": "Email",
+        "other": "Other"
+      },
+      "message": "Message",
+      "messagePlaceholder": "Tell us about the process you want to automate or the product you have in mind...",
+      "submit": "Send request",
+      "submitting": "Sending...",
+      "bookCall": "Book a call",
+      "errors": {
+        "nameRequired": "Name is required",
+        "emailRequired": "Email is required",
+        "interestRequired": "Please select an offer",
+        "workflowRequired": "Please describe the critical workflow"
+      }
+    },
+    "alternative": {
+      "email": "Email",
+      "location": "Location",
+      "response": "Response",
+      "responseTime": "Within 24h business days"
+    }
   },
   "hero": {
     "label": "Design. Development. Release.",
     "title": "Solid digital products, crafted with care.",
-    "description": "End-to-end solutions for companies seeking quality, transparency and on-time releases.",
-    "ctaPrimary": "View projects",
-    "ctaSecondary": "How we work",
+    "description": "We cut manual work, errors, and handoffs with automation-first products built to ship reliably.",
+    "bullets": {
+      "audit": "30-min audit",
+      "proposal": "Proposal in 48h",
+      "delivery": "Delivery in 7 days (Quick Win)"
+    },
+    "ctaPrimary": "Request 30-min audit",
+    "ctaTertiary": "How we start",
+    "ctaSecondary": "View projects",
     "available": "Available for projects",
     "since": "Since 2017",
     "remote": "Remote-first",
     "onsite": "On-site on request",
     "deliveryNote": "Remote delivery, on-site support only for critical phases."
+  },
+  "home": {
+    "startingPoints": {
+      "eyebrow": "Ways to start",
+      "title": "Choose how to begin",
+      "description": "Three paths to automate, improve and build. From monthly Quick Wins to complete products.",
+      "learnMore": "Details",
+      "requestAudit": "Request 30-min audit"
+    }
+  },
+  "proofs": {
+    "section": {
+      "eyebrow": "Internal cases",
+      "title": "Three automations we use every day",
+      "description": "Real projects from our daily workflow. If they work for us, they'll work for you."
+    },
+    "badges": {
+      "internal": "Internal use",
+      "inProgress": "In progress",
+      "production": "In production"
+    },
+    "labels": {
+      "problem": "Problem",
+      "solution": "Solution",
+      "result": "Result",
+      "timeline": "Timeline"
+    },
+    "aiOutreach": {
+      "title": "AI-Powered Personalized Outreach",
+      "description": "Automated generation of personalized outreach emails via AI, with scheduled sending and tracking.",
+      "problem": "Manual outreach slow and not scalable",
+      "solution": "AI + Sheets + n8n for automated generation and sending",
+      "result": "200+ personalized emails/week, −90% manual time",
+      "timeline": "5 days",
+      "stack": {
+        "0": "Google Sheets",
+        "1": "n8n",
+        "2": "OpenAI API",
+        "3": "Slack"
+      }
+    },
+    "slackAlerts": {
+      "title": "Multi-Tool Slack Alerts",
+      "description": "Centralized notification system: downtime, API errors, quota limits, all on Slack with automatic escalation.",
+      "problem": "Alerts scattered across 5 different tools, no one sees them",
+      "solution": "Uptime Robot + Slack API + n8n for aggregation",
+      "result": "Incident response from 2h to 15min, 0 missed downtime",
+      "timeline": "3 days",
+      "stack": {
+        "0": "Uptime Robot",
+        "1": "Slack API",
+        "2": "n8n",
+        "3": "PagerDuty"
+      }
+    },
+    "docToData": {
+      "title": "Doc → Data Extraction",
+      "description": "Automatic extraction of structured data from PDF/emails with OCR and AI, then direct insertion into Airtable.",
+      "problem": "Manual data entry from invoices/contracts (5h/week)",
+      "solution": "Zapier + Google Cloud Vision + AI parsing",
+      "result": "In progress: target −80% manual time within 2 weeks",
+      "timeline": "7 days",
+      "stack": {
+        "0": "Zapier",
+        "1": "Google Cloud Vision",
+        "2": "Airtable",
+        "3": "Python"
+      }
+    },
+    "eyebrow": "Internal cases",
+    "title": "Three automations we use every day",
+    "subtitle": "Real projects from our daily workflow. If they work for us, they'll work for you.",
+    "items": [
+      {
+        "title": "AI-Powered Personalized Outreach",
+        "description": "Automated generation of personalized outreach emails via AI, with scheduled sending and tracking.",
+        "highlights": [
+          "Manual outreach slow and not scalable",
+          "AI + Sheets + n8n for automated generation and sending",
+          "200+ personalized emails/week, −90% manual time"
+        ]
+      },
+      {
+        "title": "Multi-Tool Slack Alerts",
+        "description": "Centralized notification system: downtime, API errors, quota limits, all on Slack with automatic escalation.",
+        "highlights": [
+          "Alerts scattered across 5 different tools, no one sees them",
+          "Uptime Robot + Slack API + n8n for aggregation",
+          "Incident response from 2h to 15min, 0 missed downtime"
+        ]
+      },
+      {
+        "title": "Doc → Data Extraction",
+        "description": "Automatic extraction of structured data from PDF/emails with OCR and AI, then direct insertion into Airtable.",
+        "highlights": [
+          "Manual data entry from invoices/contracts (5h/week)",
+          "Zapier + Google Cloud Vision + AI parsing",
+          "In progress: target −80% manual time within 2 weeks"
+        ]
+      }
+    ]
   },
   "about": {
     "title": "Care, precision, continuity.",
@@ -53,68 +218,34 @@
       }
     ]
   },
+  "capabilities": {
+    "label": "Capabilities",
+    "title": "End-to-end capabilities, one team.",
+    "subtitle": "Design, development, AI and automation: all in-house, no outsourcing.",
+    "sectionCta": "Have a critical workflow? Request a 30-min audit",
+    "cta": "Explore portfolio",
+    "items": [
+      {
+        "title": "UX/UI Design",
+        "description": "Clear, consistent interfaces based on real goals. Wireframes, design systems and prototypes that reduce risks and time."
+      },
+      {
+        "title": "Web & Mobile Development",
+        "description": "Fast, stable applications built to last. Modern architectures, reliable code, easy maintenance."
+      },
+      {
+        "title": "Full-Stack Development",
+        "description": "Secure APIs, solid backends and reliable dashboards. Scalable solutions with high technical standards."
+      },
+      {
+        "title": "AI & Automation",
+        "description": "AI integrations that simplify processes and reduce costs. Custom automations, from concept to deployment."
+      }
+    ]
+  },
   "portfolio": {
     "title": "Real case studies, measurable results.",
     "subtitle": "Each project starts from a concrete need. Here are five real cases where we made processes smoother, decisions faster and teams' work more solid.",
-    "items": [
-      {
-        "title": "HostID",
-        "description": "Secure mobile identity platform for seamless authentication. −70% onboarding time, 99.98% uptime.",
-        "tags": ["Flutter", "Node.js", "PostgreSQL", "Biometrics"],
-        "metrics": {
-          "timeline": "10 weeks",
-          "team": "3 dev + 1 designer",
-          "users": "450+ active",
-          "performance": "96/100",
-          "uptime": "99.8%",
-          "status": "In production"
-        }
-      },
-      {
-        "title": "HelixOps",
-        "description": "AI workflow engine automating operational processes. +50% efficiency, −60% manual tasks.",
-        "tags": ["Python", "TensorFlow", "Redis", "Kubernetes"],
-        "metrics": {
-          "timeline": "14 weeks",
-          "team": "4 dev + 1 data scientist",
-          "users": "12 facilities",
-          "status": "In production"
-        }
-      },
-      {
-        "title": "PulseShift",
-        "description": "Mobile scheduling AI for workforce optimization. −40% scheduling conflicts, +35% resource utilization.",
-        "tags": ["React Native", "GraphQL", "AI/ML", "PostgreSQL"],
-        "metrics": {
-          "timeline": "8 weeks",
-          "team": "2 dev + 1 designer",
-          "users": "200+ team members",
-          "status": "In production"
-        }
-      },
-      {
-        "title": "InsightGrid",
-        "description": "Real-time analytics dashboard for business intelligence. 10x faster insights, unified data sources.",
-        "tags": ["React", "D3.js", "Python", "BigQuery"],
-        "metrics": {
-          "timeline": "12 weeks",
-          "team": "3 dev + 1 data analyst",
-          "users": "Enterprise clients",
-          "status": "In production"
-        }
-      },
-      {
-        "title": "FlowCanvas",
-        "description": "Real-time collaboration platform for distributed teams. −50% revision cycles, +60% team productivity.",
-        "tags": ["Next.js", "WebSockets", "Firebase", "Canvas API"],
-        "metrics": {
-          "timeline": "10 weeks",
-          "team": "4 dev + 1 designer",
-          "users": "500+ users",
-          "status": "In production"
-        }
-      }
-    ],
     "labels": {
       "timeline": "Timeline",
       "status": "Status",
@@ -131,8 +262,101 @@
         "dev": "Dev",
         "test": "Test",
         "launch": "Launch"
+      },
+      "mobile": "Mobile",
+      "automation": "Automation",
+      "fullStack": "Full-stack",
+      "designSystem": "Design system"
+    },
+    "badges": {
+      "internal": "Internal",
+      "concept": "Concept",
+      "nda": "NDA"
+    },
+    "items": [
+      {
+        "title": "HostID",
+        "description": "Secure mobile identity platform for seamless authentication. −70% onboarding time, 99.98% uptime.",
+        "tags": [
+          "Flutter",
+          "Node.js",
+          "PostgreSQL",
+          "Biometrics"
+        ],
+        "metrics": {
+          "timeline": "10 weeks",
+          "team": "3 dev + 1 designer",
+          "users": "450+ active",
+          "performance": "96/100",
+          "uptime": "99.8%",
+          "status": "In production"
+        }
+      },
+      {
+        "title": "HelixOps",
+        "description": "AI workflow engine automating operational processes. +50% efficiency, −60% manual tasks.",
+        "tags": [
+          "Python",
+          "TensorFlow",
+          "Redis",
+          "Kubernetes"
+        ],
+        "metrics": {
+          "timeline": "14 weeks",
+          "team": "4 dev + 1 data scientist",
+          "users": "12 facilities",
+          "status": "In production"
+        }
+      },
+      {
+        "title": "PulseShift",
+        "description": "Mobile scheduling AI for workforce optimization. −40% scheduling conflicts, +35% resource utilization.",
+        "tags": [
+          "React Native",
+          "GraphQL",
+          "AI/ML",
+          "PostgreSQL"
+        ],
+        "metrics": {
+          "timeline": "8 weeks",
+          "team": "2 dev + 1 designer",
+          "users": "200+ team members",
+          "status": "In production"
+        }
+      },
+      {
+        "title": "InsightGrid",
+        "description": "Real-time analytics dashboard for business intelligence. 10x faster insights, unified data sources.",
+        "tags": [
+          "React",
+          "D3.js",
+          "Python",
+          "BigQuery"
+        ],
+        "metrics": {
+          "timeline": "12 weeks",
+          "team": "3 dev + 1 data analyst",
+          "users": "Enterprise clients",
+          "status": "In production"
+        }
+      },
+      {
+        "title": "FlowCanvas",
+        "description": "Real-time collaboration platform for distributed teams. −50% revision cycles, +60% team productivity.",
+        "tags": [
+          "Next.js",
+          "WebSockets",
+          "Firebase",
+          "Canvas API"
+        ],
+        "metrics": {
+          "timeline": "10 weeks",
+          "team": "4 dev + 1 designer",
+          "users": "500+ users",
+          "status": "In production"
+        }
       }
-    }
+    ]
   },
   "process": {
     "title": "How we work.",
@@ -224,7 +448,8 @@
     "title": "Let's build something solid.",
     "subtitle": "Whether it's a new product or an existing platform, we can help you design, develop and release concrete solutions.",
     "nextSteps": "We get back to you within one business day with a couple of focused questions and, if it makes sense, suggest a 30-minute exploratory call.",
-    "cta": "Let's talk",
+    "cta": "Request 30-min audit",
+    "bookCall": "Book a call",
     "email": "contact@atavicolabs.com"
   },
   "footer": {
@@ -957,6 +1182,625 @@
         "description": "Let's talk about how we can help you create a powerful, real-time collaborative experience for your team.",
         "button": "Start your project"
       }
+    },
+    "vectis": {
+      "back": "Back to portfolio",
+      "subtitle": "We rebuilt Vectis' operations platform to centralize workflows and compliance steps.",
+      "meta": {
+        "client": "Client",
+        "clientName": "Vectis Capital",
+        "timeline": "Timeline",
+        "timelineValue": "12 weeks",
+        "platform": "Platform",
+        "platformValue": "Web + Admin"
+      },
+      "overview": {
+        "title": "Overview",
+        "description": "We rebuilt Vectis' workflow management tool to consolidate operations, cut manual steps, and give leadership real-time visibility."
+      },
+      "problem": {
+        "title": "Challenges",
+        "items": {
+          "item1": "Fragmented processes across spreadsheets and email created errors.",
+          "item2": "No single source of truth for deal data and compliance steps.",
+          "item3": "Manual reporting slowed investment committee updates.",
+          "item4": "Lack of audit trail made onboarding and reviews painful."
+        }
+      },
+      "solution": {
+        "title": "Solution",
+        "description": "We delivered a secure web platform that centralizes workflows, automates approvals, and keeps stakeholders aligned.",
+        "features": {
+          "feature1": {
+            "title": "Unified workspace",
+            "description": "Single hub for deals, documents, and tasks with role-based access."
+          },
+          "feature2": {
+            "title": "Automated checkpoints",
+            "description": "Smart checklists and reminders to keep compliance steps on track."
+          },
+          "feature3": {
+            "title": "Live reporting",
+            "description": "Dashboards and exports that replace manual spreadsheets."
+          }
+        }
+      },
+      "results": {
+        "title": "Results",
+        "metrics": {
+          "metric1": {
+            "value": "-40%",
+            "label": "Manual effort"
+          },
+          "metric2": {
+            "value": "+3x",
+            "label": "Visibility on pipeline"
+          },
+          "metric3": {
+            "value": "0",
+            "label": "Missed approvals"
+          },
+          "metric4": {
+            "value": "12w",
+            "label": "Delivery time"
+          }
+        }
+      },
+      "tech": {
+        "title": "Tech stack",
+        "stack": "Next.js, TypeScript, Supabase, Tailwind, Framer Motion for animations."
+      },
+      "gallery": {
+        "title": "Gallery",
+        "placeholder": "Screenshots coming soon"
+      },
+      "cta": {
+        "title": "Want similar results?",
+        "description": "Let's plan a sprint to modernize your operations platform.",
+        "button": "Request a 30-min audit"
+      }
+    },
+    "lytera": {
+      "back": "Back to portfolio",
+      "subtitle": "Workflow intelligence platform for Lytera's service teams.",
+      "meta": {
+        "client": "Client",
+        "clientName": "Lytera",
+        "timeline": "Timeline",
+        "timelineValue": "8 weeks",
+        "platform": "Platform",
+        "platformValue": "Web + Admin"
+      },
+      "overview": {
+        "title": "Overview",
+        "description": "We built a workflow orchestration tool that coordinates onboarding, analytics delivery, and client updates in one place."
+      },
+      "problem": {
+        "title": "Challenges",
+        "items": {
+          "item1": "Teams spread across spreadsheets and chat couldn't track commitments.",
+          "item2": "Clients lacked visibility on progress and deliverables.",
+          "item3": "Data collection and prep slowed reporting cycles.",
+          "item4": "No standardized approvals or QA created rework."
+        }
+      },
+      "solution": {
+        "title": "Solution",
+        "description": "A secure web platform with standardized playbooks, automated data intake, and a client-facing portal.",
+        "features": {
+          "feature1": {
+            "title": "Operational playbooks",
+            "description": "Configurable workflows with owners, SLAs, and alerts."
+          },
+          "feature2": {
+            "title": "Data pipeline",
+            "description": "Automated intake, validation, and exports for analytics."
+          },
+          "feature3": {
+            "title": "Client portal",
+            "description": "Real-time status tracking and secure deliverable sharing."
+          }
+        }
+      },
+      "results": {
+        "title": "Results",
+        "metrics": {
+          "metric1": {
+            "value": "-50%",
+            "label": "Manual coordination"
+          },
+          "metric2": {
+            "value": "+2x",
+            "label": "On-time deliveries"
+          },
+          "metric3": {
+            "value": "24h",
+            "label": "Faster turnaround"
+          },
+          "metric4": {
+            "value": "8 weeks",
+            "label": "Build time"
+          }
+        }
+      },
+      "tech": {
+        "title": "Tech stack",
+        "stack": "Next.js, TypeScript, Supabase, Tailwind, Framer Motion."
+      },
+      "gallery": {
+        "title": "Gallery",
+        "placeholder": "Screenshots coming soon"
+      },
+      "cta": {
+        "title": "Need a workflow platform?",
+        "description": "Let's design and ship it together.",
+        "button": "Request a 30-min audit"
+      }
+    },
+    "crispin": {
+      "back": "Back to portfolio",
+      "subtitle": "Operational analytics portal for Crispin's logistics network.",
+      "meta": {
+        "client": "Client",
+        "clientName": "Crispin",
+        "timeline": "Timeline",
+        "timelineValue": "10 weeks",
+        "platform": "Platform",
+        "platformValue": "Web + Mobile"
+      },
+      "overview": {
+        "title": "Overview",
+        "description": "We built a control panel to track shipments, surface incidents, and automate customer updates."
+      },
+      "problem": {
+        "title": "Challenges",
+        "items": {
+          "item1": "Legacy spreadsheets hid inventory and delivery status.",
+          "item2": "Manual checks slowed response and created penalties.",
+          "item3": "No shared space to coordinate incidents with partners.",
+          "item4": "Customer reporting was manual and inconsistent."
+        }
+      },
+      "solution": {
+        "title": "Solution",
+        "description": "A centralized portal with live tracking, automated SLAs, and branded customer communications.",
+        "features": {
+          "feature1": {
+            "title": "Live ops map",
+            "description": "Aggregated carrier data with exception flags and filters."
+          },
+          "feature2": {
+            "title": "SLA automation",
+            "description": "Rules engine for escalations, reminders, and owner assignment."
+          },
+          "feature3": {
+            "title": "Customer updates",
+            "description": "Status pages and scheduled reports straight from the platform."
+          }
+        }
+      },
+      "results": {
+        "title": "Results",
+        "metrics": {
+          "metric1": {
+            "value": "-35%",
+            "label": "Delay penalties"
+          },
+          "metric2": {
+            "value": "+20%",
+            "label": "On-time deliveries"
+          },
+          "metric3": {
+            "value": "1h",
+            "label": "Incident response"
+          },
+          "metric4": {
+            "value": "10 weeks",
+            "label": "Build time"
+          }
+        }
+      },
+      "tech": {
+        "title": "Tech stack",
+        "stack": "Next.js, TypeScript, Supabase, Tailwind, Framer Motion."
+      },
+      "gallery": {
+        "title": "Gallery",
+        "placeholder": "Screenshots coming soon"
+      },
+      "cta": {
+        "title": "Need a control tower?",
+        "description": "Let's ship a portal your ops team will love.",
+        "button": "Request a 30-min audit"
+      }
+    }
+  },
+  "offers": {
+    "meta": {
+      "title": "Offers — AtavicoLabs",
+      "description": "Choose how to start: quick automation, monthly continuity, or full product."
+    },
+    "hub": {
+      "eyebrow": "Offers",
+      "title": "Choose how to start",
+      "description": "Three ways to automate, improve, and scale your processes. Concrete results, clear timelines, no surprises.",
+      "intro": "Start with a Quick Win (7 days), continue with monthly Retainer for iterative improvements, then move to Product Build when you need a dedicated interface or scalable product.",
+      "learnMore": "Learn more",
+      "meta": {
+        "timeline": "Timeline",
+        "from": "From"
+      },
+      "offers": {
+        "quickWin": {
+          "title": "Ops Quick Win",
+          "tagline": "One critical process automated in 7 days",
+          "timeline": "7 days",
+          "price": "€1,200 – €3,000",
+          "badge": "Quick start"
+        },
+        "retainer": {
+          "title": "Continuity Retainer",
+          "tagline": "We monitor and improve your automations every month",
+          "timeline": "Monthly",
+          "price": "€400 – €1,500/month",
+          "badge": "Most popular"
+        },
+        "product": {
+          "title": "Product Build",
+          "tagline": "From workflow to product: design, development, release",
+          "timeline": "6–14 weeks",
+          "price": "€8,000 – €25,000+",
+          "badge": "End-to-end"
+        }
+      },
+      "cta": {
+        "title": "Don't know where to start?",
+        "description": "Book a free 30-minute audit. We help you identify the critical process and the best solution.",
+        "button": "Request a 30-min audit"
+      }
+    },
+    "badges": {
+      "quickStart": "Quick start",
+      "mostPopular": "Most popular",
+      "endToEnd": "End-to-end"
+    },
+    "quickWin": {
+      "title": "Ops Quick Win",
+      "promise": "In 7 days we automate one critical process (1 end-to-end flow) across your tools and make it reliable.",
+      "timeline": "7 days",
+      "price": "€1,200 – €3,000",
+      "badge": "Quick start",
+      "cta": "Request 30-min audit",
+      "meta": {
+        "timeline": "Timeline",
+        "investment": "Investment"
+      },
+      "hero": {
+        "eyebrow": "Quick Win — 7 days"
+      },
+      "sections": {
+        "examples": "Use cases",
+        "included": "What's included",
+        "boundaries": "Boundaries",
+        "timeline": "Development timeline",
+        "pricing": "Investment",
+        "howItWorks": "How it works",
+        "readyToStart": "Ready to start?",
+        "readyDescription": "Book a 30-min audit. We identify the critical process and tell you how to automate it."
+      },
+      "pricing": {
+        "amount": "€1,200 – €3,000",
+        "note": "one-time",
+        "description": "Fixed price to automate 1 critical end-to-end flow. Includes analysis, development, testing, deployment and complete documentation.",
+        "included": [
+          "Complete automation of 1 process",
+          "Monitoring and error logs",
+          "Documentation and handover"
+        ]
+      },
+      "process": [
+        {
+          "title": "Audit and analysis",
+          "description": "We map the current flow, identify involved tools and define the optimal automation."
+        },
+        {
+          "title": "Development and integration",
+          "description": "We create integrations between your tools and implement the automation logic."
+        },
+        {
+          "title": "Testing and deployment",
+          "description": "We test the end-to-end flow, handle edge cases and deploy to production."
+        },
+        {
+          "title": "Handover and monitoring",
+          "description": "We deliver complete documentation, monitoring dashboard and train the team."
+        }
+      ],
+      "examples": [
+        "Automated reporting (CRM → Slack/Email every Monday)",
+        "Alert/incident notification (monitor → Slack → ticket)",
+        "Client onboarding (form → CRM → welcome email + task)",
+        "Sales→delivery handoff (deal close → Notion/ClickUp)",
+        "CRM ↔ Sheets ↔ Slack sync (real-time or scheduled)",
+        "Extract data from email/PDF → structured database"
+      ],
+      "deliverables": [
+        "End-to-end automated flow (1 process)",
+        "Error logs + fallback/manual review",
+        "Mini dashboard or Google Sheet for monitoring",
+        "Complete handover with documentation"
+      ],
+      "boundaries": [
+        "Max 2–3 integrations (API/webhook)",
+        "No infrastructure refactoring",
+        "Focus on 1 critical flow, not multiple"
+      ],
+      "steps": [
+        {
+          "day": "Day 1-2",
+          "activity": "Flow audit + tools mapping"
+        },
+        {
+          "day": "Day 3-5",
+          "activity": "Automation setup + testing"
+        },
+        {
+          "day": "Day 6",
+          "activity": "Deploy + monitoring"
+        },
+        {
+          "day": "Day 7",
+          "activity": "Handover + documentation"
+        }
+      ],
+      "faqs": [
+        {
+          "question": "What if I need more than one flow?",
+          "answer": "We start with the most critical. Then evaluate Continuity Retainer for the rest."
+        },
+        {
+          "question": "Can I request changes after?",
+          "answer": "Yes, with Continuity Retainer (monthly) we handle evolutions and new rules."
+        },
+        {
+          "question": "Do you support custom tools?",
+          "answer": "If they have documented API/webhooks, yes. Otherwise we evaluate alternatives."
+        },
+        {
+          "question": "Does it include training?",
+          "answer": "Includes documented handover. Extended training optional (on request)."
+        },
+        {
+          "question": "Fixed or flexible timeline?",
+          "answer": "7 business days. If urgency needed, let's discuss in audit."
+        }
+      ]
+    },
+    "retainer": {
+      "title": "Continuity Retainer",
+      "promise": "We monitor, maintain, and improve automations: bugfix, new rules, new integrations, cost/time optimization, monthly report.",
+      "timeline": "Monthly",
+      "price": "€400 – €1,500/month",
+      "badge": "Most popular",
+      "cta": "Request 30-min audit",
+      "meta": {
+        "timeline": "Timeline",
+        "investment": "Investment"
+      },
+      "sections": {
+        "examples": "Use cases",
+        "included": "What's included",
+        "boundaries": "Boundaries",
+        "howItWorks": "How it works",
+        "readyToStart": "Ready to start?",
+        "readyDescription": "Book a 30-minute audit to discuss your continuity needs.",
+        "plans": "Plans"
+      },
+      "examples": [
+        "Add new data source (e.g., new CRM)",
+        "Modify alert logic (thresholds, recipients)",
+        "Fix sudden errors (API change, rate limit)",
+        "Optimize slow or expensive flows",
+        "Extend dashboard with new metrics"
+      ],
+      "deliverables": [
+        "Continuous monitoring (uptime, errors, performance)",
+        "Priority bugfix within 24-48h",
+        "New rules/integrations (monthly quota)",
+        "API cost and execution time optimization",
+        "Monthly report with metrics and suggestions"
+      ],
+      "boundaries": [
+        "Monthly hours quota (varies by plan)",
+        "Scope on existing automations (no new product)",
+        "Response time: 24-48h (not real-time support)"
+      ],
+      "steps": [
+        {
+          "title": "Week 1",
+          "description": "Setup monitoring and baselines"
+        },
+        {
+          "title": "Weekly",
+          "description": "Proactive checks and fixes"
+        },
+        {
+          "title": "End of month",
+          "description": "Report and roadmap"
+        },
+        {
+          "title": "Ongoing",
+          "description": "Iteration and new requests"
+        }
+      ],
+      "faqs": [
+        {
+          "question": "What does the base plan (€400) include?",
+          "answer": "Monitoring + bugfix + 2-3h/month for small changes."
+        },
+        {
+          "question": "Can I switch from Quick Win to Retainer?",
+          "answer": "Absolutely. It's the recommended path: quick automation → continuity."
+        },
+        {
+          "question": "What if I don't use all hours?",
+          "answer": "They don't roll over. But we use the time to optimize proactively."
+        },
+        {
+          "question": "Can I cancel?",
+          "answer": "Yes, with 30 days notice. No annual commitment."
+        },
+        {
+          "question": "Does it include new automations from scratch?",
+          "answer": "Yes, if within hours quota. Otherwise we evaluate Quick Win add-on."
+        }
+      ],
+      "hero": {
+        "eyebrow": "Continuity"
+      },
+      "plans": {
+        "recommended": "Recommended",
+        "perMonth": "per month",
+        "care": {
+          "name": "Care",
+          "price": "€400/mo",
+          "features": [
+            "2-3h/month for fixes and tweaks",
+            "Monitoring + monthly report",
+            "Response within 48h"
+          ]
+        },
+        "growth": {
+          "name": "Growth",
+          "price": "€900/mo",
+          "features": [
+            "6-8h/month for new rules and integrations",
+            "Proactive optimization roadmap",
+            "Response within 36h"
+          ]
+        },
+        "opsPlus": {
+          "name": "Ops+",
+          "price": "€1,500/mo",
+          "features": [
+            "12-15h/month for complex changes",
+            "Priority fixes and experiments",
+            "Response within 24h"
+          ]
+        }
+      }
+    },
+    "product": {
+      "title": "Product Build",
+      "promise": "When workflow becomes product (dashboard, portal, web app), we design it and bring it live end-to-end. Mobile as option when needed.",
+      "timeline": "6–14 weeks",
+      "price": "€8,000 – €25,000+",
+      "badge": "End-to-end",
+      "cta": "Request 30-min audit",
+      "meta": {
+        "timeline": "Timeline",
+        "investment": "Investment"
+      },
+      "sections": {
+        "examples": "Use cases",
+        "included": "What's included",
+        "boundaries": "Boundaries",
+        "howItWorks": "How it works",
+        "readyToStart": "Ready to start?",
+        "readyDescription": "Book a 30-minute audit to discuss your product project.",
+        "timeline": "Timeline"
+      },
+      "examples": [
+        "Analytics dashboard for internal teams",
+        "Client portal with login and data access",
+        "Internal tool for operations management",
+        "SaaS web app (MVP or v1)",
+        "Admin panel for existing automations",
+        "Mobile app for field operations (optional)"
+      ],
+      "deliverables": [
+        "Product design (UX/UI, wireframe, design system)",
+        "Full-stack development (frontend + backend + database)",
+        "Production-ready infrastructure (hosting, CI/CD)",
+        "Testing + QA pre-release",
+        "Technical documentation + handover",
+        "Mobile option (native or cross-platform) if needed"
+      ],
+      "boundaries": [
+        "Scope defined pre-development (no scope creep)",
+        "Web-first focus, mobile as add-on",
+        "No custom AI/ML training (integrations only)"
+      ],
+      "steps": [
+        {
+          "phase": "Weeks 1-2",
+          "activity": "Discovery, wireframes, stack definition"
+        },
+        {
+          "phase": "Weeks 3-4",
+          "activity": "UI design and interactive prototype"
+        },
+        {
+          "phase": "Weeks 5-10",
+          "activity": "Iterative development (weekly sprints)"
+        },
+        {
+          "phase": "Weeks 11-12",
+          "activity": "Testing, QA, performance"
+        },
+        {
+          "phase": "Weeks 13-14",
+          "activity": "Launch, handover, documentation"
+        }
+      ],
+      "faqs": [
+        {
+          "question": "When to choose Product Build vs Quick Win?",
+          "answer": "Quick Win = quick automation. Product = user interface, multi-user, scalability."
+        },
+        {
+          "question": "Does it include hosting and domain?",
+          "answer": "Setup included. Recurring hosting costs on client (we advise)."
+        },
+        {
+          "question": "Can I request changes during development?",
+          "answer": "Yes, in weekly sprint reviews. Major scope changes = re-estimate."
+        },
+        {
+          "question": "Is mobile always necessary?",
+          "answer": "No. We include it only if truly needed (e.g., field operations)."
+        },
+        {
+          "question": "Post-release support?",
+          "answer": "Handover included. For ongoing maintenance: Continuity Retainer."
+        }
+      ],
+      "hero": {
+        "eyebrow": "Product build"
+      },
+      "mobileNote": "Mobile version optional when it truly helps. We'll confirm during discovery.",
+      "process": [
+        {
+          "title": "Discovery & scope",
+          "description": "Workshops, priorities, and success metrics."
+        },
+        {
+          "title": "Design system",
+          "description": "Flows, wireframes, UI kit, interactive prototype."
+        },
+        {
+          "title": "Build & integrate",
+          "description": "Full-stack development, APIs, data models."
+        },
+        {
+          "title": "QA & hardening",
+          "description": "Tests, performance checks, accessibility."
+        },
+        {
+          "title": "Launch & handover",
+          "description": "Deploy, documentation, training, support plan."
+        }
+      ]
     }
   }
 }

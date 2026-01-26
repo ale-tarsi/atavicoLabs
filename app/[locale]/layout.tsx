@@ -2,8 +2,39 @@ import {NextIntlClientProvider} from 'next-intl';
 import {getMessages} from 'next-intl/server';
 import {notFound} from 'next/navigation';
 import {locales} from '@/src/i18n/config';
+import {Metadata} from 'next';
 import CustomCursor from '../components/CustomCursor';
 import "../globals.css";
+
+export const metadata: Metadata = {
+  metadataBase: new URL('https://atavicolabs.com'),
+  title: {
+    template: '%s — AtavicoLabs',
+    default: 'AtavicoLabs — Prodotti digitali solidi, ingegneria affidabile',
+  },
+  description: 'Progettiamo, automatizziamo e rilasciamo sistemi digitali affidabili — partendo dai processi critici. Ops automation, continuity retainer e product build.',
+  openGraph: {
+    type: 'website',
+    siteName: 'AtavicoLabs',
+    images: [{
+      url: '/og/default.png',
+      width: 1200,
+      height: 630,
+      alt: 'AtavicoLabs — Digital Product Engineering',
+    }],
+  },
+  twitter: {
+    card: 'summary_large_image',
+    images: ['/og/default.png'],
+  },
+  alternates: {
+    canonical: '/',
+    languages: {
+      'it': '/it',
+      'en': '/en',
+    },
+  },
+};
 
 export function generateStaticParams() {
   return locales.map((locale) => ({locale}));
