@@ -22,7 +22,7 @@ export default function ProofsSection() {
           <h2 className={`font-display text-[32px] lg:text-[40px] font-medium text-sabbia mb-4 leading-[1.1] fade-up ${isRevealed ? 'revealed' : ''}`}>
             {t('title')}
           </h2>
-          <p className={`text-[15px] leading-[1.65] text-sabbia/70 font-light max-w-2xl mx-auto fade-up ${isRevealed ? 'revealed' : ''}`} style={{ animationDelay: '100ms' }}>
+          <p className={`text-[15px] leading-[1.65] text-sabbia/80 font-light max-w-2xl mx-auto fade-up ${isRevealed ? 'revealed' : ''}`} style={{ animationDelay: '100ms' }}>
             {t('subtitle')}
           </p>
         </div>
@@ -56,14 +56,14 @@ export default function ProofsSection() {
               </h3>
 
               {/* Description */}
-              <p className="text-[14px] text-sabbia/70 leading-[1.6] mb-4 font-light">
+              <p className="text-[14px] text-sabbia/80 leading-[1.6] mb-4 font-light">
                 {t(proof.descriptionKey)}
               </p>
 
               {/* Highlights */}
-              <ul className="space-y-2 text-[13px]">
+              <ul className="space-y-2 text-[13px] text-sabbia/75">
                 {proof.highlights.map((highlightKey, i) => (
-                  <li key={i} className="flex items-start gap-2 text-sabbia/70">
+                  <li key={i} className="flex items-start gap-2">
                     <span className="text-oliva/60 mt-1">•</span>
                     <span>{t(highlightKey)}</span>
                   </li>
