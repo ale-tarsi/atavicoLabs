@@ -27,6 +27,8 @@ type OfferCardProps = {
   locale: string;
   /** Featured styling */
   featured?: boolean;
+  /** Highlighted state for guided selection */
+  highlighted?: boolean;
   /** Animation delay (ms) */
   delay?: number;
   /** Details link label */
@@ -45,6 +47,7 @@ export default function OfferCard({
   priceLabel,
   locale,
   featured = false,
+  highlighted = false,
   delay = 0,
   detailsLabel,
 }: OfferCardProps) {
@@ -58,7 +61,11 @@ export default function OfferCard({
     >
       <div className="h-full flex flex-col">
         <div
-          className={`group h-full flex flex-col relative border border-grigio/20 bg-grafite/30 transition-all duration-300 hover:border-oliva/40 hover:-translate-y-1 ${
+          className={`group h-full flex flex-col relative transition-all duration-300 hover:border-oliva/50 hover:-translate-y-1 ${
+            highlighted
+              ? 'border border-oliva/60 bg-grafite/40 shadow-[0_0_0_1px_rgba(168,183,92,0.3)]'
+              : 'border border-grigio/20 bg-grafite/30'
+          } ${
             featured ? 'p-10 lg:p-12' : 'p-8 lg:p-10'
           }`}
         >

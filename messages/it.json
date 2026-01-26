@@ -23,6 +23,7 @@
     "eyebrow": "Contatti",
     "title": "Richiedi audit 30 min",
     "description": "Prenota una chiamata gratuita di 30 minuti. Analizziamo il tuo processo critico e ti diciamo come automatizzarlo o costruire il prodotto che serve.",
+    "helper": "Tempo stimato: 60–90 sec",
     "form": {
       "name": "Nome",
       "namePlaceholder": "Mario Rossi",
@@ -39,8 +40,16 @@
         "other": "Altro / Non so ancora"
       },
       "workflow": "Descrivi il flusso critico da automatizzare",
-      "workflowPlaceholder": "Es: Ogni volta che riceviamo un'email da un cliente, devo inserire i dati in uno spreadsheet e inviare una notifica su Slack...",
+      "workflowPlaceholder": "Es: Sincronizzare i lead dal CRM a Sheets + alert Slack; Generare email di outreach con AI + approvazione; Estrarre dati da fatture PDF in Airtable…",
       "tools": "Quali strumenti usi già? (opzionale)",
+      "budget": "Budget (opzionale)",
+      "budgetPlaceholder": "Seleziona un range",
+      "budgetOptions": {
+        "lt1k": "< €1k",
+        "1to3k": "€1k–€3k",
+        "3to10k": "€3k–€10k",
+        "gt10k": "€10k+"
+      },
       "toolOptions": {
         "sheets": "Google Sheets",
         "slack": "Slack",
@@ -93,7 +102,12 @@
       "title": "Scegli come iniziare",
       "description": "Tre percorsi per automatizzare, migliorare e costruire. Dalla Quick Win mensile al prodotto completo.",
       "learnMore": "Dettagli",
-      "requestAudit": "Richiedi audit 30 min"
+      "requestAudit": "Richiedi audit 30 min",
+      "selector": {
+        "automateProcess": "Ho un processo manuale da automatizzare",
+        "stabilizeAutomation": "Ho automazioni già live da stabilizzare",
+        "buildProduct": "Devo costruire un prodotto completo"
+      }
     }
   },
   "proofs": {
@@ -106,6 +120,16 @@
       "internal": "Uso interno",
       "inProgress": "In sviluppo",
       "production": "In produzione"
+    },
+    "stack": {
+      "aiOutreach": "n8n • Google Sheets • OpenAI",
+      "slackAlerts": "Webhook • Slack API • n8n",
+      "docToData": "Email/PDF • Parser • Review Queue"
+    },
+    "output": {
+      "aiOutreach": "bozze + log + digest follow-up",
+      "slackAlerts": "dedupe + retry + escalation",
+      "docToData": "Schema JSON + flag di confidenza"
     },
     "labels": {
       "problem": "Problema",
@@ -187,6 +211,8 @@
         ]
       }
     ]
+  ,
+    "disclaimer": "Esempi interni: niente numeri inventati, solo sistemi reali."
   },
   "about": {
     "title": "Cura, precisione, continuità.",

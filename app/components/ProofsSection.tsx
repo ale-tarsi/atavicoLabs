@@ -29,12 +29,14 @@ export default function ProofsSection() {
 
         {/* Proofs Grid */}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
-          {PROOFS.map((proof, index) => (
-            <div
-              key={proof.id}
-              className={`border border-grigio/20 bg-grafite/30 p-6 hover:border-oliva/40 transition-all duration-300 hover:-translate-y-1 fade-up ${isRevealed ? 'revealed' : ''}`}
-              style={{ animationDelay: `${index * 100 + 200}ms` }}
-            >
+          {PROOFS.map((proof, index) => {
+            const stackItems = t(proof.stackKey).split('•').map((item) => item.trim()).filter(Boolean);
+            return (
+              <div
+                key={proof.id}
+                className={`border border-grigio/20 bg-grafite/30 p-6 hover:border-oliva/40 transition-all duration-300 hover:-translate-y-1 fade-up ${isRevealed ? 'revealed' : ''}`}
+                style={{ animationDelay: `${index * 100 + 200}ms` }}
+              >
               {/* Badges */}
               <div className="flex items-center gap-2 mb-4 text-[10px] uppercase tracking-wider">
                 {proof.badges.internal && (
@@ -67,9 +69,30 @@ export default function ProofsSection() {
                   </li>
                 ))}
               </ul>
-            </div>
-          ))}
+
+              {/* Stack + Output */}
+              <div className="mt-4 pt-4 border-t border-grigio/15 space-y-2">
+                <div className="flex flex-wrap items-center gap-2 text-[12px] text-sabbia/80">
+                  <span className="uppercase tracking-[0.12em] text-grigio/60">Stack</span>
+                  {stackItems.map((item, idx) => (
+                    <span key={idx} className="px-2 py-1 rounded-full border border-grigio/25 bg-grafite/40 text-[11px] text-sabbia/80">
+                      {item}
+                    </span>
+                  ))}
+                </div>
+                <div className="text-[12px] text-sabbia/60">
+                  <span className="uppercase tracking-[0.12em] text-grigio/60 mr-2">Output</span>
+                  <span>{t(proof.outputKey)}</span>
+                </div>
+              </div>
+              </div>
+            );
+          })}
         </div>
+
+        <p className={`mt-6 text-center text-[13px] text-grigio/70 fade-up ${isRevealed ? 'revealed' : ''}`} style={{ animationDelay: `${PROOFS.length * 100 + 200}ms` }}>
+          {t('disclaimer')}
+        </p>
       </div>
     </section>
   );

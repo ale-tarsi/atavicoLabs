@@ -13,11 +13,10 @@ import CTA from '@/app/components/CTA';
 import Footer from '@/app/components/Footer';
 import LanguageSwitcher from '@/app/components/LanguageSwitcher';
 import Navbar from '@/app/components/Navbar';
-import OfferCard from '@/app/components/OfferCard';
 import ProofsSection from '@/app/components/ProofsSection';
-import { OFFERS } from '@/app/constants/offers';
 import { FEATURES } from '@/app/constants/features';
 import { ArrowRight } from 'lucide-react';
+import StartingPoints from '@/app/components/StartingPoints';
 
 export async function generateMetadata({params}: {params: Promise<{locale: string}>}) {
   const {locale} = await params;
@@ -80,7 +79,6 @@ export async function generateMetadata({params}: {params: Promise<{locale: strin
 export default async function HomePage({ params }: { params: Promise<{ locale: string }> }) {
   const { locale } = await params;
   const tHome = await getTranslations({ locale, namespace: 'home' });
-  const tOffers = await getTranslations({ locale, namespace: 'offers' });
 
   return (
     <main className="min-h-screen">
@@ -106,27 +104,7 @@ export default async function HomePage({ params }: { params: Promise<{ locale: s
             </p>
           </div>
 
-          {/* Offers Grid */}
-          <div className="grid grid-cols-1 gap-6 md:grid-cols-2 xl:grid-cols-3 items-stretch">
-            {OFFERS.map((offer, index) => (
-              <OfferCard
-                key={offer.id}
-                slug={offer.slug}
-                title={tOffers(offer.titleKey)}
-                tagline={tOffers(offer.taglineKey)}
-                promise={tOffers(offer.promiseKey)}
-                timeline={tOffers(offer.timelineKey)}
-                priceRange={tOffers(offer.priceKey)}
-                badge={offer.badgeKey ? tOffers(offer.badgeKey) : undefined}
-                timelineLabel={tOffers('hub.meta.timeline')}
-                priceLabel={tOffers('hub.meta.from')}
-                locale={locale}
-                featured={false}
-                delay={index * 100}
-                detailsLabel={tHome('startingPoints.learnMore')}
-              />
-            ))}
-          </div>
+          <StartingPoints />
 
           <div className="mt-12 flex justify-center">
             <Link

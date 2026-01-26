@@ -28,6 +28,7 @@ function ContactContent() {
     const company = formData.get('company') as string;
     const interest = formData.get('interest') as string;
     const workflow = formData.get('workflow') as string;
+    const budget = formData.get('budget') as string;
     const tools = formData.getAll('tools') as string[];
 
     // Validation
@@ -53,6 +54,7 @@ Email: ${email}
 ${company ? `Azienda: ${company}` : ''}
 
 Interesse: ${interest}
+${budget ? `Budget: ${budget}` : ''}
 
 Flusso critico da automatizzare:
 ${workflow}
@@ -85,6 +87,9 @@ ${tools.length > 0 ? `Strumenti utilizzati: ${tools.join(', ')}` : ''}
             <p className="text-[17px] leading-[1.65] text-sabbia/70 font-light max-w-2xl">
               {t('description')}
             </p>
+            <p className="text-[13px] text-grigio/70 mt-4">
+              {t('helper')}
+            </p>
           </div>
         </section>
 
@@ -109,6 +114,25 @@ ${tools.length > 0 ? `Strumenti utilizzati: ${tools.join(', ')}` : ''}
                 {errors.name && (
                   <p className="text-[12px] text-red-400 mt-1">{errors.name}</p>
                 )}
+              </div>
+
+              {/* Budget (optional) */}
+              <div>
+                <label htmlFor="budget" className="block text-[13px] text-sabbia/80 mb-2 font-medium">
+                  {t('form.budget')}
+                </label>
+                <select
+                  id="budget"
+                  name="budget"
+                  defaultValue=""
+                  className="w-full bg-grafite/30 border border-grigio/20 px-4 py-3 text-[15px] text-sabbia focus:border-oliva/60 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-oliva/60 focus-visible:ring-offset-2 focus-visible:ring-offset-carbone transition-colors"
+                >
+                  <option value="">{t('form.budgetPlaceholder')}</option>
+                  <option value="< €1k">{t('form.budgetOptions.lt1k')}</option>
+                  <option value="€1k–€3k">{t('form.budgetOptions.1to3k')}</option>
+                  <option value="€3k–€10k">{t('form.budgetOptions.3to10k')}</option>
+                  <option value="€10k+">{t('form.budgetOptions.gt10k')}</option>
+                </select>
               </div>
 
               {/* Email */}

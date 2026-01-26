@@ -8,6 +8,8 @@ export interface Proof {
   titleKey: string;
   descriptionKey: string;
   highlights: string[]; // Array of i18n keys for bullet points
+  stackKey: string;
+  outputKey: string;
   badges: {
     internal: boolean;
     inProgress: boolean;
@@ -24,6 +26,8 @@ export const PROOFS: Proof[] = [
       'items.0.highlights.1',
       'items.0.highlights.2',
     ],
+    stackKey: 'stack.aiOutreach',
+    outputKey: 'output.aiOutreach',
     badges: {
       internal: true,
       inProgress: true,
@@ -38,6 +42,8 @@ export const PROOFS: Proof[] = [
       'items.1.highlights.1',
       'items.1.highlights.2',
     ],
+    stackKey: 'stack.slackAlerts',
+    outputKey: 'output.slackAlerts',
     badges: {
       internal: true,
       inProgress: false,
@@ -52,6 +58,8 @@ export const PROOFS: Proof[] = [
       'items.2.highlights.1',
       'items.2.highlights.2',
     ],
+    stackKey: 'stack.docToData',
+    outputKey: 'output.docToData',
     badges: {
       internal: true,
       inProgress: true,

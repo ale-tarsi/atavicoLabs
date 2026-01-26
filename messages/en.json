@@ -23,6 +23,7 @@
     "eyebrow": "Contact",
     "title": "Request a 30-min audit",
     "description": "Book a free 30-minute call. We analyze your critical process and tell you how to automate it or build the product you need.",
+    "helper": "Estimated time: 60–90 sec",
     "form": {
       "name": "Name",
       "namePlaceholder": "John Doe",
@@ -39,8 +40,16 @@
         "other": "Other / Not sure yet"
       },
       "workflow": "Describe the critical workflow to automate",
-      "workflowPlaceholder": "E.g., Every time we receive an email from a customer, I need to enter data into a spreadsheet and send a Slack notification...",
+      "workflowPlaceholder": "E.g., Sync CRM leads to Sheets + Slack alert; Generate outreach emails with AI + approvals; Extract data from PDF invoices into Airtable…",
       "tools": "Which tools do you already use? (optional)",
+      "budget": "Budget range (optional)",
+      "budgetPlaceholder": "Select a budget range",
+      "budgetOptions": {
+        "lt1k": "< €1k",
+        "1to3k": "€1k–€3k",
+        "3to10k": "€3k–€10k",
+        "gt10k": "€10k+"
+      },
       "toolOptions": {
         "sheets": "Google Sheets",
         "slack": "Slack",
@@ -93,7 +102,12 @@
       "title": "Choose how to begin",
       "description": "Three paths to automate, improve and build. From monthly Quick Wins to complete products.",
       "learnMore": "Details",
-      "requestAudit": "Request 30-min audit"
+      "requestAudit": "Request 30-min audit",
+      "selector": {
+        "automateProcess": "I have a manual process to automate",
+        "stabilizeAutomation": "I have live automations to stabilize",
+        "buildProduct": "I need to build a full product"
+      }
     }
   },
   "proofs": {
@@ -106,6 +120,16 @@
       "internal": "Internal use",
       "inProgress": "In progress",
       "production": "In production"
+    },
+    "stack": {
+      "aiOutreach": "n8n • Google Sheets • OpenAI",
+      "slackAlerts": "Webhook • Slack API • n8n",
+      "docToData": "Email/PDF • Parser • Review Queue"
+    },
+    "output": {
+      "aiOutreach": "drafts + log + follow-up digest",
+      "slackAlerts": "dedupe + retry + escalation",
+      "docToData": "JSON schema + confidence flags"
     },
     "labels": {
       "problem": "Problem",
@@ -187,6 +211,8 @@
         ]
       }
     ]
+  ,
+    "disclaimer": "Internal examples: no invented metrics, only real systems."
   },
   "about": {
     "title": "Care, precision, continuity.",
