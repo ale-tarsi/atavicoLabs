@@ -8,6 +8,7 @@ import OfferSection from '@/app/components/OfferSection';
 import OfferBullets from '@/app/components/OfferBullets';
 import OfferFAQ from '@/app/components/OfferFAQ';
 import OfferCTA from '@/app/components/OfferCTA';
+import { getCalendlyUrl } from '@/app/constants/links';
 import { Info } from 'lucide-react';
 
 export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }) {
@@ -77,7 +78,8 @@ export default async function ProductBuildPage({ params }: { params: Promise<{ l
           timeline={t('timeline')}
           priceRange={t('price')}
           ctaText={t('cta')}
-          ctaHref={`/${locale}/contact?interest=product-build`}
+          ctaHref={getCalendlyUrl(locale as 'it' | 'en')}
+          locale={locale}
           timelineLabel={t('meta.timeline')}
           priceLabel={t('meta.investment')}
         />
@@ -169,7 +171,8 @@ export default async function ProductBuildPage({ params }: { params: Promise<{ l
           title={t('sections.readyToStart')}
           description={t('sections.readyDescription')}
           buttonText={t('cta')}
-          buttonHref={`/${locale}/contact?interest=product-build`}
+          buttonHref={getCalendlyUrl(locale as 'it' | 'en')}
+          locale={locale}
         />
       </main>
       <Footer />

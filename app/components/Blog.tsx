@@ -11,7 +11,7 @@ export default function Blog() {
     <section 
       id="blog" 
       ref={ref}
-      className="relative py-24 sm:py-32 px-6 lg:px-16 bg-carbone w-full overflow-hidden border-t border-grigio/20"
+      className="relative py-24 sm:py-32 px-6 lg:px-16 bg-carbone w-full overflow-hidden"
     >
       {/* Section Number */}
       <div className="absolute top-12 right-6 lg:right-16 text-[11px] font-mono text-oliva/30">[06]</div>

@@ -12,8 +12,8 @@
     "startHere": "Start here",
     "offers": "Offers",
     "contact": "Contact",
-    "cta": "Request a 30-min audit",
-    "requestAudit": "Request 30-min audit"
+    "cta": "Book a 30-min audit",
+    "requestAudit": "Book a 30-min audit"
   },
   "contact": {
     "meta": {
@@ -21,7 +21,7 @@
       "description": "Let's talk about your project. Free 30-minute audit to identify the best solution."
     },
     "eyebrow": "Contact",
-    "title": "Request a 30-min audit",
+    "title": "Book a 30-min audit",
     "description": "Book a free 30-minute call. We analyze your critical process and tell you how to automate it or build the product you need.",
     "helper": "Estimated time: 60–90 sec",
     "form": {
@@ -62,8 +62,9 @@
       "message": "Message",
       "messagePlaceholder": "Tell us about the process you want to automate or the product you have in mind...",
       "submit": "Send request",
-      "submitting": "Sending...",
-      "bookCall": "Book a call",
+      "submitting": "Sending email...",
+      "bookCall": "Book a 30-min audit",
+      "preferWrite": "Prefer to write instead?",
       "errors": {
         "nameRequired": "Name is required",
         "emailRequired": "Email is required",
@@ -87,7 +88,7 @@
       "proposal": "Proposal in 48h",
       "delivery": "Delivery in 7 days (Quick Win)"
     },
-    "ctaPrimary": "Request 30-min audit",
+    "ctaPrimary": "Book a 30-min audit",
     "ctaTertiary": "How we start",
     "ctaSecondary": "View projects",
     "available": "Available for projects",
@@ -102,7 +103,7 @@
       "title": "Choose how to begin",
       "description": "Three paths to automate, improve and build. From monthly Quick Wins to complete products.",
       "learnMore": "Details",
-      "requestAudit": "Request 30-min audit",
+      "requestAudit": "Book a 30-min audit",
       "selector": {
         "automateProcess": "I have a manual process to automate",
         "stabilizeAutomation": "I have live automations to stabilize",
@@ -248,7 +249,7 @@
     "label": "Capabilities",
     "title": "End-to-end capabilities, one team.",
     "subtitle": "Design, development, AI and automation: all in-house, no outsourcing.",
-    "sectionCta": "Have a critical workflow? Request a 30-min audit",
+    "sectionCta": "Have a critical workflow? Book a 30-min audit",
     "cta": "Explore portfolio",
     "items": [
       {
@@ -270,8 +271,8 @@
     ]
   },
   "portfolio": {
-    "title": "Real case studies, measurable results.",
-    "subtitle": "Each project starts from a concrete need. Here are five real cases where we made processes smoother, decisions faster and teams' work more solid.",
+    "title": "Selected work.",
+    "subtitle": "Examples of products and systems we build: some public, some under NDA.",
     "labels": {
       "timeline": "Timeline",
       "status": "Status",
@@ -474,20 +475,42 @@
     "title": "Let's build something solid.",
     "subtitle": "Whether it's a new product or an existing platform, we can help you design, develop and release concrete solutions.",
     "nextSteps": "We get back to you within one business day with a couple of focused questions and, if it makes sense, suggest a 30-minute exploratory call.",
-    "cta": "Request 30-min audit",
+    "cta": "Book a 30-min audit",
     "bookCall": "Book a call",
     "email": "contact@atavicolabs.com"
+  },
+  "proofPoints": {
+    "label": "Operational proof",
+    "items": [
+      {
+        "title": "Remote-first",
+        "description": "Distributed by design; on-site on request."
+      },
+      {
+        "title": "Production workflows",
+        "description": "We design, ship and operate live products end-to-end."
+      },
+      {
+        "title": "Audit + logs + handover",
+        "description": "Traceability, documentation and transitions are standard."
+      },
+      {
+        "title": "On-site on request",
+        "description": "We show up in person when needed."
+      }
+    ]
   },
   "footer": {
     "brand": "AtavicoLabs",
     "description": "Design, development and release of digital products.",
     "quickLinks": {
-      "title": "Menu",
-      "services": "Services",
-      "portfolio": "Portfolio",
-      "process": "Process",
-      "contact": "Contact"
-    },
+    "title": "Menu",
+    "services": "Services",
+    "startHere": "Start here",
+    "portfolio": "Portfolio",
+    "process": "Process",
+    "contact": "Contact"
+  },
     "contact": {
       "title": "Contact",
       "location": "Italy"
@@ -1283,7 +1306,7 @@
       "cta": {
         "title": "Want similar results?",
         "description": "Let's plan a sprint to modernize your operations platform.",
-        "button": "Request a 30-min audit"
+        "button": "Book a 30-min audit"
       }
     },
     "lytera": {
@@ -1360,7 +1383,7 @@
       "cta": {
         "title": "Need a workflow platform?",
         "description": "Let's design and ship it together.",
-        "button": "Request a 30-min audit"
+        "button": "Book a 30-min audit"
       }
     },
     "crispin": {
@@ -1437,7 +1460,7 @@
       "cta": {
         "title": "Need a control tower?",
         "description": "Let's ship a portal your ops team will love.",
-        "button": "Request a 30-min audit"
+        "button": "Book a 30-min audit"
       }
     }
   },
@@ -1482,7 +1505,7 @@
       "cta": {
         "title": "Don't know where to start?",
         "description": "Book a free 30-minute audit. We help you identify the critical process and the best solution.",
-        "button": "Request a 30-min audit"
+        "button": "Book a 30-min audit"
       }
     },
     "badges": {
@@ -1496,7 +1519,7 @@
       "timeline": "7 days",
       "price": "€1,200 – €3,000",
       "badge": "Quick start",
-      "cta": "Request 30-min audit",
+      "cta": "Book a 30-min audit",
       "meta": {
         "timeline": "Timeline",
         "investment": "Investment"
@@ -1608,7 +1631,7 @@
       "timeline": "Monthly",
       "price": "€400 – €1,500/month",
       "badge": "Most popular",
-      "cta": "Request 30-min audit",
+      "cta": "Book a 30-min audit",
       "meta": {
         "timeline": "Timeline",
         "investment": "Investment"
@@ -1722,7 +1745,7 @@
       "timeline": "6–14 weeks",
       "price": "€8,000 – €25,000+",
       "badge": "End-to-end",
-      "cta": "Request 30-min audit",
+      "cta": "Book a 30-min audit",
       "meta": {
         "timeline": "Timeline",
         "investment": "Investment"

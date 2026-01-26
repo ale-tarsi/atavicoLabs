@@ -9,4 +9,7 @@ export const FEATURES = {
   
   /** Show Testimonials section (requires verified client testimonials) */
   TESTIMONIALS_ENABLED: false,
+
+  /** Show Newsletter section (requires active list + real signup) */
+  NEWSLETTER_ENABLED: false,
 } as const;

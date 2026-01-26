@@ -8,6 +8,7 @@ import OfferSection from '@/app/components/OfferSection';
 import OfferBullets from '@/app/components/OfferBullets';
 import OfferFAQ from '@/app/components/OfferFAQ';
 import OfferCTA from '@/app/components/OfferCTA';
+import { getCalendlyUrl } from '@/app/constants/links';
 import { Check } from 'lucide-react';
 
 export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }) {
@@ -79,7 +80,8 @@ export default async function ContinuityRetainerPage({ params }: { params: Promi
           timeline={t('timeline')}
           priceRange={t('price')}
           ctaText={t('cta')}
-          ctaHref={`/${locale}/contact?interest=continuity-retainer`}
+          ctaHref={getCalendlyUrl(locale as 'it' | 'en')}
+          locale={locale}
           timelineLabel={t('meta.timeline')}
           priceLabel={t('meta.investment')}
         />
@@ -186,7 +188,8 @@ export default async function ContinuityRetainerPage({ params }: { params: Promi
           title={t('sections.readyToStart')}
           description={t('sections.readyDescription')}
           buttonText={t('cta')}
-          buttonHref={`/${locale}/contact?interest=continuity-retainer`}
+          buttonHref={getCalendlyUrl(locale as 'it' | 'en')}
+          locale={locale}
         />
       </main>
       <Footer />

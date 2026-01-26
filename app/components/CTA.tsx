@@ -3,21 +3,23 @@
 import { useTranslations } from 'next-intl';
 import { useLocale } from 'next-intl';
 import { useReveal } from '../hooks/useReveal';
-import { getMetrics } from '../constants/metrics';
-import { CALENDLY_URL } from '../constants/links';
+import { getCalendlyUrl } from '../constants/links';
+import { trackCtaClick } from '../utils/track';
 import { Calendar } from 'lucide-react';
 
 export default function CTA() {
   const t = useTranslations('cta');
   const tContact = useTranslations('contact.form');
+  const tProof = useTranslations('proofPoints');
   const locale = useLocale() as 'it' | 'en';
   const { ref, isRevealed } = useReveal();
+  const proofItems = tProof.raw('items') as { title: string; description: string }[];
 
   return (
     <section 
       id="contact" 
       ref={ref}
-      className="relative py-40 px-6 lg:px-16 bg-carbone border-t border-grigio/20 overflow-hidden w-full"
+      className="relative py-40 px-6 lg:px-16 bg-carbone overflow-hidden w-full"
     >
       {/* Blueprint Grid Background */}
       <div 
@@ -66,7 +68,10 @@ export default function CTA() {
             style={{ animationDelay: '200ms' }}
           >
             <a
-              href={`/${locale}/contact`}
+              href={getCalendlyUrl(locale)}
+              target="_blank"
+              rel="noopener noreferrer"
+              onClick={() => trackCtaClick('cta_section_primary', locale)}
               className="inline-flex w-full sm:w-auto items-center justify-center gap-3 px-7 py-3.5 border border-sabbia/30 text-sabbia text-[13px] tracking-wide hover:border-oliva hover:text-oliva hover:bg-oliva/5 transition-all duration-300 uppercase"
             >
               {t('cta')}
@@ -76,9 +81,10 @@ export default function CTA() {
             </a>
             
             <a
-              href={CALENDLY_URL}
+              href={getCalendlyUrl(locale)}
               target="_blank"
               rel="noopener noreferrer"
+              onClick={() => trackCtaClick('cta_section_secondary', locale)}
               className="inline-flex w-full sm:w-auto items-center justify-center gap-2 px-7 py-3.5 text-sabbia/70 text-[13px] tracking-wide hover:text-oliva transition-all duration-300 uppercase"
             >
               {tContact('bookCall')}
@@ -91,10 +97,10 @@ export default function CTA() {
             className={`grid grid-cols-4 gap-4 pt-8 border-t border-grigio/20 fade-up ${isRevealed ? 'revealed' : ''}`}
             style={{ animationDelay: '300ms' }}
           >
-            {getMetrics(locale).map((stat, index) => (
+            {proofItems.map((item, index) => (
               <div key={index}>
-                <div className="text-[28px] font-medium text-oliva">{stat.value}</div>
-                <div className="text-[11px] text-grigio/70 uppercase tracking-wider mt-1">{stat.label}</div>
+                <div className="text-[28px] font-medium text-oliva leading-[1.2]">{item.title}</div>
+                <div className="text-[11px] text-grigio/70 uppercase tracking-wider mt-1 leading-relaxed">{item.description}</div>
               </div>
             ))}
           </div>

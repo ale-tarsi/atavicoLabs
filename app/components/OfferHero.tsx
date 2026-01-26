@@ -2,6 +2,7 @@
 
 import { ArrowRight } from 'lucide-react';
 import { motion } from 'framer-motion';
+import { trackCtaClick } from '../utils/track';
 
 type OfferHeroProps = {
   /** Optional eyebrow text */
@@ -24,6 +25,8 @@ type OfferHeroProps = {
   ctaText: string;
   /** CTA button href */
   ctaHref: string;
+  /** Current locale */
+  locale: string;
 };
 
 export default function OfferHero({
@@ -37,6 +40,7 @@ export default function OfferHero({
   badge,
   ctaText,
   ctaHref,
+  locale,
 }: OfferHeroProps) {
   return (
     <section className="relative py-24 lg:py-32 px-6 lg:px-16 border-b border-grigio/20">
@@ -110,6 +114,9 @@ export default function OfferHero({
         >
           <a
             href={ctaHref}
+            target="_blank"
+            rel="noopener noreferrer"
+            onClick={() => trackCtaClick('offer_hero', locale)}
             className="inline-flex items-center gap-2 px-8 py-4 bg-oliva text-sabbia text-[15px] font-medium hover:bg-oliva/90 transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-oliva/60 focus-visible:ring-offset-2 focus-visible:ring-offset-carbone"
           >
             {ctaText}

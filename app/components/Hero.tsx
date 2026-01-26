@@ -1,9 +1,10 @@
 'use client';
 
-import Link from 'next/link';
 import { useLocale, useTranslations } from 'next-intl';
 import { useReveal } from '../hooks/useReveal';
 import { ArrowRight, ArrowUpRight } from 'lucide-react';
+import { getCalendlyUrl } from '../constants/links';
+import { trackCtaClick } from '../utils/track';
 
 export default function Hero() {
   const t = useTranslations('hero');
@@ -94,13 +95,16 @@ export default function Hero() {
               style={{ animationDelay: '330ms' }}
             >
               {/* Primary CTA */}
-              <Link
-                href={`/${locale}/contact`}
+              <a
+                href={getCalendlyUrl(locale)}
+                target="_blank"
+                rel="noopener noreferrer"
+                onClick={() => trackCtaClick('hero', locale)}
                 className="group inline-flex items-center justify-center gap-3 px-8 py-4 bg-oliva text-carbone text-[14px] font-medium tracking-wide hover:bg-oliva/90 hover:-translate-y-1 transition-all duration-300 shadow-xl hover:shadow-2xl focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-oliva/60 focus-visible:ring-offset-2 focus-visible:ring-offset-carbone"
               >
                 {t('ctaPrimary')}
                 <ArrowRight className="w-4 h-4 transition-transform group-hover:translate-x-1" strokeWidth={2} />
-              </Link>
+              </a>
 
               {/* Starting Points CTA */}
               <a

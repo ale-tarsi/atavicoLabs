@@ -1,4 +1,3 @@
-import Link from 'next/link';
 import {getTranslations} from 'next-intl/server';
 import Hero from '@/app/components/Hero';
 import About from '@/app/components/About';
@@ -8,16 +7,16 @@ import Process from '@/app/components/Process';
 import Portfolio from '@/app/components/Portfolio';
 import Testimonials from '@/app/components/Testimonials';
 import Blog from '@/app/components/Blog';
-import Newsletter from '@/app/components/Newsletter';
 import CTA from '@/app/components/CTA';
 import Footer from '@/app/components/Footer';
 import LanguageSwitcher from '@/app/components/LanguageSwitcher';
 import Navbar from '@/app/components/Navbar';
 import ProofsSection from '@/app/components/ProofsSection';
-import SectionDivider from '@/app/components/SectionDivider';
 import { FEATURES } from '@/app/constants/features';
 import { ArrowRight } from 'lucide-react';
 import StartingPoints from '@/app/components/StartingPoints';
+import SectionHeader from '@/app/components/SectionHeader';
+import AuditLink from '@/app/components/AuditLink';
 
 export async function generateMetadata({params}: {params: Promise<{locale: string}>}) {
   const {locale} = await params;
@@ -92,68 +91,45 @@ export default async function HomePage({ params }: { params: Promise<{ locale: s
       {/* 1. Hero - Ispirazione */}
       <Hero />
       
-      <div className="px-6 lg:px-16 mt-8">
-        <SectionDivider label={tHome('startingPoints.eyebrow')} />
-      </div>
-
       {/* 2. Ways to Start - Entry points */}
-      <section id="starting-points" className="relative py-20 lg:py-28 px-6 lg:px-16 bg-grafite border-y border-grigio/20 scroll-mt-24">
+      <section id="starting-points" className="relative pt-24 lg:pt-32 pb-20 lg:pb-28 px-6 lg:px-16 bg-grafite scroll-mt-24">
         <div className="max-w-6xl mx-auto">
-          {/* Header */}
-          <div className="text-center mb-12">
-            <div className="text-[11px] uppercase tracking-[0.15em] text-grigio/60 mb-4">
-              {tHome('startingPoints.eyebrow')}
-            </div>
-            <h2 className="font-display text-[36px] lg:text-[48px] font-medium text-sabbia mb-4 leading-[1.1]">
-              {tHome('startingPoints.title')}
-            </h2>
-            <p className="text-[16px] leading-[1.65] text-sabbia/80 font-light max-w-2xl mx-auto">
-              {tHome('startingPoints.description')}
-            </p>
-          </div>
-
+          <SectionHeader
+            align="center"
+            eyebrow={tHome('startingPoints.eyebrow')}
+            title={tHome('startingPoints.title')}
+            description={tHome('startingPoints.description')}
+            className="mb-12"
+            titleClassName="text-[36px] lg:text-[48px]"
+            descriptionClassName="max-w-2xl mx-auto text-sabbia/80"
+          />
           <StartingPoints />
 
           <div className="mt-12 flex justify-center">
-            <Link
-              href={`/${locale}/contact?interest=other`}
+            <AuditLink
+              locale={locale}
+              source="starting_points"
               className="inline-flex items-center gap-2 px-7 py-3 bg-oliva text-carbone text-[14px] font-medium hover:bg-oliva/90 transition-all focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-oliva/60 focus-visible:ring-offset-2 focus-visible:ring-offset-carbone"
             >
               {tHome('startingPoints.requestAudit')}
               <ArrowRight size={16} />
-            </Link>
+            </AuditLink>
           </div>
         </div>
       </section>
       
-      <div className="px-6 lg:px-16 my-4">
-        <SectionDivider label={tProofs('section.eyebrow')} />
-      </div>
-
       {/* 2.5. Automation Proofs - Proof of reliability */}
       <ProofsSection />
       
-      <div className="px-6 lg:px-16 my-4">
-        <SectionDivider label={tCapabilities('label')} />
-      </div>
-
       {/* 3. Capabilities - Le nostre competenze al lavoro */}
       <section id="capabilities" className="scroll-mt-24">
         <ServicesSection />
       </section>
       
-      <div className="px-6 lg:px-16 my-4">
-        <SectionDivider label={tNavbar('work')} />
-      </div>
-      
       {/* 3. Portfolio - Prova concreta */}
       <section id="portfolio" className="scroll-mt-24">
         <Portfolio />
       </section>
-      
-      <div className="px-6 lg:px-16 my-4">
-        <SectionDivider label={tNavbar('process')} />
-      </div>
       
       {/* 4. Process - Coinvolgimento (How We Work) */}
       <section id="process" className="scroll-mt-24">

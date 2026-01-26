@@ -3,9 +3,11 @@
 import { useTranslations } from 'next-intl';
 import { useReveal } from '../hooks/useReveal';
 import { useEffect, useRef, useState } from 'react';
+import SectionHeader from './SectionHeader';
 
 export default function Process() {
   const t = useTranslations('process');
+  const tNavbar = useTranslations('navbar');
   const { ref, isRevealed } = useReveal();
 
   // per-step reveal state and refs (one observer per step)
@@ -48,7 +50,7 @@ export default function Process() {
     <section 
       id="process" 
       ref={ref}
-      className="relative py-24 sm:py-32 lg:py-40 px-6 lg:px-16 bg-carbone w-full overflow-hidden border-t border-grigio/20"
+      className="relative py-24 sm:py-32 lg:py-40 px-6 lg:px-16 bg-carbone w-full overflow-hidden"
     >
       {/* Section Number - top right */}
       <div className="absolute top-12 right-6 lg:right-16 text-[11px] font-mono text-oliva/30">[05]</div>
@@ -56,20 +58,15 @@ export default function Process() {
       <div className="relative max-w-[900px] mx-auto">
 
         {/* Header */}
-        <div className="max-w-[750px] mb-16">
-          <div className="text-[11px] uppercase tracking-[0.15em] text-grigio/60 font-light mb-4">How we work</div>
-          <h2 
-            className={`font-display text-[32px] font-medium text-sabbia mb-4 leading-[1.2] fade-up ${isRevealed ? 'revealed' : ''}`}
-          >
-            {t('title')}
-          </h2>
-          <p 
-            className={`text-[17px] leading-[1.65] text-sabbia/60 font-light max-w-[520px] fade-up ${isRevealed ? 'revealed' : ''}`}
-            style={{ animationDelay: '100ms' }}
-          >
-            {t('subtitle')}
-          </p>
-        </div>
+        <SectionHeader
+          eyebrow={tNavbar('process')}
+          index="05"
+          title={t('title')}
+          description={t('subtitle')}
+          className="max-w-[750px] mb-16"
+          titleClassName={`text-[32px] font-medium text-sabbia leading-[1.2] fade-up ${isRevealed ? 'revealed' : ''}`}
+          descriptionClassName={`text-[17px] leading-[1.65] text-sabbia/60 font-light max-w-[520px] fade-up ${isRevealed ? 'revealed' : ''}`}
+        />
 
         {/* Timeline - vertical line with dots */}
         <div className="relative">

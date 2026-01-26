@@ -4,6 +4,7 @@ import { useTranslations } from 'next-intl';
 import { useReveal } from '../hooks/useReveal';
 import { useState, useEffect, useRef } from 'react';
 import { ArrowRight } from 'lucide-react';
+import SectionHeader from './SectionHeader';
 
 export default function ServicesSection() {
   const t = useTranslations('capabilities');
@@ -58,22 +59,23 @@ export default function ServicesSection() {
   return (
     <section 
       ref={ref}
-      className="relative w-full py-24 sm:py-32 lg:py-40 px-6 lg:px-24 bg-bg-primary overflow-hidden border-t border-text-ghost/10"
+      className="relative w-full py-24 sm:py-32 lg:py-40 px-6 lg:px-24 bg-bg-primary overflow-hidden"
     >
       {/* Section Number - top right */}
       <div className="absolute top-16 right-6 lg:right-24 text-mono text-text-ghost">[03]</div>
 
       <div className="relative max-w-content mx-auto">
         {/* Header - max-width 780px */}
-        <div className="max-w-text mb-20">
-          <div className="text-label uppercase text-text-muted font-medium mb-6">{t('label')}</div>
-          <h2 className="font-display text-h1 lg:text-h2 text-text-primary mb-5">
-            {t('title')}
-          </h2>
-          <p className="text-body lg:text-body-lg text-text-tertiary font-light max-w-paragraph">
-            {t('subtitle')}
-          </p>
-        </div>
+        <SectionHeader
+          eyebrow={t('label')}
+          index="03"
+          title={t('title')}
+          description={t('subtitle')}
+          className="max-w-text mb-20"
+          titleClassName="text-h1 lg:text-h2"
+          descriptionClassName="text-body lg:text-body-lg text-text-tertiary font-light max-w-paragraph"
+          eyebrowClassName="text-text-muted font-medium"
+        />
 
         {/* Services Grid - 4 columns, gap aumentato */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">

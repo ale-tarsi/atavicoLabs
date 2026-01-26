@@ -8,6 +8,7 @@ import OfferSection from '@/app/components/OfferSection';
 import OfferBullets from '@/app/components/OfferBullets';
 import OfferFAQ from '@/app/components/OfferFAQ';
 import OfferCTA from '@/app/components/OfferCTA';
+import { getCalendlyUrl } from '@/app/constants/links';
 
 export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }) {
   const { locale } = await params;
@@ -78,7 +79,8 @@ export default async function OpsQuickWinPage({ params }: { params: Promise<{ lo
           timeline={t('timeline')}
           priceRange={t('price')}
           ctaText={t('cta')}
-          ctaHref={`/${locale}/contact?interest=ops-quick-win`}
+          ctaHref={getCalendlyUrl(locale as 'it' | 'en')}
+          locale={locale}
           timelineLabel={t('meta.timeline')}
           priceLabel={t('meta.investment')}
         />
@@ -179,7 +181,8 @@ export default async function OpsQuickWinPage({ params }: { params: Promise<{ lo
           title={t('sections.readyToStart')}
           description={t('sections.readyDescription')}
           buttonText={t('cta')}
-          buttonHref={`/${locale}/contact?interest=ops-quick-win`}
+          buttonHref={getCalendlyUrl(locale as 'it' | 'en')}
+          locale={locale}
         />
       </main>
       <Footer />

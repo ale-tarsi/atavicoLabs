@@ -2,6 +2,7 @@
 
 import { ArrowRight } from 'lucide-react';
 import { motion } from 'framer-motion';
+import { trackCtaClick } from '../utils/track';
 
 type OfferCTAProps = {
   /** Main CTA heading */
@@ -12,6 +13,8 @@ type OfferCTAProps = {
   buttonText: string;
   /** CTA button href */
   buttonHref: string;
+  /** Locale for tracking */
+  locale?: string;
   /** Animation delay (ms) */
   delay?: number;
 };
@@ -21,6 +24,7 @@ export default function OfferCTA({
   description,
   buttonText,
   buttonHref,
+  locale = 'it',
   delay = 0,
 }: OfferCTAProps) {
   return (
@@ -42,6 +46,9 @@ export default function OfferCTA({
         
         <motion.a
           href={buttonHref}
+          target="_blank"
+          rel="noopener noreferrer"
+          onClick={() => trackCtaClick('offer_footer', locale)}
           whileHover={{ scale: 1.02 }}
           whileTap={{ scale: 0.98 }}
           className="inline-flex items-center gap-2 px-8 py-4 bg-oliva text-sabbia text-[15px] font-medium hover:bg-oliva/90 transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-oliva/60 focus-visible:ring-offset-2 focus-visible:ring-offset-carbone"

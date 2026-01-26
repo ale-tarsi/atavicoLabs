@@ -1,14 +1,13 @@
 'use client';
 
 import { useTranslations } from 'next-intl';
-import { useLocale } from 'next-intl';
 import { useReveal } from '../hooks/useReveal';
-import { getAboutMetrics } from '../constants/metrics';
 
 export default function About() {
   const t = useTranslations('about');
-  const locale = useLocale() as 'it' | 'en';
+  const tProof = useTranslations('proofPoints');
   const { ref, isRevealed } = useReveal();
+  const proofItems = tProof.raw('items') as { title: string; description: string }[];
 
   const principles = [
     { number: '01', title: 'CURA', description: 'Ogni dettaglio conta: architettura, interfacce, micro-interazioni, comunicazione. Nessun compromesso sulla qualità.' },
@@ -16,13 +15,11 @@ export default function About() {
     { number: '03', title: 'AFFIDABILITÀ', description: 'Sviluppo stabile e scalabile, progettato per durare oltre il primo rilascio. Code review, test, monitoraggio.' }
   ];
 
-  const metrics = getAboutMetrics(locale);
-
   return (
     <section 
       id="about" 
       ref={ref}
-      className="relative py-24 sm:py-32 lg:py-40 px-6 lg:px-16 bg-carbone w-full overflow-hidden border-t border-grigio/20"
+      className="relative py-24 sm:py-32 lg:py-40 px-6 lg:px-16 bg-carbone w-full overflow-hidden"
     >
       {/* Section Number */}
       <div className="absolute top-12 right-6 lg:right-16 text-[11px] font-mono text-oliva/30">[02]</div>
@@ -77,12 +74,12 @@ export default function About() {
 
             {/* Metrics Dashboard */}
             <div className="border border-grigio/20 p-6 bg-grafite/30">
-              <div className="text-[11px] uppercase tracking-[0.15em] text-grigio/50 font-light mb-6">Metrics</div>
+              <div className="text-[11px] uppercase tracking-[0.15em] text-grigio/50 font-light mb-6">{tProof('label')}</div>
               <div className="grid grid-cols-2 gap-6">
-                {metrics.map((metric, i) => (
+                {proofItems.map((item, i) => (
                   <div key={i} className="space-y-2">
-                    <div className="text-[28px] font-medium text-oliva leading-[1.1]">{metric.value}</div>
-                    <div className="text-[11px] text-grigio/70 leading-relaxed max-w-[160px]">{metric.label}</div>
+                    <div className="text-[28px] font-medium text-oliva leading-[1.1]">{item.title}</div>
+                    <div className="text-[11px] text-grigio/70 leading-relaxed max-w-[160px]">{item.description}</div>
                   </div>
                 ))}
               </div>

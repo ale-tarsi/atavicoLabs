@@ -12,8 +12,8 @@
     "startHere": "Come partiamo",
     "offers": "Offerte",
     "contact": "Contatti",
-    "cta": "Richiedi audit 30 min",
-    "requestAudit": "Richiedi audit 30 min"
+    "cta": "Prenota audit 30 min",
+    "requestAudit": "Prenota audit 30 min"
   },
   "contact": {
     "meta": {
@@ -21,7 +21,7 @@
       "description": "Parliamo del tuo progetto. Audit gratuito di 30 minuti per identificare la soluzione migliore."
     },
     "eyebrow": "Contatti",
-    "title": "Richiedi audit 30 min",
+    "title": "Prenota audit 30 min",
     "description": "Prenota una chiamata gratuita di 30 minuti. Analizziamo il tuo processo critico e ti diciamo come automatizzarlo o costruire il prodotto che serve.",
     "helper": "Tempo stimato: 60–90 sec",
     "form": {
@@ -62,8 +62,9 @@
       "message": "Messaggio",
       "messagePlaceholder": "Raccontaci del processo che vuoi automatizzare o del prodotto che hai in mente...",
       "submit": "Invia richiesta",
-      "submitting": "Invio in corso...",
-      "bookCall": "Prenota una call",
+      "submitting": "Invio email...",
+      "bookCall": "Prenota audit 30 min",
+      "preferWrite": "Preferisci scriverci?",
       "errors": {
         "nameRequired": "Il nome è obbligatorio",
         "emailRequired": "L'email è obbligatoria",
@@ -87,7 +88,7 @@
       "proposal": "Proposta in 48h",
       "delivery": "Delivery in 7 giorni (Quick Win)"
     },
-    "ctaPrimary": "Richiedi audit 30 min",
+    "ctaPrimary": "Prenota audit 30 min",
     "ctaTertiary": "Come partiamo",
     "ctaSecondary": "Vedi i progetti",
     "available": "Disponibili per progetti",
@@ -102,7 +103,7 @@
       "title": "Scegli come iniziare",
       "description": "Tre percorsi per automatizzare, migliorare e costruire. Dalla Quick Win mensile al prodotto completo.",
       "learnMore": "Dettagli",
-      "requestAudit": "Richiedi audit 30 min",
+      "requestAudit": "Prenota audit 30 min",
       "selector": {
         "automateProcess": "Ho un processo manuale da automatizzare",
         "stabilizeAutomation": "Ho automazioni già live da stabilizzare",
@@ -248,7 +249,7 @@
     "label": "Capacità",
     "title": "Capacità end-to-end, un team solo.",
     "subtitle": "Design, sviluppo, AI e automazione: tutto internamente, senza subappalti.",
-    "sectionCta": "Hai un flusso critico? Richiedi audit 30 min",
+    "sectionCta": "Hai un flusso critico? Prenota audit 30 min",
     "cta": "Scopri il portfolio",
     "items": [
       {
@@ -270,8 +271,8 @@
     ]
   },
   "portfolio": {
-    "title": "Case study reali, risultati misurabili.",
-    "subtitle": "Ogni progetto nasce da un'esigenza concreta. Qui trovi cinque casi reali in cui abbiamo reso più fluidi i processi, più rapide le decisioni e più solido il lavoro dei team.",
+    "title": "Progetti selezionati.",
+    "subtitle": "Esempi di prodotti e sistemi che costruiamo: alcuni pubblici, altri sotto NDA.",
     "labels": {
       "timeline": "Timeline",
       "status": "Status",
@@ -474,20 +475,42 @@
     "title": "Costruiamo qualcosa di solido.",
     "subtitle": "Che sia un nuovo prodotto o una piattaforma esistente, possiamo aiutarti a progettare, sviluppare e rilasciare soluzioni concrete.",
     "nextSteps": "Ti rispondiamo entro un giorno lavorativo con un paio di domande mirate e, se ha senso, proponiamo una prima call esplorativa di 30 minuti.",
-    "cta": "Richiedi audit 30 min",
+    "cta": "Prenota audit 30 min",
     "bookCall": "Prenota una call",
     "email": "contact@atavicolabs.com"
+  },
+  "proofPoints": {
+    "label": "Prove operative",
+    "items": [
+      {
+        "title": "Remote-first",
+        "description": "Team distribuito; on-site su richiesta."
+      },
+      {
+        "title": "Workflow in produzione",
+        "description": "Progettiamo, rilasciamo e gestiamo prodotti live end-to-end."
+      },
+      {
+        "title": "Audit + log + handover",
+        "description": "Tracciabilità, documentazione e passaggio di consegne inclusi."
+      },
+      {
+        "title": "On-site su richiesta",
+        "description": "Presenza di persona quando serve."
+      }
+    ]
   },
   "footer": {
     "brand": "AtavicoLabs",
     "description": "Design, sviluppo e rilascio di prodotti digitali.",
     "quickLinks": {
-      "title": "Menu",
-      "services": "Servizi",
-      "portfolio": "Portfolio",
-      "process": "Processo",
-      "contact": "Contatti"
-    },
+    "title": "Menu",
+    "services": "Servizi",
+    "startHere": "Come partiamo",
+    "portfolio": "Portfolio",
+    "process": "Processo",
+    "contact": "Contatti"
+  },
     "contact": {
       "title": "Contatti",
       "location": "Italia"
@@ -1283,7 +1306,7 @@
       "cta": {
         "title": "Vuoi un risultato simile?",
         "description": "Pianifichiamo uno sprint per modernizzare la tua piattaforma operativa.",
-        "button": "Richiedi audit 30 min"
+        "button": "Prenota audit 30 min"
       }
     },
     "lytera": {
@@ -1360,7 +1383,7 @@
       "cta": {
         "title": "Serve una piattaforma di workflow?",
         "description": "Progettiamola e lanciamola insieme.",
-        "button": "Richiedi audit 30 min"
+        "button": "Prenota audit 30 min"
       }
     },
     "crispin": {
@@ -1437,7 +1460,7 @@
       "cta": {
         "title": "Serve un control tower?",
         "description": "Lavoriamo insieme a un portale che il tuo team amerà.",
-        "button": "Richiedi audit 30 min"
+        "button": "Prenota audit 30 min"
       }
     }
   },
@@ -1482,7 +1505,7 @@
       "cta": {
         "title": "Non sai da dove iniziare?",
         "description": "Prenota un audit gratuito di 30 minuti. Ti aiutiamo a identificare il processo critico e la soluzione migliore.",
-        "button": "Richiedi audit 30 min"
+        "button": "Prenota audit 30 min"
       }
     },
     "badges": {
@@ -1496,7 +1519,7 @@
       "timeline": "7 giorni",
       "price": "€1.200 – €3.000",
       "badge": "Partenza rapida",
-      "cta": "Richiedi audit 30 min",
+      "cta": "Prenota audit 30 min",
       "meta": {
         "timeline": "Timeline",
         "investment": "Investimento"
@@ -1608,7 +1631,7 @@
       "timeline": "Mensile",
       "price": "€400 – €1.500/mese",
       "badge": "Più scelto",
-      "cta": "Richiedi audit 30 min",
+      "cta": "Prenota audit 30 min",
       "meta": {
         "timeline": "Timeline",
         "investment": "Investimento"
@@ -1722,7 +1745,7 @@
       "timeline": "6–14 settimane",
       "price": "€8.000 – €25.000+",
       "badge": "End-to-end",
-      "cta": "Richiedi audit 30 min",
+      "cta": "Prenota audit 30 min",
       "meta": {
         "timeline": "Timeline",
         "investment": "Investimento"

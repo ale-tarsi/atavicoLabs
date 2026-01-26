@@ -3,6 +3,7 @@
 import { useTranslations } from 'next-intl';
 import { useReveal } from '../hooks/useReveal';
 import { PROOFS } from '../constants/proofs';
+import SectionHeader from './SectionHeader';
 
 export default function ProofsSection() {
   const t = useTranslations('proofs');
@@ -11,21 +12,18 @@ export default function ProofsSection() {
   return (
     <section 
       ref={ref}
-      className="relative py-20 lg:py-28 px-6 lg:px-16 bg-carbone border-y border-grigio/20"
+      className="relative pt-24 lg:pt-32 pb-20 lg:pb-28 px-6 lg:px-16 bg-carbone"
     >
       <div className="max-w-6xl mx-auto">
-        {/* Header */}
-        <div className="text-center mb-12">
-          <div className="text-[11px] uppercase tracking-[0.15em] text-grigio/60 mb-4">
-            {t('eyebrow')}
-          </div>
-          <h2 className={`font-display text-[32px] lg:text-[40px] font-medium text-sabbia mb-4 leading-[1.1] fade-up ${isRevealed ? 'revealed' : ''}`}>
-            {t('title')}
-          </h2>
-          <p className={`text-[15px] leading-[1.65] text-sabbia/80 font-light max-w-2xl mx-auto fade-up ${isRevealed ? 'revealed' : ''}`} style={{ animationDelay: '100ms' }}>
-            {t('subtitle')}
-          </p>
-        </div>
+        <SectionHeader
+          align="center"
+          eyebrow={t('eyebrow')}
+          title={t('title')}
+          description={t('subtitle')}
+          className="mb-12"
+          titleClassName={`fade-up ${isRevealed ? 'revealed' : ''}`}
+          descriptionClassName={`mx-auto text-sabbia/80 ${isRevealed ? 'revealed fade-up' : 'fade-up'}`}
+        />
 
         {/* Proofs Grid */}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-4">

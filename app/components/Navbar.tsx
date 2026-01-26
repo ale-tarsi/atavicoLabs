@@ -5,6 +5,8 @@ import Link from 'next/link';
 import { useTranslations, useLocale } from 'next-intl';
 import { usePathname } from 'next/navigation';
 import LanguageSwitcher from './LanguageSwitcher';
+import { getCalendlyUrl } from '../constants/links';
+import { trackCtaClick } from '../utils/track';
 
 export default function Navbar() {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -48,7 +50,7 @@ export default function Navbar() {
       return;
     }
 
-    const sections = ['starting-points', 'process'];
+    const sections = ['starting-points', 'process', 'portfolio'];
     const observers: IntersectionObserver[] = [];
 
     const observerOptions = {
@@ -131,8 +133,10 @@ export default function Navbar() {
           {/* Center Navigation - Desktop */}
           <div className="hidden lg:flex items-center gap-8">
             <Link
-              href={`/${locale}/projects`}
-              className="text-[13px] font-medium tracking-wide text-sabbia/90 hover:text-accent-primary focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent-primary/60 focus-visible:ring-offset-2 focus-visible:ring-offset-bg-primary transition-colors duration-300"
+              href={`/${locale}#portfolio`}
+              className={`text-[13px] font-medium tracking-wide hover:text-accent-primary focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent-primary/60 focus-visible:ring-offset-2 focus-visible:ring-offset-bg-primary transition-colors duration-300 ${
+                activeSection === 'portfolio' ? 'text-oliva' : 'text-sabbia/90'
+              }`}
             >
               {t('work')}
             </Link>
@@ -152,13 +156,28 @@ export default function Navbar() {
             >
               {t('startHere')}
             </Link>
+            <Link
+              href={`/${locale}/offers/ops-quick-win`}
+              className="text-[13px] font-medium tracking-wide text-sabbia/90 hover:text-accent-primary focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent-primary/60 focus-visible:ring-offset-2 focus-visible:ring-offset-bg-primary transition-colors duration-300"
+            >
+              {t('offers')}
+            </Link>
+            <Link
+              href={`/${locale}/contact`}
+              className="text-[13px] font-medium tracking-wide text-sabbia/90 hover:text-accent-primary focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent-primary/60 focus-visible:ring-offset-2 focus-visible:ring-offset-bg-primary transition-colors duration-300"
+            >
+              {t('contact')}
+            </Link>
           </div>
 
           {/* CTA Button - Desktop */}
           <div className="hidden lg:block">
-            <Link
-              href={`/${locale}/contact`}
+            <a
+              href={getCalendlyUrl(locale as 'it' | 'en')}
+              target="_blank"
+              rel="noopener noreferrer"
               className="inline-flex items-center gap-2 px-6 py-2.5 border text-[13px] font-medium tracking-[0.02em] transition-all duration-300 hover:translate-y-[-1px] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent-primary/60 focus-visible:ring-offset-2 focus-visible:ring-offset-bg-primary"
+              onClick={() => trackCtaClick('navbar', locale as string)}
               style={{ 
                 borderColor: 'rgba(157, 154, 142, 0.25)',
                 color: '#E8E5DC'
@@ -176,7 +195,7 @@ export default function Navbar() {
               <svg className="w-3.5 h-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}>
                 <path strokeLinecap="round" strokeLinejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3" />
               </svg>
-            </Link>
+            </a>
           </div>
 
           {/* Mobile Menu Button */}
@@ -280,22 +299,22 @@ export default function Navbar() {
             {/* Navigation Links */}
             <nav className="flex-1 flex flex-col" style={{ gap: '2rem' }}>
               <Link
-                href={`/${locale}#starting-points`}
-                onClick={() => setMenuOpen(false)}
-                className="text-[32px] font-light tracking-[-0.02em] text-sabbia hover:text-oliva transition-colors duration-200"
-                tabIndex={menuOpen ? 0 : -1}
-              >
-                {t('startHere')}
-              </Link>
-              
-              <Link
-                href={`/${locale}/projects`}
-                onClick={() => setMenuOpen(false)}
-                className="text-[32px] font-light tracking-[-0.02em] text-sabbia hover:text-oliva transition-colors duration-200"
-                tabIndex={menuOpen ? 0 : -1}
-              >
-                {t('work')}
-              </Link>
+              href={`/${locale}#starting-points`}
+              onClick={() => setMenuOpen(false)}
+              className="text-[32px] font-light tracking-[-0.02em] text-sabbia hover:text-oliva transition-colors duration-200"
+              tabIndex={menuOpen ? 0 : -1}
+            >
+              {t('startHere')}
+            </Link>
+            
+            <Link
+              href={`/${locale}#portfolio`}
+              onClick={() => setMenuOpen(false)}
+              className="text-[32px] font-light tracking-[-0.02em] text-sabbia hover:text-oliva transition-colors duration-200"
+              tabIndex={menuOpen ? 0 : -1}
+            >
+              {t('work')}
+            </Link>
               
               <Link
                 href={`/${locale}#process`}
@@ -306,13 +325,27 @@ export default function Navbar() {
                 {t('process')}
               </Link>
 
-              {/* Divider */}
-              <div className="h-px bg-grigio/20" style={{ margin: '1rem 0' }} />
+              <Link
+                href={`/${locale}/offers/ops-quick-win`}
+                onClick={() => setMenuOpen(false)}
+                className="text-[32px] font-light tracking-[-0.02em] text-sabbia hover:text-oliva transition-colors duration-200"
+                tabIndex={menuOpen ? 0 : -1}
+              >
+                {t('offers')}
+              </Link>
+
+            {/* Divider */}
+            <div className="h-px bg-grigio/20" style={{ margin: '1rem 0' }} />
 
               {/* Contact Button */}
-              <Link
-                href={`/${locale}/contact`}
-                onClick={() => setMenuOpen(false)}
+              <a
+                href={getCalendlyUrl(locale as 'it' | 'en')}
+                target="_blank"
+                rel="noopener noreferrer"
+                onClick={() => {
+                  trackCtaClick('navbar_mobile', locale as string);
+                  setMenuOpen(false);
+                }}
                 className="inline-flex items-center justify-center gap-2 px-6 py-4 border border-sabbia/20 text-[15px] font-normal tracking-[0.02em] text-sabbia hover:border-oliva hover:bg-oliva/10 transition-all duration-200"
                 tabIndex={menuOpen ? 0 : -1}
               >
@@ -320,7 +353,7 @@ export default function Navbar() {
                 <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}>
                   <path strokeLinecap="round" strokeLinejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3" />
                 </svg>
-              </Link>
+              </a>
             </nav>
 
             {/* Footer: Language Switcher + Meta */}

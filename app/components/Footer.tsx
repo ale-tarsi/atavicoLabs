@@ -3,6 +3,7 @@
 import Link from 'next/link';
 import { useTranslations, useLocale } from 'next-intl';
 import { useReveal } from '../hooks/useReveal';
+import { FEATURES } from '../constants/features';
 
 export default function Footer() {
   const currentYear = new Date().getFullYear();
@@ -18,7 +19,7 @@ export default function Footer() {
       <div className={`relative max-w-7xl mx-auto fade-up ${isRevealed ? 'revealed' : ''}`}>
         
         {/* 4-Column Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 lg:gap-20 mb-16">
+        <div className={`grid grid-cols-1 md:grid-cols-2 ${FEATURES.NEWSLETTER_ENABLED ? 'lg:grid-cols-4' : 'lg:grid-cols-3'} gap-12 lg:gap-20 mb-16`}>
           
           {/* Column 1: Brand */}
           <div className="max-w-[280px]">
@@ -65,6 +66,11 @@ export default function Footer() {
             </h4>
             <ul className="space-y-3">
               <li>
+                <Link href={`/${locale}#starting-points`} className="text-[13px] text-sabbia/70 hover:text-oliva transition-colors duration-300">
+                  {t('quickLinks.startHere')}
+                </Link>
+              </li>
+              <li>
                 <Link href={`/${locale}#portfolio`} className="text-[13px] text-sabbia/70 hover:text-oliva transition-colors duration-300">
                   {t('quickLinks.portfolio')}
                 </Link>
@@ -75,11 +81,6 @@ export default function Footer() {
                 </Link>
               </li>
               <li>
-                <Link href={`/${locale}#blog`} className="text-[13px] text-sabbia/70 hover:text-oliva transition-colors duration-300">
-                  {locale === 'it' ? 'Approfondimenti' : 'Insights'}
-                </Link>
-              </li>
-              <li>
                 <Link href={`/${locale}/contact`} className="text-[13px] text-sabbia/70 hover:text-oliva transition-colors duration-300">
                   {t('quickLinks.contact')}
                 </Link>
@@ -87,29 +88,31 @@ export default function Footer() {
             </ul>
           </div>
 
-          {/* Column 4: Newsletter */}
-          <div>
-            <h4 className="text-[11px] uppercase tracking-[0.15em] text-grigio/60 mb-4 font-light">Newsletter</h4>
-            <p className="text-[12px] text-sabbia/60 leading-[1.6] mb-4">
-              Aggiornamenti mensili su design, sviluppo e best practice.
-            </p>
-            <form className="space-y-3">
-              <input
-                type="email"
-                placeholder="La tua email"
-                className="w-full bg-grafite border border-grigio/20 px-3 py-2 text-[13px] text-sabbia placeholder:text-grigio/40 rounded-sm focus:border-oliva/60 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-oliva/60 focus-visible:ring-offset-2 focus-visible:ring-offset-carbone transition-colors"
-              />
-              <button
-                type="submit"
-                className="w-full border border-sabbia/40 text-sabbia text-[11px] uppercase tracking-wider py-2 rounded-sm hover:border-oliva hover:text-oliva hover:bg-oliva/5 transition-all duration-300 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-oliva/60 focus-visible:ring-offset-2 focus-visible:ring-offset-carbone"
-              >
-                Iscriviti
-              </button>
-            </form>
-            <p className="text-[10px] text-grigio/50 mt-3">
-              Join 1,200+ subscribers
-            </p>
-          </div>
+          {/* Column 4: Newsletter (disabled until real list is available) */}
+          {FEATURES.NEWSLETTER_ENABLED && (
+            <div>
+              <h4 className="text-[11px] uppercase tracking-[0.15em] text-grigio/60 mb-4 font-light">Newsletter</h4>
+              <p className="text-[12px] text-sabbia/60 leading-[1.6] mb-4">
+                Aggiornamenti mensili su design, sviluppo e best practice.
+              </p>
+              <form className="space-y-3">
+                <input
+                  type="email"
+                  placeholder="La tua email"
+                  className="w-full bg-grafite border border-grigio/20 px-3 py-2 text-[13px] text-sabbia placeholder:text-grigio/40 rounded-sm focus:border-oliva/60 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-oliva/60 focus-visible:ring-offset-2 focus-visible:ring-offset-carbone transition-colors"
+                />
+                <button
+                  type="submit"
+                  className="w-full border border-sabbia/40 text-sabbia text-[11px] uppercase tracking-wider py-2 rounded-sm hover:border-oliva hover:text-oliva hover:bg-oliva/5 transition-all duration-300 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-oliva/60 focus-visible:ring-offset-2 focus-visible:ring-offset-carbone"
+                >
+                  Iscriviti
+                </button>
+              </form>
+              <p className="text-[10px] text-grigio/50 mt-3">
+                Join 1,200+ subscribers
+              </p>
+            </div>
+          )}
         </div>
 
         {/* Bottom bar */}

@@ -16,17 +16,17 @@ export const PROJECTS: ProjectMeta[] = [
   {
     slug: 'hostid',
     category: 'mobile',
-    // badge: 'nda', // Uncomment if needed
+    badge: 'nda',
   },
   {
     slug: 'helixops',
     category: 'automation',
-    // badge: 'internal', // Uncomment if needed
+    badge: 'internal',
   },
   {
     slug: 'pulseshift',
     category: 'mobile',
-    // badge: 'concept', // Uncomment if needed
+    badge: 'concept',
   },
   {
     slug: 'insightgrid',

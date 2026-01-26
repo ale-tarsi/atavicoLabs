@@ -13,7 +13,7 @@ export default function Testimonials() {
     <section 
       id="testimonials" 
       ref={ref}
-      className="relative py-24 sm:py-32 px-6 lg:px-16 bg-grafite border-t border-grigio/20 w-full overflow-hidden"
+      className="relative py-24 sm:py-32 px-6 lg:px-16 bg-grafite w-full overflow-hidden"
     >
       {/* Section Number */}
       <div className="absolute top-12 right-6 lg:right-16 text-[14px] font-mono text-oliva/40">[05]</div>
