@@ -20,21 +20,18 @@ export default function Portfolio() {
     <section 
       id="portfolio" 
       ref={ref}
-      className="relative py-24 sm:py-32 lg:py-40 px-6 lg:px-16 bg-carbone w-full overflow-hidden"
+      className="relative py-24 sm:py-32 lg:py-40 bg-carbone w-full overflow-hidden"
     >
       {/* Section Number - top right */}
       <div className="absolute top-12 right-6 lg:right-16 text-[11px] font-mono text-oliva/30">[04]</div>
 
-      <div className="relative max-w-7xl mx-auto">
+      <div className="relative max-w-6xl mx-auto px-6">
         {/* Header - max-width 750px */}
         <SectionHeader
           eyebrow={tNavbar('work')}
-          index="04"
           title={t('title')}
-          description={t('subtitle')}
-          className="max-w-[750px] mb-16"
-          titleClassName={`text-[32px] font-medium text-sabbia leading-[1.2] fade-up ${isRevealed ? 'revealed' : ''}`}
-          descriptionClassName={`text-[17px] leading-[1.65] text-sabbia/60 font-light max-w-[520px] mb-6 fade-up ${isRevealed ? 'revealed' : ''}`}
+          subtitle={t('subtitle')}
+          className={`max-w-[750px] mb-16 ${isRevealed ? 'revealed fade-up' : 'fade-up'} [&_h2]:text-[32px] [&_h2]:leading-[1.2] [&_p]:text-[17px] [&_p]:leading-[1.65] [&_p]:text-sabbia/60 [&_p]:font-light [&_p]:max-w-[520px] [&_p]:mb-6`}
         />
 
         {/* Projects - vertical stack with 1px gaps */}

@@ -2,6 +2,7 @@
 
 import { useTranslations } from 'next-intl';
 import { useReveal } from '../hooks/useReveal';
+import SectionHeader from './SectionHeader';
 
 export default function Testimonials() {
   const t = useTranslations('testimonials');
@@ -13,27 +14,18 @@ export default function Testimonials() {
     <section 
       id="testimonials" 
       ref={ref}
-      className="relative py-24 sm:py-32 px-6 lg:px-16 bg-grafite w-full overflow-hidden"
+      className="relative py-24 sm:py-32 bg-grafite w-full overflow-hidden"
     >
       {/* Section Number */}
       <div className="absolute top-12 right-6 lg:right-16 text-[14px] font-mono text-oliva/40">[05]</div>
 
-      <div className="relative max-w-7xl mx-auto">
-        {/* Header */}
-        <div className="max-w-[750px] mb-16">
-          <div className="text-[11px] uppercase tracking-[0.15em] text-grigio/60 font-light mb-4">Testimonials</div>
-          <h2 
-            className={`font-display text-[32px] font-medium text-sabbia mb-4 leading-[1.2] fade-up ${isRevealed ? 'revealed' : ''}`}
-          >
-            {t('title')}
-          </h2>
-          <p 
-            className={`text-[17px] leading-[1.65] text-sabbia/60 font-light max-w-[520px] fade-up ${isRevealed ? 'revealed' : ''}`}
-            style={{ animationDelay: '100ms' }}
-          >
-            {t('subtitle')}
-          </p>
-        </div>
+      <div className="relative max-w-6xl mx-auto px-6">
+        <SectionHeader
+          eyebrow="Testimonials"
+          title={t('title')}
+          subtitle={t('subtitle')}
+          className={`max-w-[750px] mb-16 ${isRevealed ? 'revealed fade-up' : 'fade-up'} [&_h2]:text-[32px] [&_h2]:leading-[1.2] [&_p]:text-[17px] [&_p]:leading-[1.65] [&_p]:text-sabbia/60 [&_p]:font-light [&_p]:max-w-[520px]`}
+        />
 
         {/* 3-Column Grid */}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-4">

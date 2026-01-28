@@ -1524,29 +1524,56 @@
         "timeline": "Timeline",
         "investment": "Investment"
       },
+      "summary": {
+        "priceNote": "Range depends on number of integrations and logic complexity.",
+        "note": "Plan + estimate within 24–48h. No commitment until you approve."
+      },
       "hero": {
-        "eyebrow": "Quick Win — 7 days"
+        "eyebrow": "Quick Win — 7 days",
+        "bullets": [
+          "End-to-end automation of 1 critical flow, not a patch.",
+          "Logs, alerts and fallback to cut errors and manual babysitting.",
+          "Detailed plan in 24–48h, go-live in 7 days."
+        ]
       },
       "sections": {
-        "examples": "Use cases",
+        "outcomes": "What you get",
         "included": "What's included",
         "boundaries": "Boundaries",
-        "timeline": "Development timeline",
-        "pricing": "Investment",
-        "howItWorks": "How it works",
+        "examples": "Examples / Use cases",
+        "process": "Process & timeline",
         "readyToStart": "Ready to start?",
         "readyDescription": "Book a 30-min audit. We identify the critical process and tell you how to automate it."
       },
-      "pricing": {
-        "amount": "€1,200 – €3,000",
-        "note": "one-time",
-        "description": "Fixed price to automate 1 critical end-to-end flow. Includes analysis, development, testing, deployment and complete documentation.",
-        "included": [
-          "Complete automation of 1 process",
-          "Monitoring and error logs",
-          "Documentation and handover"
-        ]
-      },
+      "outcomes": [
+        {
+          "title": "Fewer errors",
+          "description": "Alerts and fallback make the automation reliable, without manual checks.",
+          "bullets": [
+            "Centralized monitoring and logs",
+            "Automatic alerts on failures",
+            "Controlled manual fallback when needed"
+          ]
+        },
+        {
+          "title": "Time saved",
+          "description": "Remove copy/paste, CSVs and manual follow-ups between teams and tools.",
+          "bullets": [
+            "Push updates to Slack/CRM",
+            "Scheduled or real-time automations",
+            "Delivery in 7 days"
+          ]
+        },
+        {
+          "title": "Traceability",
+          "description": "You always know what happened, where it is stuck, and who owns it.",
+          "bullets": [
+            "Control dashboard/sheet",
+            "Clear SLA and ownership",
+            "Audit trail for QA"
+          ]
+        }
+      ],
       "process": [
         {
           "title": "Audit and analysis",
@@ -1565,13 +1592,37 @@
           "description": "We deliver complete documentation, monitoring dashboard and train the team."
         }
       ],
-      "examples": [
-        "Automated reporting (CRM → Slack/Email every Monday)",
-        "Alert/incident notification (monitor → Slack → ticket)",
-        "Client onboarding (form → CRM → welcome email + task)",
-        "Sales→delivery handoff (deal close → Notion/ClickUp)",
-        "CRM ↔ Sheets ↔ Slack sync (real-time or scheduled)",
-        "Extract data from email/PDF → structured database"
+      "useCases": [
+        {
+          "title": "Automated reporting (CRM → Slack/Email)",
+          "output": "Weekly report sent to the team with key metrics.",
+          "tools": "HubSpot, Slack, Gmail"
+        },
+        {
+          "title": "Alert / incident notification",
+          "output": "Ticket created with context + escalation to the right channel.",
+          "tools": "Statuspage, Slack, Linear/Jira"
+        },
+        {
+          "title": "Client onboarding",
+          "output": "Data in CRM, welcome email and tasks created for delivery.",
+          "tools": "Typeform, HubSpot, ClickUp, Gmail"
+        },
+        {
+          "title": "Sales → delivery handoff",
+          "output": "Project card with checklist, owner and due dates.",
+          "tools": "HubSpot, Notion, Slack"
+        },
+        {
+          "title": "Sync CRM ↔ Sheets ↔ Slack",
+          "output": "Bi-directional sync + alerts on status/value changes.",
+          "tools": "HubSpot, Google Sheets, Slack"
+        },
+        {
+          "title": "Email/PDF extraction → database",
+          "output": "Structured records ready for analysis and reporting.",
+          "tools": "Gmail, Make/Zapier, Google Sheets"
+        }
       ],
       "deliverables": [
         "End-to-end automated flow (1 process)",
@@ -1623,7 +1674,16 @@
           "question": "Fixed or flexible timeline?",
           "answer": "7 business days. If urgency needed, let's discuss in audit."
         }
-      ]
+      ],
+      "finalCta": {
+        "title": "Ready to start?",
+        "bullets": [
+          "1 critical flow automated end-to-end with monitoring.",
+          "7-day timeline with a check-in on day 5.",
+          "€1,200–€3,000 range, defined by complexity and integrations."
+        ],
+        "note": "Book an audit: plan + estimate within 24–48h."
+      }
     },
     "retainer": {
       "title": "Continuity Retainer",

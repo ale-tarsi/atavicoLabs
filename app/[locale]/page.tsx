@@ -92,16 +92,14 @@ export default async function HomePage({ params }: { params: Promise<{ locale: s
       <Hero />
       
       {/* 2. Ways to Start - Entry points */}
-      <section id="starting-points" className="relative pt-24 lg:pt-32 pb-20 lg:pb-28 px-6 lg:px-16 bg-grafite scroll-mt-24">
-        <div className="max-w-6xl mx-auto">
+      <section id="starting-points" className="relative pt-24 lg:pt-32 pb-20 lg:pb-28 bg-grafite scroll-mt-24">
+        <div className="max-w-6xl mx-auto px-6">
           <SectionHeader
             align="center"
             eyebrow={tHome('startingPoints.eyebrow')}
             title={tHome('startingPoints.title')}
-            description={tHome('startingPoints.description')}
-            className="mb-12"
-            titleClassName="text-[36px] lg:text-[48px]"
-            descriptionClassName="max-w-2xl mx-auto text-sabbia/80"
+            subtitle={tHome('startingPoints.description')}
+            className="mb-12 [&_h2]:text-[36px] [&_h2]:lg:text-[48px] [&_p]:max-w-2xl [&_p]:mx-auto [&_p]:text-sabbia/80"
           />
           <StartingPoints />
 

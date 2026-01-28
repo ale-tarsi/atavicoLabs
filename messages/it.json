@@ -1524,29 +1524,56 @@
         "timeline": "Timeline",
         "investment": "Investimento"
       },
+      "summary": {
+        "priceNote": "Il range dipende da numero di integrazioni e complessità della logica.",
+        "note": "Piano + stima entro 24–48h. Nessun impegno finché non approvi."
+      },
       "hero": {
-        "eyebrow": "Quick Win — 7 giorni"
+        "eyebrow": "Quick Win — 7 giorni",
+        "bullets": [
+          "Automazione end-to-end di 1 flusso critico, non una patch.",
+          "Log, alert e fallback per ridurre errori e lavoro manuale.",
+          "Piano dettagliato entro 24–48h, go-live in 7 giorni."
+        ]
       },
       "sections": {
-        "examples": "Casi d'uso",
+        "outcomes": "Cosa ottieni",
         "included": "Cosa include",
         "boundaries": "Confini",
-        "timeline": "Timeline di sviluppo",
-        "pricing": "Investimento",
-        "howItWorks": "Come funziona",
+        "examples": "Esempi / Use case",
+        "process": "Processo & timeline",
         "readyToStart": "Pronto a partire?",
         "readyDescription": "Prenota un audit di 30 minuti. Identifichiamo il processo critico e ti diciamo come automatizzarlo."
       },
-      "pricing": {
-        "amount": "€1.200 – €3.000",
-        "note": "una tantum",
-        "description": "Prezzo fisso per automatizzare 1 flusso critico end-to-end. Include analisi, sviluppo, test, deploy e documentazione completa.",
-        "included": [
-          "Automazione completa di 1 processo",
-          "Monitoring e log errori",
-          "Documentazione e handover"
-        ]
-      },
+      "outcomes": [
+        {
+          "title": "Riduci errori",
+          "description": "Alert e fallback rendono l'automazione affidabile, senza check manuali.",
+          "bullets": [
+            "Monitoring e log centralizzati",
+            "Alert automatici su failure",
+            "Fallback manuale quando serve"
+          ]
+        },
+        {
+          "title": "Risparmia tempo",
+          "description": "Elimini copia/incolla, CSV e follow-up manuali tra team e tool.",
+          "bullets": [
+            "Aggiornamenti push su Slack/CRM",
+            "Automazioni schedulate o real-time",
+            "Consegna in 7 giorni"
+          ]
+        },
+        {
+          "title": "Tracciabilità",
+          "description": "Sai sempre cosa è successo, dove è bloccato e chi deve intervenire.",
+          "bullets": [
+            "Dashboard/Sheet di controllo",
+            "SLA e ownership chiari",
+            "Audit trail per QA"
+          ]
+        }
+      ],
       "process": [
         {
           "title": "Audit e analisi",
@@ -1565,13 +1592,37 @@
           "description": "Consegniamo documentazione completa, dashboard di monitoring e formiamo il team."
         }
       ],
-      "examples": [
-        "Reporting automatico (CRM → Slack/Email ogni lunedì)",
-        "Alert/incident notification (monitor → Slack → ticket)",
-        "Onboarding clienti (form → CRM → welcome email + task)",
-        "Handoff sales→delivery (deal close → Notion/ClickUp)",
-        "Sync CRM ↔ Sheets ↔ Slack (real-time o scheduled)",
-        "Estrazione dati da email/PDF → database strutturato"
+      "useCases": [
+        {
+          "title": "Reporting automatico (CRM → Slack/Email)",
+          "output": "Report settimanale inviato al team con metriche chiave.",
+          "tools": "HubSpot, Slack, Gmail"
+        },
+        {
+          "title": "Alert / incident notification",
+          "output": "Ticket creato con contesto + escalation sul canale giusto.",
+          "tools": "Statuspage, Slack, Linear/Jira"
+        },
+        {
+          "title": "Onboarding clienti",
+          "output": "Dati in CRM, welcome email e task creati per delivery.",
+          "tools": "Typeform, HubSpot, ClickUp, Gmail"
+        },
+        {
+          "title": "Handoff sales → delivery",
+          "output": "Scheda progetto con checklist, owner e scadenze.",
+          "tools": "HubSpot, Notion, Slack"
+        },
+        {
+          "title": "Sync CRM ↔ Sheets ↔ Slack",
+          "output": "Sync bidirezionale + alert su cambi stato/valore.",
+          "tools": "HubSpot, Google Sheets, Slack"
+        },
+        {
+          "title": "Estrazione email/PDF → database",
+          "output": "Record strutturati pronti per analisi e report.",
+          "tools": "Gmail, Make/Zapier, Google Sheets"
+        }
       ],
       "deliverables": [
         "Flusso automatizzato end-to-end (1 processo)",
@@ -1623,7 +1674,16 @@
           "question": "Tempi fissi o flessibili?",
           "answer": "7 giorni lavorativi. Se serve urgenza, parliamone in audit."
         }
-      ]
+      ],
+      "finalCta": {
+        "title": "Pronto a partire?",
+        "bullets": [
+          "1 flusso critico automatizzato end-to-end con monitoring.",
+          "Timeline di 7 giorni con check-in al giorno 5.",
+          "Range €1.200–€3.000, definito su complessità e integrazioni."
+        ],
+        "note": "Prenota un audit: piano + stima entro 24–48h."
+      }
     },
     "retainer": {
       "title": "Continuity Retainer",

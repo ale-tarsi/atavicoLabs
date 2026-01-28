@@ -12,17 +12,14 @@ export default function ProofsSection() {
   return (
     <section 
       ref={ref}
-      className="relative pt-24 lg:pt-32 pb-20 lg:pb-28 px-6 lg:px-16 bg-carbone"
+      className="relative pt-24 lg:pt-32 pb-20 lg:pb-28 bg-carbone"
     >
-      <div className="max-w-6xl mx-auto">
+      <div className="max-w-6xl mx-auto px-6">
         <SectionHeader
-          align="center"
           eyebrow={t('eyebrow')}
           title={t('title')}
-          description={t('subtitle')}
-          className="mb-12"
-          titleClassName={`fade-up ${isRevealed ? 'revealed' : ''}`}
-          descriptionClassName={`mx-auto text-sabbia/80 ${isRevealed ? 'revealed fade-up' : 'fade-up'}`}
+          subtitle={t('subtitle')}
+          className={`mb-12 ${isRevealed ? 'revealed fade-up' : 'fade-up'} [&_p]:text-sabbia/80`}
         />
 
         {/* Proofs Grid */}

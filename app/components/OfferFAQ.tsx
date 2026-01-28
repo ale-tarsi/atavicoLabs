@@ -18,7 +18,7 @@ type OfferFAQProps = {
   delay?: number;
 };
 
-export default function OfferFAQ({ items, title = 'FAQ', delay = 0 }: OfferFAQProps) {
+export default function OfferFAQ({ items, title, delay = 0 }: OfferFAQProps) {
   const [openIndex, setOpenIndex] = useState<number | null>(null);
 
   const toggleFAQ = (index: number) => {

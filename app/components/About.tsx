@@ -19,12 +19,12 @@ export default function About() {
     <section 
       id="about" 
       ref={ref}
-      className="relative py-24 sm:py-32 lg:py-40 px-6 lg:px-16 bg-carbone w-full overflow-hidden"
+      className="relative py-24 sm:py-32 lg:py-40 bg-carbone w-full overflow-hidden"
     >
       {/* Section Number */}
       <div className="absolute top-12 right-6 lg:right-16 text-[11px] font-mono text-oliva/30">[02]</div>
 
-      <div className="relative max-w-7xl mx-auto">
+      <div className="relative max-w-6xl mx-auto px-6">
         <div className="grid lg:grid-cols-2 gap-16 lg:gap-20">
           
           {/* Left Column */}
