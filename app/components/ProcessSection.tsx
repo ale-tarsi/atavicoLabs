@@ -42,45 +42,48 @@ const toStringArray = (value: unknown): string[] =>
 
 const toDeliverables = (value: unknown): Deliverable[] => {
   if (!Array.isArray(value)) return [];
-  return value
-    .map((item) => {
-      if (typeof item === 'string') {
-        return { text: item, done: true };
-      }
-      if (item && typeof item === 'object' && 'text' in item) {
-        const obj = item as { text?: unknown; done?: unknown };
-        const text = toString(obj.text);
-        if (!text) return null;
-        const done = obj.done === undefined ? true : Boolean(obj.done);
-        return { text, done };
-      }
-      return null;
-    })
-    .filter((item): item is Deliverable => Boolean(item?.text));
+
+  const result: Deliverable[] = [];
+
+  value.forEach((item) => {
+    if (typeof item === 'string') {
+      result.push({ text: item, done: true });
+      return;
+    }
+    if (item && typeof item === 'object' && 'text' in item) {
+      const obj = item as { text?: unknown; done?: unknown };
+      const text = toString(obj.text);
+      if (!text) return;
+      const done = obj.done === undefined ? true : Boolean(obj.done);
+      result.push({ text, done });
+    }
+  });
+
+  return result;
 };
 
 const toSteps = (value: unknown): Step[] => {
   if (!Array.isArray(value)) return [];
-  return value
-    .map((item) => {
-      if (!item || typeof item !== 'object') return null;
-      const step = item as Record<string, unknown>;
-      const title = toString(step.title);
-      const description = toString(step.description);
-      if (!title && !description) return null;
+  const steps: Step[] = [];
+  value.forEach((item) => {
+    if (!item || typeof item !== 'object') return;
+    const step = item as Record<string, unknown>;
+    const title = toString(step.title);
+    const description = toString(step.description);
+    if (!title && !description) return;
 
-      return {
-        phaseLabel: toString(step.phaseLabel),
-        percent: toString(step.percent),
-        title,
-        description,
-        duration: toString(step.duration),
-        next: toString(step.next),
-        deliverablesLabel: toString(step.deliverablesLabel),
-        deliverables: toDeliverables(step.deliverables),
-      };
-    })
-    .filter((item): item is Step => Boolean(item));
+    steps.push({
+      phaseLabel: toString(step.phaseLabel),
+      percent: toString(step.percent),
+      title,
+      description,
+      duration: toString(step.duration),
+      next: toString(step.next),
+      deliverablesLabel: toString(step.deliverablesLabel),
+      deliverables: toDeliverables(step.deliverables),
+    });
+  });
+  return steps;
 };
 
 const loadVariant = (raw: unknown): VariantContent => {
