@@ -386,38 +386,281 @@
     ]
   },
   "process": {
-    "title": "How we work.",
-    "subtitle": "A clear process, no surprises.",
-    "steps": [
-      {
-        "number": "01",
-        "title": "Analysis",
-        "description": "We understand goals, constraints and context. Output: shared documentation.",
-        "duration": "1–2 weeks",
-        "next": "At the end of this phase you have a clear picture of the project and a shared document we use as the base for every next decision."
-      },
-      {
-        "number": "02",
-        "title": "Design",
-        "description": "Wireframes, UI and system architecture. Output: realistic prototype.",
-        "duration": "2–3 weeks",
-        "next": "We close this phase with a clickable prototype and a defined architecture, so you can validate the product before investing in full development."
-      },
-      {
-        "number": "03",
-        "title": "Development",
-        "description": "Clean code, clear versioning and continuous verification. Output: testable releases.",
-        "duration": "4–8 weeks",
-        "next": "We ship incrementally: you get testable builds in staging and continuous visibility on what is ready."
-      },
-      {
-        "number": "04",
-        "title": "Release",
-        "description": "Deploy, optimization and post-launch support.",
-        "duration": "1 week",
-        "next": "We handle go-live and stay by your side for monitoring, fine-tuning and planning the next iterations."
-      }
-    ]
+    "opsQuickWin": {
+      "title": "Ops Quick Win — automation in 7 days",
+      "subtitle": "One critical workflow automated end-to-end with monitoring, not a patch.",
+      "deliverablesLabel": "Deliverables",
+      "methodologyLabel": "Methodology",
+      "methodologyText": "Instrumentation-first automation: logs, alerts, fallback. Small scope, fast shipping, zero surprises.",
+      "tools": [
+        "Make/Zapier or n8n",
+        "TypeScript/Node",
+        "Postman",
+        "Linear",
+        "Slack"
+      ],
+      "finalNudge": "Want to see how this process fits your stack? Book a 30-min audit.",
+      "steps": [
+        {
+          "phaseLabel": "DAY 1-2",
+          "percent": "20%",
+          "title": "Audit & scope lock",
+          "description": "We map tools, owners and data shape; we define the success metric and fallback rules.",
+          "duration": "Days 1–2",
+          "next": "You get a one-page brief and a go/no-go before we start building.",
+          "deliverables": [
+            "Automation brief with success metric",
+            "Tool map + access checklist",
+            {
+              "text": "Risk list + fallback plan",
+              "done": true
+            }
+          ]
+        },
+        {
+          "phaseLabel": "DAY 3-5",
+          "percent": "40%",
+          "title": "Build & integrate",
+          "description": "We connect APIs/webhooks, implement the logic, idempotency and retries.",
+          "duration": "Days 3–5",
+          "next": "The flow runs in staging with logs and alerts.",
+          "deliverables": [
+            "API/webhook integrations configured",
+            {
+              "text": "Validation + retry rules",
+              "done": true
+            },
+            {
+              "text": "Structured logs",
+              "done": true
+            }
+          ]
+        },
+        {
+          "phaseLabel": "DAY 6",
+          "percent": "25%",
+          "title": "Test & harden",
+          "description": "We handle edge cases, simulate failures and route alerts.",
+          "duration": "Day 6",
+          "next": "We review together using test data.",
+          "deliverables": [
+            {
+              "text": "Test matrix + results",
+              "done": true
+            },
+            {
+              "text": "Alert channels + thresholds",
+              "done": true
+            },
+            {
+              "text": "Runbook for manual fallback",
+              "done": true
+            }
+          ]
+        },
+        {
+          "phaseLabel": "DAY 7",
+          "percent": "15%",
+          "title": "Deploy & handover",
+          "description": "Production deploy, monitoring dashboard and training for owners.",
+          "duration": "Day 7",
+          "next": "Your team can operate without us; we propose continuity if needed.",
+          "deliverables": [
+            {
+              "text": "Live automation with monitoring",
+              "done": true
+            },
+            {
+              "text": "Mini dashboard/Sheet",
+              "done": true
+            },
+            {
+              "text": "Documentation + loom handoff",
+              "done": true
+            }
+          ]
+        }
+      ]
+    },
+    "continuityRetainer": {
+      "title": "Continuity Retainer — keep automations reliable",
+      "subtitle": "Monthly monitoring, fixes and improvements with a clear SLA.",
+      "deliverablesLabel": "What we deliver",
+      "methodologyLabel": "Methodology",
+      "methodologyText": "SLOs, playbooks and change log. We measure errors and time saved, and keep owners in the loop.",
+      "tools": [
+        "Grafana/Metabase",
+        "Postman",
+        "Linear/Jira",
+        "Statuspage",
+        "Slack"
+      ],
+      "finalNudge": "Need steady ownership on your automations? Let's set your SLOs.",
+      "steps": [
+        {
+          "phaseLabel": "WEEK 1",
+          "percent": "25%",
+          "title": "Baseline & monitoring",
+          "description": "We wire logs/alerts, define SLOs and escalation.",
+          "duration": "Week 1",
+          "next": "You get dashboards and know who is on-call.",
+          "deliverables": [
+            "Uptime/error dashboards",
+            "Alert rules + escalation",
+            {
+              "text": "SLOs + owners documented",
+              "done": true
+            }
+          ]
+        },
+        {
+          "phaseLabel": "WEEKLY",
+          "percent": "25%",
+          "title": "Proactive checks",
+          "description": "Health checks, incident triage, small fixes before they blow up.",
+          "duration": "Weekly rhythm",
+          "next": "Incidents resolved or ticketed within SLA.",
+          "deliverables": [
+            "Automated health checks",
+            "Bug fixes within SLA",
+            {
+              "text": "Weekly changelog",
+              "done": true
+            }
+          ]
+        },
+        {
+          "phaseLabel": "ONGOING",
+          "percent": "30%",
+          "title": "Improvements & requests",
+          "description": "New rules, fields and integrations within the monthly quota.",
+          "duration": "Ongoing",
+          "next": "Requests prioritized and scheduled transparently.",
+          "deliverables": [
+            "Backlog grooming + ETA",
+            "New rules/integrations shipped",
+            {
+              "text": "Cost/time optimization notes",
+              "done": true
+            }
+          ]
+        },
+        {
+          "phaseLabel": "MONTH-END",
+          "percent": "20%",
+          "title": "Report & roadmap",
+          "description": "Metrics, incidents and next bets; we adjust scope together.",
+          "duration": "End of month",
+          "next": "You approve next month's focus.",
+          "deliverables": [
+            "Monthly report",
+            "Roadmap for next sprint",
+            {
+              "text": "Updated runbooks",
+              "done": true
+            }
+          ]
+        }
+      ]
+    },
+    "productBuild": {
+      "title": "Product Build — from workflow to product",
+      "subtitle": "Design, build, release. Web-first, mobile optional.",
+      "deliverablesLabel": "Deliverables",
+      "methodologyLabel": "Methodology",
+      "methodologyText": "Product design + engineering in weekly sprints. TDD where it matters, PR reviews, CI/CD with preview envs.",
+      "tools": [
+        "Figma",
+        "Storybook",
+        "TypeScript/Next.js",
+        "PostgreSQL/Supabase",
+        "GitHub + CI",
+        "Linear/Slack"
+      ],
+      "finalNudge": "Want this roadmap for your product? Book a 30-min audit.",
+      "steps": [
+        {
+          "phaseLabel": "PHASE 01",
+          "percent": "15%",
+          "title": "Discovery & scope",
+          "description": "Workshops, priorities, success metrics and tech choices.",
+          "duration": "Weeks 1–2",
+          "next": "Signed-off scope, architecture draft and delivery plan.",
+          "deliverables": [
+            "Scope doc + acceptance criteria",
+            "Architecture draft + stack decision",
+            {
+              "text": "Risks & constraints map",
+              "done": true
+            }
+          ]
+        },
+        {
+          "phaseLabel": "PHASE 02",
+          "percent": "20%",
+          "title": "Design system & flows",
+          "description": "Wireframes, UI kit, states and a clickable prototype.",
+          "duration": "Weeks 3–4",
+          "next": "Review sessions with stakeholders; dev-ready components.",
+          "deliverables": [
+            "User flows & wireframes",
+            "Design system tokens/components",
+            {
+              "text": "Clickable prototype",
+              "done": true
+            }
+          ]
+        },
+        {
+          "phaseLabel": "PHASE 03",
+          "percent": "35%",
+          "title": "Build",
+          "description": "Full-stack implementation, integrations, data model and access control.",
+          "duration": "Weeks 5–10",
+          "next": "Weekly demos; staging always up to date.",
+          "deliverables": [
+            "Feature slices in staging",
+            "API + DB schema",
+            {
+              "text": "Instrumentation + logs",
+              "done": true
+            }
+          ]
+        },
+        {
+          "phaseLabel": "PHASE 04",
+          "percent": "20%",
+          "title": "QA & hardening",
+          "description": "End-to-end tests, performance checks, accessibility and security passes.",
+          "duration": "Weeks 11–12",
+          "next": "Release candidate with test evidence.",
+          "deliverables": [
+            "E2E tests + coverage snapshot",
+            "Performance & accessibility fixes",
+            {
+              "text": "Rollback plan + runbooks",
+              "done": true
+            }
+          ]
+        },
+        {
+          "phaseLabel": "PHASE 05",
+          "percent": "10%",
+          "title": "Launch & handover",
+          "description": "Production deploy, monitoring, training and next roadmap.",
+          "duration": "Weeks 13–14",
+          "next": "Team owns the product; retainer optional for continuity.",
+          "deliverables": [
+            "Production deploy + monitoring",
+            "Documentation + training",
+            {
+              "text": "Launch checklist closed",
+              "done": true
+            }
+          ]
+        }
+      ]
+    }
   },
   "testimonials": {
     "title": "What clients say",

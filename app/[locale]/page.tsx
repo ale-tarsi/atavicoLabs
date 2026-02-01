@@ -3,7 +3,7 @@ import Hero from '@/app/components/Hero';
 import About from '@/app/components/About';
 import Services from '@/app/components/Services';
 import ServicesSection from '@/app/components/ServicesSection';
-import Process from '@/app/components/Process';
+import ProcessSection from '@/app/components/ProcessSection';
 import Portfolio from '@/app/components/Portfolio';
 import Testimonials from '@/app/components/Testimonials';
 import Blog from '@/app/components/Blog';
@@ -130,9 +130,7 @@ export default async function HomePage({ params }: { params: Promise<{ locale: s
       </section>
       
       {/* 4. Process - Coinvolgimento (How We Work) */}
-      <section id="process" className="scroll-mt-24">
-        <Process />
-      </section>
+      <ProcessSection variant="opsQuickWin" id="process" />
       
       {/* 5. About - Credibilità sintetica (Chi Siamo) */}
       <section id="about" className="scroll-mt-24">

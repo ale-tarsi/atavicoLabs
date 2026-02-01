@@ -2,6 +2,7 @@
 
 import { useState, useEffect } from 'react';
 import Link from 'next/link';
+import Image from 'next/image';
 import { useTranslations, useLocale } from 'next-intl';
 import { usePathname } from 'next/navigation';
 import LanguageSwitcher from './LanguageSwitcher';
@@ -117,7 +118,17 @@ export default function Navbar() {
           
           {/* Logo + Metadata */}
           <div className="flex items-center gap-4">
-            <div className="flex flex-col gap-0">
+            {/* Mobile: icon only */}
+            <Link
+              href={`/${locale}`}
+              className="sm:hidden inline-flex items-center text-sabbia hover:text-oliva transition-colors"
+              aria-label="AtavicoLabs home"
+            >
+              <Image src="/icon.svg" alt="AtavicoLabs logo" width={28} height={28} />
+            </Link>
+
+            {/* Desktop: wordmark + descriptor */}
+            <div className="hidden sm:flex flex-col gap-0">
               <Link 
                 href="/" 
                 className="text-[22px] font-normal tracking-[0.08em] text-text-primary hover:text-accent-primary transition-colors duration-300 uppercase"
@@ -256,19 +267,15 @@ export default function Navbar() {
             {/* Header */}
             <div className="flex items-start justify-between mb-12">
               {/* Logo */}
-              <div className="flex flex-col gap-0">
-                <Link 
-                  href={`/${locale}`}
-                  onClick={() => setMenuOpen(false)}
-                  className="text-[22px] font-normal tracking-[0.08em] uppercase text-sabbia hover:text-oliva transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-oliva/60 focus-visible:ring-offset-2 focus-visible:ring-offset-carbone"
-                  tabIndex={menuOpen ? 0 : -1}
-                >
-                  ATAVICOLABS
-                </Link>
-                <span className="text-[9px] uppercase font-light tracking-[0.2em] text-sabbia/50">
-                  DIGITAL PRODUCT STUDIO
-                </span>
-              </div>
+              <Link
+                href={`/${locale}`}
+                onClick={() => setMenuOpen(false)}
+                className="inline-flex items-center text-sabbia hover:text-oliva transition-colors"
+                tabIndex={menuOpen ? 0 : -1}
+                aria-label="AtavicoLabs home"
+              >
+                <Image src="/icon.svg" alt="AtavicoLabs logo" width={32} height={32} />
+              </Link>
 
               {/* Close Button - X animato */}
               <button

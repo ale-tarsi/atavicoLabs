@@ -5,6 +5,7 @@ import Navbar from '@/app/components/Navbar';
 import Footer from '@/app/components/Footer';
 import OfferTemplate from '@/app/components/OfferTemplate';
 import { getCalendlyUrl } from '@/app/constants/links';
+import ProcessSection from '@/app/components/ProcessSection';
 
 export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }) {
   const { locale } = await params;
@@ -150,6 +151,7 @@ export default async function OpsQuickWinPage({ params }: { params: Promise<{ lo
           ctaHref: getCalendlyUrl(locale as 'it' | 'en'),
         }}
         locale={locale}
+        processSection={<ProcessSection variant="opsQuickWin" id="process-ops" />}
       />
       <Footer />
     </>

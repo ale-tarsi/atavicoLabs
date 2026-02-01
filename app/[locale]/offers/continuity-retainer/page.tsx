@@ -10,6 +10,7 @@ import OfferFAQ from '@/app/components/OfferFAQ';
 import OfferCTA from '@/app/components/OfferCTA';
 import { getCalendlyUrl } from '@/app/constants/links';
 import { Check } from 'lucide-react';
+import ProcessSection from '@/app/components/ProcessSection';
 
 export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }) {
   const { locale } = await params;
@@ -156,22 +157,7 @@ export default async function ContinuityRetainerPage({ params }: { params: Promi
           </div>
         </OfferSection>
 
-        {/* How It Works */}
-        <OfferSection variant="muted" title={t('sections.howItWorks')}>
-          <div className="space-y-6">
-            {Array.from({ length: offer.stepsCount }).map((_, i) => (
-              <div key={i} className="flex gap-6">
-                <div className="flex-shrink-0 w-12 h-12 flex items-center justify-center border border-oliva/30 bg-oliva/10 text-oliva font-medium">
-                  {i + 1}
-                </div>
-                <div className="flex-1">
-                  <div className="text-[15px] font-medium text-sabbia mb-1">{t(`steps.${i}.title`)}</div>
-                  <div className="text-[14px] text-sabbia/70 leading-[1.6]">{t(`steps.${i}.description`)}</div>
-                </div>
-              </div>
-            ))}
-          </div>
-        </OfferSection>
+        <ProcessSection variant="continuityRetainer" id="process-retainer" />
 
         {/* FAQ */}
         <OfferSection title="FAQ">

@@ -1,5 +1,6 @@
 'use client';
 
+import { ReactNode } from 'react';
 import OfferSummaryCard from './OfferSummaryCard';
 import OfferOutcomes from './OfferOutcomes';
 import OfferIncludesBoundaries from './OfferIncludesBoundaries';
@@ -70,6 +71,7 @@ type OfferTemplateProps = {
   faq: { title: string; items: FAQItem[] };
   finalCta: FinalCta;
   locale: string;
+  processSection?: ReactNode;
 };
 
 export default function OfferTemplate({
@@ -83,6 +85,7 @@ export default function OfferTemplate({
   faq,
   finalCta,
   locale,
+  processSection,
 }: OfferTemplateProps) {
   return (
     <main className="bg-carbone min-h-screen pt-20">
@@ -168,22 +171,28 @@ export default function OfferTemplate({
             </OfferSectionWrap>
           </section>
 
-          <section>
-            <OfferSectionWrap>
-              <OfferProcessTimeline
-                title={process.title}
-                steps={process.steps}
-                rightCard={
-                  process.steps.length
-                    ? {
-                        title: include.title,
-                        bullets: include.items,
-                      }
-                    : undefined
-                }
-              />
-            </OfferSectionWrap>
-          </section>
+          {processSection ? (
+            <section className="-mx-6 lg:-mx-16">
+              {processSection}
+            </section>
+          ) : process.steps.length ? (
+            <section>
+              <OfferSectionWrap>
+                <OfferProcessTimeline
+                  title={process.title}
+                  steps={process.steps}
+                  rightCard={
+                    process.steps.length
+                      ? {
+                          title: include.title,
+                          bullets: include.items,
+                        }
+                      : undefined
+                  }
+                />
+              </OfferSectionWrap>
+            </section>
+          ) : null}
 
           <section className="border-t border-grigio/20 pt-12 lg:pt-16">
             <OfferSectionWrap>

@@ -10,6 +10,7 @@ import OfferFAQ from '@/app/components/OfferFAQ';
 import OfferCTA from '@/app/components/OfferCTA';
 import { getCalendlyUrl } from '@/app/constants/links';
 import { Info } from 'lucide-react';
+import ProcessSection from '@/app/components/ProcessSection';
 
 export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }) {
   const { locale } = await params;
@@ -122,39 +123,7 @@ export default async function ProductBuildPage({ params }: { params: Promise<{ l
           </div>
         </OfferSection>
 
-        {/* Timeline */}
-        <OfferSection title={t('sections.timeline')}>
-          <div className="space-y-6">
-            {Array.from({ length: offer.stepsCount }).map((_, i) => (
-              <div key={i} className="flex gap-6">
-                <div className="flex-shrink-0 w-12 h-12 flex items-center justify-center border border-oliva/30 bg-oliva/10 text-oliva font-medium">
-                  {i + 1}
-                </div>
-                <div className="flex-1">
-                  <div className="text-[15px] font-medium text-sabbia mb-1">{t(`steps.${i}.phase`)}</div>
-                  <div className="text-[14px] text-sabbia/70 leading-[1.6]">{t(`steps.${i}.activity`)}</div>
-                </div>
-              </div>
-            ))}
-          </div>
-        </OfferSection>
-
-        {/* How It Works */}
-        <OfferSection variant="muted" title={t('sections.howItWorks')}>
-          <div className="space-y-8">
-            {Array.from({ length: offer.stepsCount }).map((_, i) => (
-              <div key={i} className="flex gap-6">
-                <div className="flex-shrink-0 w-10 h-10 flex items-center justify-center rounded-full bg-oliva/10 text-oliva font-medium text-[14px]">
-                  {i + 1}
-                </div>
-                <div className="flex-1">
-                  <h3 className="text-[17px] font-medium text-sabbia mb-2">{t(`process.${i}.title`)}</h3>
-                  <p className="text-[14px] text-sabbia/70 leading-[1.6]">{t(`process.${i}.description`)}</p>
-                </div>
-              </div>
-            ))}
-          </div>
-        </OfferSection>
+        <ProcessSection variant="productBuild" id="process-product" />
 
         {/* FAQ */}
         <OfferSection title="FAQ">
