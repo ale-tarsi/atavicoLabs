@@ -5,11 +5,10 @@ import { useLocale } from 'next-intl';
 import { useReveal } from '../hooks/useReveal';
 import { getCalendlyUrl } from '../constants/links';
 import { trackCtaClick } from '../utils/track';
-import { Calendar } from 'lucide-react';
+import { Mail } from 'lucide-react';
 
 export default function CTA() {
   const t = useTranslations('cta');
-  const tContact = useTranslations('contact.form');
   const tProof = useTranslations('proofPoints');
   const locale = useLocale() as 'it' | 'en';
   const { ref, isRevealed } = useReveal();
@@ -37,7 +36,7 @@ export default function CTA() {
         {/* Left Column - Content */}
         <div className="space-y-8">
           {/* Micro Label */}
-          <div className="text-[11px] uppercase tracking-[0.15em] text-grigio/60 font-light mb-4">Get in touch</div>
+          <div className="text-[11px] uppercase tracking-[0.15em] text-grigio/60 font-light mb-4">{t('eyebrow')}</div>
 
           {/* Title */}
           <h2 
@@ -81,14 +80,12 @@ export default function CTA() {
             </a>
             
             <a
-              href={getCalendlyUrl(locale)}
-              target="_blank"
-              rel="noopener noreferrer"
-              onClick={() => trackCtaClick('cta_section_secondary', locale)}
+              href={`mailto:${t('email')}`}
+              onClick={() => trackCtaClick('cta_section_email', locale)}
               className="inline-flex w-full sm:w-auto items-center justify-center gap-2 px-7 py-3.5 text-sabbia/70 text-[13px] tracking-wide hover:text-oliva transition-all duration-300 uppercase"
             >
-              {tContact('bookCall')}
-              <Calendar size={16} />
+              {t('emailLabel')}
+              <Mail size={16} />
             </a>
           </div>
 
@@ -115,7 +112,7 @@ export default function CTA() {
             {/* Availability Indicator */}
             <div className="flex items-center gap-2 text-[13px] text-sabbia/70 pb-6 border-b border-grigio/20">
               <div className="w-2 h-2 rounded-full bg-oliva animate-pulse"></div>
-              <span className="uppercase tracking-wider">Disponibili per nuovi progetti</span>
+              <span className="uppercase tracking-wider">{t('status')}</span>
             </div>
 
             {/* Contact Details */}
@@ -133,14 +130,14 @@ export default function CTA() {
 
               {/* Location */}
               <div>
-                <div className="text-[11px] uppercase tracking-[0.15em] text-grigio/60 mb-1">Modalità lavoro</div>
-                <div className="text-[15px] text-sabbia/70">Remote-first • On-site su richiesta</div>
+                <div className="text-[11px] uppercase tracking-[0.15em] text-grigio/60 mb-1">{t('workModeLabel')}</div>
+                <div className="text-[15px] text-sabbia/70">{t('workMode')}</div>
               </div>
 
               {/* Response Time */}
               <div>
-                <div className="text-[11px] uppercase tracking-[0.15em] text-grigio/60 mb-1">Tempo di risposta</div>
-                <div className="text-[15px] text-sabbia/70">Entro 24 ore</div>
+                <div className="text-[11px] uppercase tracking-[0.15em] text-grigio/60 mb-1">{t('responseTimeLabel')}</div>
+                <div className="text-[15px] text-sabbia/70">{t('responseTime')}</div>
               </div>
             </div>
           </div>

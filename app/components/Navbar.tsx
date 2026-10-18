@@ -136,7 +136,7 @@ export default function Navbar() {
                 ATAVICOLABS
               </Link>
               <span className="hidden lg:block text-[9px] uppercase font-light tracking-[0.2em]" style={{ color: 'rgba(255, 255, 255, 0.50)' }}>
-                DIGITAL PRODUCT STUDIO
+                {t('studioDescriptor')}
               </span>
             </div>
           </div>
@@ -371,7 +371,7 @@ export default function Navbar() {
                 <span className="text-oliva">●</span>
                 <span>Remote-first</span>
                 <span className="text-oliva">●</span>
-                <span>{locale === 'it' ? 'Dal 2017' : 'Since 2017'}</span>
+                <span>{t('since')}</span>
               </div>
             </div>
           </div>

@@ -46,10 +46,10 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: s
       images: ['/og/continuity-retainer.png', '/og/default.png'],
     },
     alternates: {
-      canonical: `/${locale}/offers/continuity-retainer`,
+      canonical: `https://atavicolabs.com/${locale}/offers/continuity-retainer`,
       languages: {
-        'it': '/it/offers/continuity-retainer',
-        'en': '/en/offers/continuity-retainer',
+        'it': 'https://atavicolabs.com/it/offers/continuity-retainer',
+        'en': 'https://atavicolabs.com/en/offers/continuity-retainer',
       },
     },
   };
@@ -173,7 +173,7 @@ export default async function ContinuityRetainerPage({ params }: { params: Promi
         <OfferCTA
           title={t('sections.readyToStart')}
           description={t('sections.readyDescription')}
-          buttonText={t('cta')}
+          buttonText={t('ctaFinal')}
           buttonHref={getCalendlyUrl(locale as 'it' | 'en')}
           locale={locale}
         />

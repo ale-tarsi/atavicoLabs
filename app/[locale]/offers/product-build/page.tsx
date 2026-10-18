@@ -46,10 +46,10 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: s
       images: ['/og/product-build.png', '/og/default.png'],
     },
     alternates: {
-      canonical: `/${locale}/offers/product-build`,
+      canonical: `https://atavicolabs.com/${locale}/offers/product-build`,
       languages: {
-        'it': '/it/offers/product-build',
-        'en': '/en/offers/product-build',
+        'it': 'https://atavicolabs.com/it/offers/product-build',
+        'en': 'https://atavicolabs.com/en/offers/product-build',
       },
     },
   };
@@ -139,7 +139,7 @@ export default async function ProductBuildPage({ params }: { params: Promise<{ l
         <OfferCTA
           title={t('sections.readyToStart')}
           description={t('sections.readyDescription')}
-          buttonText={t('cta')}
+          buttonText={t('ctaFinal')}
           buttonHref={getCalendlyUrl(locale as 'it' | 'en')}
           locale={locale}
         />

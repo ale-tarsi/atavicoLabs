@@ -41,10 +41,10 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: s
       images: ['/og/ops-quick-win.png', '/og/default.png'],
     },
     alternates: {
-      canonical: `/${locale}/offers/ops-quick-win`,
+      canonical: `https://atavicolabs.com/${locale}/offers/ops-quick-win`,
       languages: {
-        'it': '/it/offers/ops-quick-win',
-        'en': '/en/offers/ops-quick-win',
+        'it': 'https://atavicolabs.com/it/offers/ops-quick-win',
+        'en': 'https://atavicolabs.com/en/offers/ops-quick-win',
       },
     },
   };
@@ -147,7 +147,7 @@ export default async function OpsQuickWinPage({ params }: { params: Promise<{ lo
           title: t('finalCta.title'),
           bullets: Array.from({ length: 3 }).map((_, i) => t(`finalCta.bullets.${i}`)),
           note: t('finalCta.note'),
-          ctaText: t('cta'),
+          ctaText: t('ctaFinal'),
           ctaHref: getCalendlyUrl(locale as 'it' | 'en'),
         }}
         locale={locale}

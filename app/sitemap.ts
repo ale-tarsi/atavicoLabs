@@ -8,6 +8,23 @@ export default function sitemap(): MetadataRoute.Sitemap {
     'continuity-retainer',
     'product-build',
   ];
+
+  const projects = [
+    'ai-workflow-assistant',
+    'crispin',
+    'energy-intelligence',
+    'flowcanvas',
+    'helixops',
+    'hostid',
+    'insightgrid',
+    'loopin',
+    'lytera',
+    'nuvia',
+    'pulseshift',
+    'syncora',
+    'team-scheduler',
+    'vectis',
+  ];
   
   const homepages: MetadataRoute.Sitemap = [
     {
@@ -31,6 +48,33 @@ export default function sitemap(): MetadataRoute.Sitemap {
         languages: {
           it: `${baseUrl}/it`,
           en: `${baseUrl}/en`,
+        },
+      },
+    },
+  ];
+
+  const contactPages: MetadataRoute.Sitemap = [
+    {
+      url: `${baseUrl}/it/contact`,
+      lastModified: new Date(),
+      changeFrequency: 'yearly',
+      priority: 0.9,
+      alternates: {
+        languages: {
+          it: `${baseUrl}/it/contact`,
+          en: `${baseUrl}/en/contact`,
+        },
+      },
+    },
+    {
+      url: `${baseUrl}/en/contact`,
+      lastModified: new Date(),
+      changeFrequency: 'yearly',
+      priority: 0.9,
+      alternates: {
+        languages: {
+          it: `${baseUrl}/it/contact`,
+          en: `${baseUrl}/en/contact`,
         },
       },
     },
@@ -62,6 +106,33 @@ export default function sitemap(): MetadataRoute.Sitemap {
       },
     },
   ]);
+
+  const projectPages: MetadataRoute.Sitemap = projects.flatMap(project => [
+    {
+      url: `${baseUrl}/it/projects/${project}`,
+      lastModified: new Date(),
+      changeFrequency: 'yearly' as const,
+      priority: 0.6,
+      alternates: {
+        languages: {
+          it: `${baseUrl}/it/projects/${project}`,
+          en: `${baseUrl}/en/projects/${project}`,
+        },
+      },
+    },
+    {
+      url: `${baseUrl}/en/projects/${project}`,
+      lastModified: new Date(),
+      changeFrequency: 'yearly' as const,
+      priority: 0.6,
+      alternates: {
+        languages: {
+          it: `${baseUrl}/it/projects/${project}`,
+          en: `${baseUrl}/en/projects/${project}`,
+        },
+      },
+    },
+  ]);
   
-  return [...homepages, ...offerPages];
+  return [...homepages, ...contactPages, ...offerPages, ...projectPages];
 }

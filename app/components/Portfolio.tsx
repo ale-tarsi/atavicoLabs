@@ -94,54 +94,49 @@ export default function Portfolio() {
 
                   {/* Metrics Box */}
                     <div className="border border-grigio/20 p-4 space-y-3">
-                    <div className="text-[10px] uppercase tracking-wider text-grigio/70 font-light">METRICHE PROGETTO</div>
+                    <div className="text-[10px] uppercase tracking-wider text-grigio/70 font-light">{t('labels.metricsTitle')}</div>
                     <div className={`grid ${isFeatured ? 'grid-cols-2 sm:grid-cols-3' : 'grid-cols-2'} gap-4 text-[11px]`}>
                       {/* Shared metrics */}
                       <div>
                         <div className="text-grigio/70">Timeline</div>
                         <div className="text-sabbia font-medium">
-                          {index === 0 && '8 settimane'}
-                          {index === 1 && '12 settimane'}
-                          {index === 2 && '10 settimane'}
+                          {t(`items.${index}.metrics.timeline`)}
                         </div>
                       </div>
                       <div>
                         <div className="text-grigio/70">Team</div>
                         <div className="text-sabbia">
-                          {index === 0 && '3 dev + 1 designer'}
-                          {index === 1 && '4 dev + 1 data scientist'}
-                          {index === 2 && '2 dev + 1 AI engineer'}
+                          {t(`items.${index}.metrics.team`)}
                         </div>
                       </div>
                       {/* Featured project shows full status/performance */}
                       {isFeatured ? (
                         <>
                           <div>
-                            <div className="text-grigio/70">Status</div>
+                            <div className="text-grigio/70">{t('labels.status')}</div>
                             <div className="text-oliva flex items-center gap-1.5">
                               <span className="w-1.5 h-1.5 rounded-full bg-oliva"></span>
-                              In produzione
+                              {t(`items.${index}.metrics.status`)}
                             </div>
                           </div>
                           <div>
-                            <div className="text-grigio/70">Utenti</div>
-                            <div className="text-sabbia font-medium">200+ attivi</div>
+                            <div className="text-grigio/70">{t('labels.users')}</div>
+                            <div className="text-sabbia font-medium">{t(`items.${index}.metrics.users`)}</div>
                           </div>
                           <div>
-                            <div className="text-grigio/70">Performance</div>
-                            <div className="text-oliva">98/100</div>
+                            <div className="text-grigio/70">{t('labels.performance')}</div>
+                            <div className="text-oliva">{t(`items.${index}.metrics.performance`)}</div>
                           </div>
                           <div>
-                            <div className="text-grigio/70">Uptime</div>
-                            <div className="text-oliva">99.9%</div>
+                            <div className="text-grigio/70">{t('labels.uptime')}</div>
+                            <div className="text-oliva">{t(`items.${index}.metrics.uptime`)}</div>
                           </div>
                         </>
                       ) : (
                         <div>
-                          <div className="text-grigio/70">Utenti</div>
+                          <div className="text-grigio/70">{t('labels.users')}</div>
                           <div className="text-sabbia">
-                            {index === 1 && '12 facilities'}
-                            {index === 2 && '200+ team members'}
+                            {t(`items.${index}.metrics.users`)}
                           </div>
                         </div>
                       )}
@@ -186,7 +181,7 @@ export default function Portfolio() {
 
                   {/* Case Study Link */}
                   <div className="flex items-center gap-2 text-[12px] text-oliva pt-3 font-medium">
-                    <span>Leggi caso studio</span>
+                    <span>{t('labels.caseStudy')}</span>
                     <ArrowUpRight className="w-3.5 h-3.5" strokeWidth={1.5} />
                   </div>
                 </div>

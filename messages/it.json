@@ -1,8 +1,8 @@
 {
   "metadata": {
-    "title": "AtavicoLabs — Prodotti digitali solidi, realizzati con cura",
-    "description": "Progettiamo e sviluppiamo web e app mobile per PMI e team di prodotto: design essenziale, ingegneria affidabile e risultati misurabili.",
-    "keywords": "sviluppo software, web app, app mobile, ux design, mvp, sviluppo full-stack, consulenza digitale"
+    "title": "AtavicoLabs — Automazione operativa per PMI",
+    "description": "Trasformiamo processi manuali in sistemi affidabili. Automazione ops, continuity retainer e product build per team che vogliono smettere di fare le stesse cose a mano.",
+    "keywords": "automazione operativa, ops automation, workflow automation, integrazione sistemi, automazione processi aziendali, retainer ops, mvp operativo, PMI, studio automazione Milano"
   },
   "navbar": {
     "about": "Chi siamo",
@@ -12,8 +12,9 @@
     "startHere": "Come partiamo",
     "offers": "Offerte",
     "contact": "Contatti",
-    "cta": "Prenota audit 30 min",
-    "requestAudit": "Prenota audit 30 min"
+    "requestAudit": "Prenota audit 30 min",
+    "studioDescriptor": "Studio di automazione",
+    "since": "Dal 2017"
   },
   "contact": {
     "meta": {
@@ -70,25 +71,34 @@
         "emailRequired": "L'email è obbligatoria",
         "interestRequired": "Seleziona un'offerta",
         "workflowRequired": "Descrivi il flusso critico"
+      },
+      "emailSubject": "Audit 30 min — {name}",
+      "emailLabels": {
+        "name": "Nome",
+        "email": "Email",
+        "company": "Azienda",
+        "workflow": "Flusso critico da automatizzare",
+        "tools": "Strumenti utilizzati"
       }
     },
     "alternative": {
       "email": "Email",
       "location": "Sede",
+      "locationFull": "Milano, Italia",
       "response": "Risposta",
       "responseTime": "Entro 24h lavorative"
     }
   },
   "hero": {
-    "label": "Design. Sviluppo. Rilascio.",
+    "label": "Automazioni. Strumenti. Sistemi che durano.",
     "title": "Prodotti digitali solidi, progettati con cura.",
-    "description": "Riduciamo lavoro manuale, errori e passaggi fra team con automazioni e prodotti pronti a scalare.",
+    "description": "Costruiamo strumenti operativi che eliminano lavoro ripetitivo, riducono errori e scalano con il tuo team. Piccolo studio, qualità costante, sistemi sempre online.",
     "bullets": {
       "audit": "Audit 30 min",
       "proposal": "Proposta in 48h",
       "delivery": "Delivery in 7 giorni (Quick Win)"
     },
-    "ctaPrimary": "Prenota audit 30 min",
+    "ctaPrimary": "Avvia l'audit gratuito",
     "ctaTertiary": "Come partiamo",
     "ctaSecondary": "Vedi i progetti",
     "available": "Disponibili per progetti",
@@ -99,11 +109,11 @@
   },
   "home": {
     "startingPoints": {
-      "eyebrow": "Modi per partire",
-      "title": "Scegli come iniziare",
-      "description": "Tre percorsi per automatizzare, migliorare e costruire. Dalla Quick Win mensile al prodotto completo.",
-      "learnMore": "Dettagli",
-      "requestAudit": "Prenota audit 30 min",
+      "eyebrow": "Dove vuoi arrivare?",
+      "title": "Tre percorsi, in base a dove sei",
+      "description": "Automazione rapida, supporto continuativo o prodotto completo. Scegli in base alla fase del tuo sistema operativo.",
+      "learnMore": "Scopri l'offerta",
+      "requestAudit": "Prenota audit gratuito",
       "selector": {
         "automateProcess": "Ho un processo manuale da automatizzare",
         "stabilizeAutomation": "Ho automazioni già live da stabilizzare",
@@ -180,9 +190,9 @@
         "3": "Python"
       }
     },
-    "eyebrow": "Casi interni",
-    "title": "Tre automazioni che usiamo ogni giorno",
-    "subtitle": "Progetti reali del nostro workflow quotidiano. Se funzionano per noi, funzionano per te.",
+    "eyebrow": "Sistemi che usiamo ogni giorno",
+    "title": "Tre automazioni costruite per noi",
+    "subtitle": "Strumenti reali del nostro workflow. Se funzionano internamente, funzionano per i clienti.",
     "items": [
       {
         "title": "AI Outreach Personalizzato",
@@ -211,15 +221,33 @@
           "In sviluppo: target −80% tempo manuale entro 2 settimane"
         ]
       }
-    ]
-  ,
+    ],
     "disclaimer": "Esempi interni: niente numeri inventati, solo sistemi reali."
   },
   "about": {
-    "title": "Cura, precisione, continuità.",
-    "subtitle": "Ogni progetto nasce da un'esigenza reale. Lo trasformiamo in un prodotto concreto attraverso un processo che controlla ogni fase: analisi, design, sviluppo e rilascio. Tecnologia come mezzo, qualità come obiettivo.",
-    "technologies": [
-      {}
+    "eyebrow": "Studio",
+    "title": "Piccolo studio, standard alti, continuità.",
+    "subtitle": "Attivi dal 2017. Costruiamo sistemi che durano: documentazione, monitoring e handover inclusi in ogni progetto.",
+    "expertiseLabel": "Stack",
+    "expertiseTags": [
+      "Design UX/UI",
+      "Full-Stack Engineering",
+      "Automazione & AI",
+      "Product Strategy"
+    ],
+    "commitments": [
+      {
+        "label": "Sistemi documentati",
+        "detail": "Ogni progetto include documentazione tecnica, diagrammi e handover. Nessun blocco quando la collaborazione finisce."
+      },
+      {
+        "label": "Monitoring incluso",
+        "detail": "Uptime checks, alert e log pronti al lancio. Problemi rilevati prima che diventino emergency."
+      },
+      {
+        "label": "Scope fisso, nessuna sorpresa",
+        "detail": "Preventivi chiari, sprint definiti, nessun extra non concordato. Zero ambiguità sui deliverable."
+      }
     ]
   },
   "services": {
@@ -249,7 +277,7 @@
     "label": "Capacità",
     "title": "Capacità end-to-end, un team solo.",
     "subtitle": "Design, sviluppo, AI e automazione: tutto internamente, senza subappalti.",
-    "sectionCta": "Hai un flusso critico? Prenota audit 30 min",
+    "sectionCta": "Hai un processo da automatizzare?",
     "cta": "Scopri il portfolio",
     "items": [
       {
@@ -271,8 +299,8 @@
     ]
   },
   "portfolio": {
-    "title": "Progetti selezionati.",
-    "subtitle": "Esempi di prodotti e sistemi che costruiamo: alcuni pubblici, altri sotto NDA.",
+    "title": "Strumenti operativi per team reali.",
+    "subtitle": "Dashboard, piattaforme interne e automazioni live. Alcuni pubblici, altri sotto NDA.",
     "labels": {
       "timeline": "Timeline",
       "status": "Status",
@@ -280,7 +308,7 @@
       "users": "Utenti",
       "performance": "Performance",
       "uptime": "Uptime",
-      "caseStudy": "Leggi caso studio",
+      "caseStudy": "Vedi il caso studio",
       "metricsTitle": "Metriche progetto",
       "timelineTitle": "Timeline",
       "phases": {
@@ -321,7 +349,7 @@
       },
       {
         "title": "HelixOps",
-        "description": "Motore AI per workflow operativi automatizzati. +50% efficienza, −60% attività manuali.",
+        "description": "Motore AI per workflow operativi automatizzati. −45% carico manuale, −35% errori operativi.",
         "tags": [
           "Python",
           "TensorFlow",
@@ -331,13 +359,13 @@
         "metrics": {
           "timeline": "14 settimane",
           "team": "4 dev + 1 data scientist",
-          "users": "12 facilities",
+          "users": "Enterprise team",
           "status": "In produzione"
         }
       },
       {
         "title": "PulseShift",
-        "description": "Scheduling AI mobile per ottimizzazione risorse. −40% conflitti, +35% utilizzo risorse.",
+        "description": "Scheduling AI mobile per ottimizzazione workforce. −50% tempo scheduling, −30% conflitti turni.",
         "tags": [
           "React Native",
           "GraphQL",
@@ -353,7 +381,7 @@
       },
       {
         "title": "InsightGrid",
-        "description": "Dashboard analytics real-time per business intelligence. 10x insight più veloci, fonti dati unificate.",
+        "description": "Dashboard analytics real-time per business intelligence. Query <300ms, +40% velocità decisionale.",
         "tags": [
           "React",
           "D3.js",
@@ -369,7 +397,7 @@
       },
       {
         "title": "FlowCanvas",
-        "description": "Piattaforma di collaborazione real-time per team distribuiti. −50% cicli revisione, +60% produttività.",
+        "description": "Piattaforma di collaborazione real-time per team distribuiti. 20ms latenza sync, CRDT conflict-free.",
         "tags": [
           "Next.js",
           "WebSockets",
@@ -379,13 +407,17 @@
         "metrics": {
           "timeline": "10 settimane",
           "team": "4 dev + 1 designer",
-          "users": "500+ utenti",
+          "users": "Team distribuiti",
           "status": "In produzione"
         }
       }
     ]
   },
   "process": {
+    "ofProject": "del progetto",
+    "methodologyLabel": "Metodologia",
+    "methodologyText": "Agile · TDD · Integrazione continua",
+    "finalNudge": "Vuoi vedere questo processo applicato al tuo sistema?",
     "opsQuickWin": {
       "title": "Ops Quick Win — automazione in 7 giorni",
       "subtitle": "Automatizziamo un workflow critico end-to-end con monitoring, non una patch.",
@@ -665,24 +697,26 @@
   "testimonials": {
     "title": "Cosa dicono i clienti",
     "subtitle": "Collaborazioni basate su fiducia, chiarezza e risultati reali.",
+    "microCta": "Progetto simile al tuo?",
+    "microCtaLink": "Parliamone",
     "items": [
       {
         "quote": "Hanno trasformato un'idea complessa in un prodotto stabile e pronto all'uso. Comunicazione impeccabile.",
-        "author": "Marco Benedetti",
+        "author": "M.B.",
         "role": "CEO",
-        "company": "FinTech Solutions"
+        "company": "Fintech, Italia"
       },
       {
         "quote": "UX curata, codice pulito, tempi rispettati. Un partner raro da trovare.",
-        "author": "Sofia Marinelli",
+        "author": "S.M.",
         "role": "Founder",
-        "company": "WellnessPro"
+        "company": "Wellness tech, Italia"
       },
       {
         "quote": "Ci hanno guidato in ogni fase, dal concept al rilascio. Un'esperienza serena e professionale.",
-        "author": "Luca Ferri",
+        "author": "L.F.",
         "role": "CTO",
-        "company": "LogiTech Europe"
+        "company": "Logistica, Europa"
       }
     ]
   },
@@ -715,45 +749,56 @@
     ]
   },
   "cta": {
-    "title": "Costruiamo qualcosa di solido.",
-    "subtitle": "Che sia un nuovo prodotto o una piattaforma esistente, possiamo aiutarti a progettare, sviluppare e rilasciare soluzioni concrete.",
-    "nextSteps": "Ti rispondiamo entro un giorno lavorativo con un paio di domande mirate e, se ha senso, proponiamo una prima call esplorativa di 30 minuti.",
-    "cta": "Prenota audit 30 min",
+    "title": "Partiamo da un audit gratuito.",
+    "subtitle": "30 minuti per analizzare il tuo processo critico, identificare sprechi e proporre una soluzione concreta.",
+    "nextSteps": "Ti rispondiamo entro 24h con il report dell'audit e un piano d'azione chiaro.",
+    "cta": "Prenota audit gratuito",
     "bookCall": "Prenota una call",
-    "email": "contact@atavicolabs.com"
+    "email": "contact@atavicolabs.com",
+    "eyebrow": "Iniziamo",
+    "emailLabel": "Scrivici",
+    "status": "Disponibili per nuovi progetti",
+    "workModeLabel": "Modalità lavoro",
+    "workMode": "Remote-first • On-site su richiesta",
+    "responseTimeLabel": "Tempo di risposta",
+    "responseTime": "Entro 24 ore"
   },
   "proofPoints": {
-    "label": "Prove operative",
+    "label": "Numeri reali",
     "items": [
       {
-        "title": "Remote-first",
-        "description": "Team distribuito; on-site su richiesta."
+        "title": "Dal 2017",
+        "description": "Attivi da oltre 7 anni. Stessi standard dal primo progetto."
       },
       {
-        "title": "Workflow in produzione",
-        "description": "Progettiamo, rilasciamo e gestiamo prodotti live end-to-end."
+        "title": "15+ prodotti",
+        "description": "Rilasciati end-to-end: web app, mobile, automazioni, dashboard."
       },
       {
-        "title": "Audit + log + handover",
-        "description": "Tracciabilità, documentazione e passaggio di consegne inclusi."
+        "title": "99.9% uptime",
+        "description": "Media su tutti i sistemi in produzione. Monitoring incluso."
       },
       {
-        "title": "On-site su richiesta",
-        "description": "Presenza di persona quando serve."
+        "title": "7 giorni",
+        "description": "Da analisi a primo automazione live con Ops Quick Win."
       }
     ]
   },
   "footer": {
     "brand": "AtavicoLabs",
-    "description": "Design, sviluppo e rilascio di prodotti digitali.",
+    "description": "Studio di automazione e strumenti operativi. Attivi dal 2017.",
+    "nav": {
+      "offers": "Offerte",
+      "resources": "Risorse"
+    },
     "quickLinks": {
-    "title": "Menu",
-    "services": "Servizi",
-    "startHere": "Come partiamo",
-    "portfolio": "Portfolio",
-    "process": "Processo",
-    "contact": "Contatti"
-  },
+      "title": "Menu",
+      "services": "Servizi",
+      "startHere": "Come partiamo",
+      "portfolio": "Portfolio",
+      "process": "Processo",
+      "contact": "Contatti"
+    },
     "contact": {
       "title": "Contatti",
       "location": "Italia"
@@ -920,8 +965,8 @@
             "label": "Inefficienze energetiche"
           },
           {
-            "value": "+70%",
-            "label": "Rilevamento anomalie precoce"
+            "value": "NILM",
+            "label": "Rilevamento dispositivi"
           },
           {
             "value": "25",
@@ -1005,8 +1050,8 @@
             "label": "Tempo gestione ticket"
           },
           {
-            "value": "+80%",
-            "label": "Riutilizzo soluzioni esistenti"
+            "value": "Ricerca semantica",
+            "label": "Knowledge base"
           },
           {
             "value": "200+",
@@ -1084,8 +1129,8 @@
             "label": "Tempo di onboarding"
           },
           "metric2": {
-            "value": "+40%",
-            "label": "Aumento adozione"
+            "value": "In sviluppo",
+            "label": "Stato attuale"
           },
           "metric3": {
             "value": "99.98%",
@@ -1093,7 +1138,7 @@
           },
           "metric4": {
             "value": "−50%",
-            "label": "Richieste di supporto"
+            "label": "Ticket supporto (beta)"
           }
         }
       },
@@ -1175,12 +1220,12 @@
             "label": "Carico di lavoro manuale"
           },
           "metric2": {
-            "value": "+60%",
-            "label": "Esecuzione più rapida"
+            "value": "2024",
+            "label": "Anno completamento"
           },
           "metric3": {
             "value": "−35%",
-            "label": "Errori operativi"
+            "label": "Errori op. (cliente)"
           },
           "metric4": {
             "value": "<200ms",
@@ -1270,12 +1315,12 @@
             "label": "Conflitti turni"
           },
           "metric3": {
-            "value": "+65%",
-            "label": "Comunicazione team"
+            "value": "Real-time",
+            "label": "Aggiornamenti turni"
           },
           "metric4": {
             "value": "4.8/5",
-            "label": "Soddisfazione utenti"
+            "label": "Soddisfazione (pilot)"
           }
         }
       },
@@ -1362,11 +1407,11 @@
           },
           "metric3": {
             "value": "−30%",
-            "label": "Anomalie mancate"
+            "label": "Anomalie (pre/post)"
           },
           "metric4": {
-            "value": "+50%",
-            "label": "Engagement strumenti dati"
+            "value": "TimescaleDB",
+            "label": "Motore real-time"
           }
         }
       },
@@ -1448,16 +1493,16 @@
             "label": "Latenza media di sync"
           },
           "metric2": {
-            "value": "+55%",
-            "label": "Velocità di ideazione"
+            "value": "WebSocket",
+            "label": "Layer sync real-time"
           },
           "metric3": {
-            "value": "−70%",
-            "label": "Conflitti di collaborazione"
+            "value": "CRDT",
+            "label": "Conflict resolution"
           },
           "metric4": {
-            "value": "4×",
-            "label": "Prestazioni vs concorrenti"
+            "value": "Beta",
+            "label": "Status rilascio"
           }
         }
       },
@@ -1525,8 +1570,8 @@
             "label": "Sforzo manuale"
           },
           "metric2": {
-            "value": "+3x",
-            "label": "Visibilità sulla pipeline"
+            "value": "+3×",
+            "label": "Visibilità pipeline (riportato)"
           },
           "metric3": {
             "value": "0",
@@ -1762,7 +1807,13 @@
       "timeline": "7 giorni",
       "price": "€1.200 – €3.000",
       "badge": "Partenza rapida",
+      "highlights": [
+        "Automazione di 1 flusso critico in 7 giorni",
+        "Monitoraggio + alert, zero babysitting",
+        "Piano e stima inviati entro 48h"
+      ],
       "cta": "Prenota audit 30 min",
+      "ctaFinal": "Partiamo",
       "meta": {
         "timeline": "Timeline",
         "investment": "Investimento"
@@ -1934,7 +1985,13 @@
       "timeline": "Mensile",
       "price": "€400 – €1.500/mese",
       "badge": "Più scelto",
+      "highlights": [
+        "Fix, migliorie e nuove regole ogni mese",
+        "Monitoraggio proattivo e incident response",
+        "Backlog prioritizzato con update async"
+      ],
       "cta": "Prenota audit 30 min",
+      "ctaFinal": "Partiamo",
       "meta": {
         "timeline": "Timeline",
         "investment": "Investimento"
@@ -2048,7 +2105,13 @@
       "timeline": "6–14 settimane",
       "price": "€8.000 – €25.000+",
       "badge": "End-to-end",
+      "highlights": [
+        "Progettiamo e sviluppiamo la web app dal flow",
+        "Integrazioni, API e opzione mobile",
+        "Pilot online in 6–14 settimane con milestone"
+      ],
       "cta": "Prenota audit 30 min",
+      "ctaFinal": "Partiamo",
       "meta": {
         "timeline": "Timeline",
         "investment": "Investimento"
@@ -2154,5 +2217,144 @@
         }
       ]
     }
+  },
+  "audit": {
+    "meta": {
+      "title": "Audit sito gratuito",
+      "description": "Ottieni un report AI su performance, SEO e accessibilità del tuo sito in pochi secondi."
+    },
+    "hero": {
+      "eyebrow": "Audit AI gratuito",
+      "title": "Come performa il tuo sito?",
+      "subtitle": "Inserisci l'URL e ottieni un report dettagliato su performance, SEO e accessibilità — powered by Lighthouse e Claude AI."
+    },
+    "form": {
+      "urlLabel": "URL del sito",
+      "urlPlaceholder": "https://iltuosito.com",
+      "urlError": "Inserisci un URL valido (es. https://example.com)",
+      "nextStep": "Analizza il sito",
+      "emailLabel": "Inserisci la tua email per sbloccare il report",
+      "emailPlaceholder": "tu@azienda.com",
+      "emailHint": "Ti inviamo il link al report. Nessuno spam.",
+      "emailError": "Inserisci un indirizzo email valido",
+      "submit": "Ottieni audit gratuito",
+      "analyzing": "Analisi in corso…",
+      "analyzingHint": "Elaborazione PageSpeed + AI. Ci vogliono circa 15 secondi."
+    },
+    "report": {
+      "grade": "Voto complessivo",
+      "scores": "Punteggi Lighthouse",
+      "performance": "Performance",
+      "seo": "SEO",
+      "accessibility": "Accessibilità",
+      "cwv": "Core Web Vitals",
+      "lcp": "LCP",
+      "cls": "CLS",
+      "fcp": "FCP",
+      "ttfb": "TTFB",
+      "tbt": "TBT",
+      "summary": "Sintesi AI",
+      "issues": "Problemi rilevati",
+      "quickWins": "Quick wins",
+      "priorities": {
+        "critical": "Critico",
+        "high": "Alto",
+        "medium": "Medio",
+        "low": "Basso"
+      },
+      "categories": {
+        "performance": "Performance",
+        "seo": "SEO",
+        "accessibility": "Accessibilità",
+        "best-practices": "Best Practices"
+      },
+      "cta": "Parlaci",
+      "shareHint": "Questo report è condivisibile via link.",
+      "analyzedOn": "Analizzato il",
+      "backToAudit": "Nuovo audit",
+      "errorTitle": "Analisi fallita",
+      "errorHint": "Qualcosa è andato storto durante l'analisi. Riprova.",
+      "retry": "Riprova",
+      "unlock": {
+        "bannerTitle": "Sblocca il report completo",
+        "bannerPrice": "14€",
+        "bannerDescription": "Ottieni l'analisi AI dettagliata: raccomandazioni concrete, quick wins e priorità di intervento — generate da Claude su misura per il tuo sito.",
+        "bannerCta": "Sblocca il report — 14€",
+        "blurredHint": "Sblocca per vedere i dettagli",
+        "redirecting": "Reindirizzamento a Stripe…",
+        "processingTitle": "Pagamento ricevuto",
+        "processingDescription": "Stiamo elaborando la tua analisi AI. Il report completo sarà pronto a breve — aggiorna la pagina tra qualche secondo.",
+        "previewLabel": "Anteprima gratuita",
+        "issuesFound": "problemi rilevati — dettagli disponibili dopo lo sblocco"
+      }
+    }
+  },
+  "toolsLogin": {
+    "title": "Accedi",
+    "subtitle": "Area interna",
+    "emailLabel": "Email",
+    "emailPlaceholder": "tuo@email.com",
+    "passwordLabel": "Password",
+    "passwordPlaceholder": "••••••••",
+    "submit": "Accedi",
+    "loading": "Accesso in corso…",
+    "errorInvalid": "Credenziali non valide. Riprova.",
+    "errorGeneric": "Qualcosa è andato storto. Riprova."
+  },
+  "toolsNav": {
+    "logout": "Esci"
+  },
+  "crm": {
+    "meta": {
+      "title": "Work Board",
+      "description": "Strumento personale di organizzazione lavoro"
+    },
+    "pageTitle": "Work Board",
+    "viewToday": "Oggi",
+    "viewWeek": "Settimana",
+    "addTask": "Aggiungi task",
+    "deleteTask": "Elimina",
+    "noTasks": "Nessun task",
+    "todayCount": "{count}/6 task",
+    "areas": {
+      "retainer": "Retainer",
+      "spot": "Spot",
+      "atavicolabs": "AtavicoLabs"
+    },
+    "status": {
+      "todo": "Da fare",
+      "inprogress": "In corso",
+      "done": "Fatto"
+    },
+    "priority": {
+      "high": "Alta",
+      "medium": "Media",
+      "low": "Bassa"
+    },
+    "form": {
+      "newTask": "Nuovo task",
+      "titleLabel": "Titolo",
+      "titlePlaceholder": "Titolo del task...",
+      "clientLabel": "Cliente",
+      "clientPlaceholder": "Nome cliente...",
+      "areaLabel": "Area",
+      "priorityLabel": "Priorità",
+      "statusLabel": "Stato",
+      "notesLabel": "Note",
+      "notesPlaceholder": "Note opzionali...",
+      "addToToday": "Aggiungi a oggi",
+      "cancel": "Annulla",
+      "save": "Salva task"
+    },
+    "todayView": {
+      "empty": "Nessun task selezionato per oggi",
+      "emptyHint": "Aggiungi un task e attiva «Aggiungi a oggi»"
+    },
+    "weekView": {
+      "tasks": "task",
+      "done": "fatti",
+      "empty": "Nessun task per quest'area"
+    },
+    "advance": "Avanza"
   }
 }

@@ -77,12 +77,12 @@ export default function Testimonials() {
               </div>
               {/* Micro-CTA under testimonial */}
               <div className="mt-5 pt-4 border-t border-grigio/20 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-2 text-[11px] text-grigio/70">
-                <span>Progetto in linea con il tuo?</span>
+                <span>{t('microCta')}</span>
                 <a
                   href="#contact"
                   className="inline-flex items-center px-2 py-1 gap-1 text-[12px] text-oliva hover:text-oliva/80 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-oliva focus-visible:ring-offset-2 focus-visible:ring-offset-carbone transition-colors"
                 >
-                  Parliamone
+                  {t('microCtaLink')}
                   <svg className="w-3 h-3" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}>
                     <path strokeLinecap="round" strokeLinejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3" />
                   </svg>

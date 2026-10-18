@@ -30,7 +30,7 @@ export default function Footer() {
               {t('description')}
             </p>
             <div className="text-[10px] font-mono text-grigio/60">
-              Milano, Italia<br />
+              {t('contact.location')}<br />
               45.4642° N, 9.1900° E
             </div>
           </div>
@@ -38,7 +38,7 @@ export default function Footer() {
           {/* Column 2: Services */}
           <div>
             <h4 className="text-[14px] font-medium text-sabbia mb-4 uppercase tracking-wider">
-              {locale === 'it' ? 'Offerte' : 'Offers'}
+              {t('nav.offers')}
             </h4>
             <ul className="space-y-3">
               <li>
@@ -62,7 +62,7 @@ export default function Footer() {
           {/* Column 3: Resources */}
           <div>
             <h4 className="text-[14px] font-medium text-sabbia mb-4 uppercase tracking-wider">
-              {locale === 'it' ? 'Risorse' : 'Resources'}
+              {t('nav.resources')}
             </h4>
             <ul className="space-y-3">
               <li>
@@ -108,9 +108,7 @@ export default function Footer() {
                   Iscriviti
                 </button>
               </form>
-              <p className="text-[10px] text-grigio/50 mt-3">
-                Join 1,200+ subscribers
-              </p>
+
             </div>
           )}
         </div>
@@ -122,14 +120,14 @@ export default function Footer() {
               {t('copyright', {year: currentYear})}
             </p>
             <p className="text-[10px] font-mono text-grigio/30">
-              Built with Next.js • Hosted on Vercel • P.IVA 01234567890
+              Built with Next.js • Hosted on Vercel
             </p>
           </div>
           <div className="flex gap-6 text-[11px]">
-            <Link href="/privacy" className="text-grigio/60 hover:text-oliva transition-colors duration-300 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-oliva/60 focus-visible:ring-offset-2 focus-visible:ring-offset-carbone">
+            <Link href={`/${locale}/privacy`} className="text-grigio/60 hover:text-oliva transition-colors duration-300 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-oliva/60 focus-visible:ring-offset-2 focus-visible:ring-offset-carbone">
               {t('legal.privacy')}
             </Link>
-            <Link href="/terms" className="text-grigio/60 hover:text-oliva transition-colors duration-300 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-oliva/60 focus-visible:ring-offset-2 focus-visible:ring-offset-carbone">
+            <Link href={`/${locale}/terms`} className="text-grigio/60 hover:text-oliva transition-colors duration-300 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-oliva/60 focus-visible:ring-offset-2 focus-visible:ring-offset-carbone">
               {t('legal.terms')}
             </Link>
           </div>

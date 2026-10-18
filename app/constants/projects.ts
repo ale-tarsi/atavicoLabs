@@ -13,27 +13,53 @@ export interface ProjectMeta {
 }
 
 export const PROJECTS: ProjectMeta[] = [
+  // Named-client work (highest credibility)
   {
-    slug: 'hostid',
-    category: 'mobile',
-    badge: 'nda',
+    slug: 'crispin',
+    category: 'automation',
   },
+  {
+    slug: 'vectis',
+    category: 'fullStack',
+  },
+  {
+    slug: 'lytera',
+    category: 'automation',
+  },
+  // NDA client work
   {
     slug: 'helixops',
     category: 'automation',
-    badge: 'internal',
+    badge: 'nda',
   },
   {
     slug: 'pulseshift',
-    category: 'mobile',
-    badge: 'concept',
+    category: 'automation',
+    badge: 'nda',
   },
   {
     slug: 'insightgrid',
     category: 'fullStack',
+    badge: 'nda',
   },
   {
     slug: 'flowcanvas',
+    category: 'fullStack',
+    badge: 'nda',
+  },
+  // Internal tools
+  {
+    slug: 'hostid',
+    category: 'mobile',
+    badge: 'internal',
+  },
+  {
+    slug: 'ai-workflow-assistant',
+    category: 'automation',
+    badge: 'internal',
+  },
+  {
+    slug: 'energy-intelligence',
     category: 'fullStack',
   },
 ];

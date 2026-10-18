@@ -1,15 +1,12 @@
 import {getTranslations} from 'next-intl/server';
 import Hero from '@/app/components/Hero';
 import About from '@/app/components/About';
-import Services from '@/app/components/Services';
-import ServicesSection from '@/app/components/ServicesSection';
 import ProcessSection from '@/app/components/ProcessSection';
 import Portfolio from '@/app/components/Portfolio';
 import Testimonials from '@/app/components/Testimonials';
 import Blog from '@/app/components/Blog';
 import CTA from '@/app/components/CTA';
 import Footer from '@/app/components/Footer';
-import LanguageSwitcher from '@/app/components/LanguageSwitcher';
 import Navbar from '@/app/components/Navbar';
 import ProofsSection from '@/app/components/ProofsSection';
 import { FEATURES } from '@/app/constants/features';
@@ -17,6 +14,7 @@ import { ArrowRight } from 'lucide-react';
 import StartingPoints from '@/app/components/StartingPoints';
 import SectionHeader from '@/app/components/SectionHeader';
 import AuditLink from '@/app/components/AuditLink';
+import LanguageSwitcher from '@/app/components/LanguageSwitcher';
 
 export async function generateMetadata({params}: {params: Promise<{locale: string}>}) {
   const {locale} = await params;
@@ -49,10 +47,10 @@ export async function generateMetadata({params}: {params: Promise<{locale: strin
       description,
       images: [
         {
-          url: 'https://atavicolabs.com/og-image.jpg',
+          url: 'https://atavicolabs.com/og/default.png',
           width: 1200,
           height: 630,
-          alt: 'AtavicoLabs - Digital Product Development',
+          alt: 'AtavicoLabs - Ops Automation Studio',
         },
       ],
     },
@@ -60,7 +58,7 @@ export async function generateMetadata({params}: {params: Promise<{locale: strin
       card: 'summary_large_image',
       title,
       description,
-      images: ['https://atavicolabs.com/og-image.jpg'],
+      images: ['https://atavicolabs.com/og/default.png'],
     },
     robots: {
       index: true,
@@ -79,19 +77,19 @@ export async function generateMetadata({params}: {params: Promise<{locale: strin
 export default async function HomePage({ params }: { params: Promise<{ locale: string }> }) {
   const { locale } = await params;
   const tHome = await getTranslations({ locale, namespace: 'home' });
-  const tProofs = await getTranslations({ locale, namespace: 'proofs' });
-  const tCapabilities = await getTranslations({ locale, namespace: 'capabilities' });
-  const tNavbar = await getTranslations({ locale, namespace: 'navbar' });
 
   return (
     <main className="min-h-screen">
       {/* Navbar - Fixed glass effect */}
       <Navbar />
       
-      {/* 1. Hero - Ispirazione */}
+      {/* 1. Hero */}
       <Hero />
       
-      {/* 2. Ways to Start - Entry points */}
+      {/* 2. Automation Proofs - Proof of reliability */}
+      <ProofsSection />
+      
+      {/* 3. Ways to Start - Entry points */}
       <section id="starting-points" className="relative pt-24 lg:pt-32 pb-20 lg:pb-28 bg-grafite scroll-mt-24">
         <div className="max-w-6xl mx-auto px-6">
           <SectionHeader
@@ -116,23 +114,15 @@ export default async function HomePage({ params }: { params: Promise<{ locale: s
         </div>
       </section>
       
-      {/* 2.5. Automation Proofs - Proof of reliability */}
-      <ProofsSection />
-      
-      {/* 3. Capabilities - Le nostre competenze al lavoro */}
-      <section id="capabilities" className="scroll-mt-24">
-        <ServicesSection />
-      </section>
-      
-      {/* 3. Portfolio - Prova concreta */}
+      {/* 4. Portfolio */}
       <section id="portfolio" className="scroll-mt-24">
         <Portfolio />
       </section>
       
-      {/* 4. Process - Coinvolgimento (How We Work) */}
+      {/* 5. Process */}
       <ProcessSection variant="opsQuickWin" id="process" />
       
-      {/* 5. About - Credibilità sintetica (Chi Siamo) */}
+      {/* 6. About */}
       <section id="about" className="scroll-mt-24">
         <About />
       </section>

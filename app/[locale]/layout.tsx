@@ -10,9 +10,9 @@ export const metadata: Metadata = {
   metadataBase: new URL('https://atavicolabs.com'),
   title: {
     template: '%s — AtavicoLabs',
-    default: 'AtavicoLabs — Prodotti digitali solidi, ingegneria affidabile',
+    default: 'AtavicoLabs — Ops Automation Studio',
   },
-  description: 'Progettiamo, automatizziamo e rilasciamo sistemi digitali affidabili — partendo dai processi critici. Ops automation, continuity retainer e product build.',
+  description: 'We turn manual processes into reliable systems. Ops automation, continuity retainer and product build for SMEs.',
   openGraph: {
     type: 'website',
     siteName: 'AtavicoLabs',
@@ -20,7 +20,7 @@ export const metadata: Metadata = {
       url: '/og/default.png',
       width: 1200,
       height: 630,
-      alt: 'AtavicoLabs — Digital Product Engineering',
+      alt: 'AtavicoLabs — Automation Studio',
     }],
   },
   twitter: {
@@ -28,7 +28,6 @@ export const metadata: Metadata = {
     images: ['/og/default.png'],
   },
   alternates: {
-    canonical: '/',
     languages: {
       'it': '/it',
       'en': '/en',
@@ -62,10 +61,10 @@ export default async function LocaleLayout({
     '@type': 'Organization',
     name: 'AtavicoLabs',
     url: 'https://atavicolabs.com',
-    logo: 'https://atavicolabs.com/logo.png',
-    description: locale === 'it' 
-      ? 'Sviluppo di web app, mobile app e piattaforme SaaS per PMI'
-      : 'Web app, mobile app and SaaS platform development for SMEs',
+    logo: 'https://atavicolabs.com/icon.svg',
+    description: locale === 'it'
+      ? 'Trasformiamo processi manuali in sistemi affidabili. Automazione operativa per PMI.'
+      : 'We turn manual processes into reliable systems. Ops automation for SMEs.',
     address: {
       '@type': 'PostalAddress',
       addressCountry: 'IT',

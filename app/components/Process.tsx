@@ -114,7 +114,7 @@ export default function Process() {
                   <div className="mb-2 flex items-center gap-3">
                     <span className="text-[10px] font-mono text-grigio/60">PHASE_0{index + 1}</span>
                     <span className="text-[10px] text-grigio/50">•</span>
-                    <span className="text-[10px] text-grigio/50">{percentages[index]} del progetto</span>
+                    <span className="text-[10px] text-grigio/50">{percentages[index]} {t('ofProject')}</span>
                   </div>
                   <h3 className="text-[20px] font-medium text-sabbia mb-2 leading-[1.3]">
                     {t(`steps.${index}.title`)}
@@ -234,9 +234,9 @@ export default function Process() {
 
         {/* Methodology */}
         <div className="mt-16 pt-12 border-t border-grigio/20">
-          <div className="text-[11px] uppercase tracking-[0.15em] text-grigio/60 font-light mb-4">Methodology</div>
+          <div className="text-[11px] uppercase tracking-[0.15em] text-grigio/60 font-light mb-4">{t('methodologyLabel')}</div>
           <div className="text-[14px] text-sabbia/70 leading-relaxed mb-4">
-            Agile · Test-Driven Development · Continuous Integration
+            {t('methodologyText')}
           </div>
           <div className="flex flex-wrap gap-3">
             {['Figma', 'GitHub', 'Linear', 'Slack'].map((tool, i) => (
@@ -251,7 +251,7 @@ export default function Process() {
             href="#contact"
             className="inline-flex items-center px-2 py-1 mt-6 text-[13px] text-oliva hover:text-oliva/80 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-oliva focus-visible:ring-offset-2 focus-visible:ring-offset-carbone transition-colors"
           >
-            Vuoi capire come applichiamo questo processo al tuo prodotto?
+            {t('finalNudge')}
             <svg className="w-4 h-4 ml-1" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}>
               <path strokeLinecap="round" strokeLinejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3" />
             </svg>
