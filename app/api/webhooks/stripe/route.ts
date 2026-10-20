@@ -3,7 +3,7 @@ import Stripe from 'stripe';
 import { supabase } from '@/lib/supabase';
 import { analyzeWithClaude } from '@/lib/audit/analyze';
 
-const stripe = new Stripe(process.env.STRIPE_SECRET_KEY!);
+const getStripe = () => new Stripe(process.env.STRIPE_SECRET_KEY!);
 
 // Next.js App Router: disable body parsing so we can read the raw bytes
 // for Stripe signature verification.
@@ -25,7 +25,7 @@ export async function POST(request: Request) {
 
   let event: Stripe.Event;
   try {
-    event = stripe.webhooks.constructEvent(rawBody, sig, webhookSecret);
+    event = getStripe().webhooks.constructEvent(rawBody, sig, webhookSecret);
   } catch (err) {
     const message = err instanceof Error ? err.message : String(err);
     console.error('[webhook:signature]', message);

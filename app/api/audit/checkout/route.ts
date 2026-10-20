@@ -2,7 +2,7 @@ import { NextResponse } from 'next/server';
 import Stripe from 'stripe';
 import { supabase } from '@/lib/supabase';
 
-const stripe = new Stripe(process.env.STRIPE_SECRET_KEY!);
+const getStripe = () => new Stripe(process.env.STRIPE_SECRET_KEY!);
 
 export async function POST(request: Request) {
   let body: { reportId?: string; locale?: string };
@@ -39,7 +39,7 @@ export async function POST(request: Request) {
   const baseUrl = process.env.NEXT_PUBLIC_SITE_URL ?? 'https://atavicolabs.com';
   const hostname = new URL(report.url).hostname;
 
-  const session = await stripe.checkout.sessions.create({
+  const session = await getStripe().checkout.sessions.create({
     payment_method_types: ['card'],
     mode: 'payment',
     line_items: [
