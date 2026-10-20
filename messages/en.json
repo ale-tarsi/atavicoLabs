@@ -1,8 +1,8 @@
 {
   "metadata": {
-    "title": "AtavicoLabs — Ops Automation for SMEs",
-    "description": "We turn manual processes into reliable systems. Ops automation, continuity retainer and product build for teams that want to stop doing the same things by hand.",
-    "keywords": "ops automation, workflow automation, systems integration, process automation, business automation, ops retainer, operational mvp, SME, automation studio"
+    "title": "AtavicoLabs — Digital Product Studio for SMEs",
+    "description": "Custom software and automation for SMEs: from analysing the manual process to a reliable system in production.",
+    "keywords": "custom software, process automation, systems integration, SME, digital product studio"
   },
   "navbar": {
     "about": "About",
@@ -13,7 +13,7 @@
     "offers": "Offers",
     "contact": "Contact",
     "requestAudit": "Book a 30-min audit",
-    "studioDescriptor": "Automation Studio"
+    "studioDescriptor": "Digital Product Studio"
   },
   "contact": {
     "meta": {
@@ -73,7 +73,7 @@
     }
   },
   "hero": {
-    "label": "Automations. Tools. Systems that last.",
+    "label": "Digital product studio for SMEs",
     "title": "Solid digital products, built with care.",
     "description": "We help small and medium businesses remove repetitive manual work: we map the process, then build the automation that replaces it.",
     "ctaPrimary": "Start your free audit",
@@ -473,7 +473,7 @@
   },
   "footer": {
     "brand": "AtavicoLabs",
-    "description": "Automation studio and operational tooling.",
+    "description": "Digital product studio for SMEs: custom software and automation.",
     "nav": {
       "offers": "Offers",
       "resources": "Resources"

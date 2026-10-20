@@ -9,7 +9,7 @@ export const metadata: Metadata = {
   metadataBase: new URL('https://atavicolabs.com'),
   title: {
     template: '%s — AtavicoLabs',
-    default: 'AtavicoLabs — Ops Automation Studio',
+    default: 'AtavicoLabs — Digital Product Studio',
   },
   description: 'We turn manual processes into reliable systems. Ops automation, continuity retainer and product build for SMEs.',
   openGraph: {
@@ -19,7 +19,7 @@ export const metadata: Metadata = {
       url: '/og/default.png',
       width: 1200,
       height: 630,
-      alt: 'AtavicoLabs — Automation Studio',
+      alt: 'AtavicoLabs — Digital Product Studio',
     }],
   },
   twitter: {

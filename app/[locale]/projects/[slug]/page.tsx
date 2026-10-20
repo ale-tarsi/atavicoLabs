@@ -4,6 +4,7 @@ import type { Metadata } from 'next';
 import Navbar from '@/app/components/Navbar';
 import Footer from '@/app/components/Footer';
 import FlowDiagram from '@/app/components/FlowDiagram';
+import Reveal from '@/app/components/Reveal';
 import { CASE_STUDIES, getCaseStudy, type Locale } from '@/app/constants/caseStudies';
 import { locales } from '@/src/i18n/config';
 
@@ -134,22 +135,22 @@ export default async function CaseStudyPage({ params }: { params: Promise<Params
             className="mt-12 w-full h-auto border border-grigio/20"
           />
 
-          <section className="mt-16">
+          <Reveal as="section" className="mt-16">
             <h2 className="text-[22px] font-medium text-sabbia mb-4">{ui.challenge}</h2>
             <p className="text-[16px] leading-[1.7] text-sabbia/70 font-light">{c.challenge}</p>
-          </section>
+          </Reveal>
 
-          <section className="mt-12">
+          <Reveal as="section" className="mt-12">
             <h2 className="text-[22px] font-medium text-sabbia mb-4">{ui.solution}</h2>
             <p className="text-[16px] leading-[1.7] text-sabbia/70 font-light">{c.solution}</p>
-          </section>
+          </Reveal>
 
-          <section className="mt-12">
+          <Reveal as="section" className="mt-12">
             <h2 className="text-[22px] font-medium text-sabbia mb-6">{ui.flow}</h2>
             <FlowDiagram steps={c.flow} label={ui.flow} />
-          </section>
+          </Reveal>
 
-          <section className="mt-12">
+          <Reveal as="section" className="mt-12">
             <h2 className="text-[22px] font-medium text-sabbia mb-4">{ui.outcome}</h2>
             <ul className="space-y-3">
               {c.outcome.map((item) => (
@@ -159,9 +160,9 @@ export default async function CaseStudyPage({ params }: { params: Promise<Params
                 </li>
               ))}
             </ul>
-          </section>
+          </Reveal>
 
-          <section className="mt-20 border-t border-grigio/20 pt-12">
+          <Reveal as="section" className="mt-20 border-t border-grigio/20 pt-12">
             <h2 className="text-[22px] font-medium text-sabbia mb-3">{ui.ctaTitle}</h2>
             <p className="text-[16px] text-sabbia/70 font-light mb-6">{ui.ctaText}</p>
             <Link
@@ -170,7 +171,7 @@ export default async function CaseStudyPage({ params }: { params: Promise<Params
             >
               {ui.cta}
             </Link>
-          </section>
+          </Reveal>
         </article>
       </main>
       <Footer />

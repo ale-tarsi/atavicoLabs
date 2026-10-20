@@ -4,6 +4,7 @@ import { useLocale, useTranslations } from 'next-intl';
 import { ArrowRight, Search, Workflow } from 'lucide-react';
 import { getCalendlyUrl } from '../constants/links';
 import { trackCtaClick } from '../utils/track';
+import Reveal from './Reveal';
 
 const ITEMS = [
   { key: 'analysis', Icon: Search },
@@ -17,11 +18,9 @@ export default function Offerings() {
   return (
     <div>
       <div className="grid grid-cols-1 md:grid-cols-2 gap-6 items-stretch">
-        {ITEMS.map(({ key, Icon }) => (
-          <div
-            key={key}
-            className="flex flex-col border border-grigio/20 bg-grafite/30 p-8 lg:p-10"
-          >
+        {ITEMS.map(({ key, Icon }, i) => (
+          <Reveal key={key} delay={i * 0.12} className="h-full">
+          <div className="flex h-full flex-col border border-grigio/20 bg-grafite/30 p-8 lg:p-10 transition-all duration-300 hover:-translate-y-1 hover:border-oliva/40 motion-reduce:transform-none">
             <Icon size={28} className="text-oliva mb-6" aria-hidden="true" />
             <h3 className="text-[26px] lg:text-[28px] font-medium text-sabbia mb-3">
               {t(`${key}.title`)}
@@ -38,6 +37,7 @@ export default function Offerings() {
               ))}
             </ul>
           </div>
+          </Reveal>
         ))}
       </div>
 

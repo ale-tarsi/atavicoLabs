@@ -1,8 +1,8 @@
 {
   "metadata": {
-    "title": "AtavicoLabs — Automazione operativa per PMI",
-    "description": "Trasformiamo processi manuali in sistemi affidabili. Automazione ops, continuity retainer e product build per team che vogliono smettere di fare le stesse cose a mano.",
-    "keywords": "automazione operativa, ops automation, workflow automation, integrazione sistemi, automazione processi aziendali, retainer ops, mvp operativo, PMI, studio automazione Milano"
+    "title": "AtavicoLabs — Digital Product Studio per PMI",
+    "description": "Software su misura e automazioni per le PMI: dall'analisi del processo manuale al sistema affidabile in produzione.",
+    "keywords": "software su misura, automazione processi, integrazione sistemi, PMI, digital product studio"
   },
   "navbar": {
     "about": "Chi siamo",
@@ -13,7 +13,7 @@
     "offers": "Offerte",
     "contact": "Contatti",
     "requestAudit": "Prenota audit 30 min",
-    "studioDescriptor": "Studio di automazione"
+    "studioDescriptor": "Digital Product Studio"
   },
   "contact": {
     "meta": {
@@ -73,7 +73,7 @@
     }
   },
   "hero": {
-    "label": "Automazioni. Strumenti. Sistemi che durano.",
+    "label": "Digital product studio per le PMI",
     "title": "Prodotti digitali solidi, progettati con cura.",
     "description": "Aiutiamo le PMI a eliminare il lavoro manuale ripetitivo: mappiamo il processo, poi costruiamo l'automazione che lo sostituisce.",
     "ctaPrimary": "Avvia l'audit gratuito",
@@ -473,7 +473,7 @@
   },
   "footer": {
     "brand": "AtavicoLabs",
-    "description": "Studio di automazione e strumenti operativi.",
+    "description": "Digital product studio per le PMI: software su misura e automazioni.",
     "nav": {
       "offers": "Offerte",
       "resources": "Risorse"

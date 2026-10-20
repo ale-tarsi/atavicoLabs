@@ -43,8 +43,8 @@ export default async function PrivacyPage({ params }: { params: Promise<{ locale
                 </h2>
                 <p>
                   {isIt
-                    ? 'AtavicoLabs — studio di automazione operativa. Per qualsiasi questione relativa ai dati personali, scrivere a:'
-                    : 'AtavicoLabs — ops automation studio. For any question related to personal data, write to:'}
+                    ? 'AtavicoLabs — digital product studio. Per qualsiasi questione relativa ai dati personali, scrivere a:'
+                    : 'AtavicoLabs — digital product studio. For any question related to personal data, write to:'}
                   {' '}
                   <a href="mailto:contact@atavicolabs.com" className="text-oliva hover:underline">
                     contact@atavicolabs.com

@@ -31,8 +31,7 @@ export default function Footer() {
               {t('description')}
             </p>
             <div className="text-[10px] font-mono text-grigio/60">
-              {t('contact.location')}<br />
-              45.4642° N, 9.1900° E
+              {t('contact.location')}
             </div>
           </div>
 

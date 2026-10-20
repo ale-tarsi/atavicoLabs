@@ -3,8 +3,9 @@
 import { useTranslations } from 'next-intl';
 import { Search, Plug, ShieldCheck, Rocket } from 'lucide-react';
 import SectionHeader from './SectionHeader';
+import Reveal from './Reveal';
 
-type Step = { title: string; description: string; duration?: string };
+type Step = { title: string; description: string };
 
 const ICONS = [Search, Plug, ShieldCheck, Rocket];
 
@@ -25,23 +26,18 @@ export default function HomeProcess() {
           {steps.map((step, i) => {
             const Icon = ICONS[i] ?? Rocket;
             return (
-              <li key={i} className="bg-carbone p-8">
+              <Reveal as="li" key={i} delay={i * 0.1} className="group bg-carbone p-8 transition-colors duration-300 hover:bg-grafite">
                 <div className="flex items-center justify-between mb-8">
-                  <span className="flex h-11 w-11 items-center justify-center border border-oliva/40 text-oliva">
+                  <span className="flex h-11 w-11 items-center justify-center border border-oliva/40 text-oliva transition-colors duration-300 group-hover:border-oliva group-hover:bg-oliva/10">
                     <Icon className="w-5 h-5" strokeWidth={1.5} aria-hidden="true" />
                   </span>
                   <span className="font-mono text-[11px] text-oliva/60">
                     {String(i + 1).padStart(2, '0')}
                   </span>
                 </div>
-                {step.duration && (
-                  <div className="text-[11px] uppercase tracking-wider text-grigio/60 mb-2">
-                    {step.duration}
-                  </div>
-                )}
                 <h3 className="text-[18px] font-medium text-sabbia mb-3 leading-snug">{step.title}</h3>
                 <p className="text-[14px] leading-[1.65] text-sabbia/60 font-light">{step.description}</p>
-              </li>
+              </Reveal>
             );
           })}
         </ol>
