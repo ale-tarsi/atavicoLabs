@@ -15,21 +15,27 @@ function ContactContent() {
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [errors, setErrors] = useState<Record<string, string>>({});
   const [showForm, setShowForm] = useState(false);
+  const [status, setStatus] = useState<'idle' | 'success' | 'error'>('idle');
+  const msg =
+    locale === 'en'
+      ? { success: 'Message sent. I reply within one business day.', error: 'Sending failed. Write to me directly at' }
+      : { success: 'Messaggio inviato. Ti rispondo entro un giorno lavorativo.', error: 'Invio non riuscito. Scrivimi direttamente a' };
 
-  const handleSubmit = (e: FormEvent<HTMLFormElement>) => {
+  const handleSubmit = async (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-    
-    const formData = new FormData(e.currentTarget);
+    const form = e.currentTarget;
+    const formData = new FormData(form);
     const name = formData.get('name') as string;
     const email = formData.get('email') as string;
     const company = formData.get('company') as string;
     const workflow = formData.get('workflow') as string;
     const tools = formData.getAll('tools') as string[];
 
-    // Validation
     const newErrors: Record<string, string> = {};
     if (!name?.trim()) newErrors.name = t('form.errors.nameRequired');
-    if (!email?.trim()) newErrors.email = t('form.errors.emailRequired');
+    if (!email?.trim() || !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email.trim())) {
+      newErrors.email = t('form.errors.emailRequired');
+    }
     if (!workflow?.trim()) newErrors.workflow = t('form.errors.workflowRequired');
 
     if (Object.keys(newErrors).length > 0) {
@@ -38,28 +44,32 @@ function ContactContent() {
     }
 
     setErrors({});
+    setStatus('idle');
     setIsSubmitting(true);
 
-    // Build mailto
-    const subject = t('form.emailSubject', { name: company || name });
-    const body = `
-${t('form.emailLabels.name')}: ${name}
-${t('form.emailLabels.email')}: ${email}
-${company ? `${t('form.emailLabels.company')}: ${company}` : ''}
-
-${t('form.emailLabels.workflow')}:
-${workflow}
-
-${tools.length > 0 ? `${t('form.emailLabels.tools')}: ${tools.join(', ')}` : ''}
-    `.trim();
-
-    const mailtoUrl = `mailto:contact@atavicolabs.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
-    
-    // Redirect to mailto
-    window.location.href = mailtoUrl;
-    
-    // Reset submitting state after a delay
-    setTimeout(() => setIsSubmitting(false), 2000);
+    try {
+      const res = await fetch('/api/contact', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          name,
+          email,
+          company,
+          workflow,
+          tools,
+          website: (formData.get('website') as string) || '',
+          locale,
+          page: window.location.pathname,
+        }),
+      });
+      if (!res.ok) throw new Error('send_failed');
+      setStatus('success');
+      form.reset();
+    } catch {
+      setStatus('error');
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   return (
@@ -109,6 +119,14 @@ ${tools.length > 0 ? `${t('form.emailLabels.tools')}: ${tools.join(', ')}` : ''}
         <section className="py-16 lg:py-24 px-6 lg:px-16">
           <div className="max-w-2xl mx-auto">
             <form onSubmit={handleSubmit} className="space-y-6">
+              {/* Honeypot anti-bot */}
+              <div aria-hidden="true" className="absolute left-[-9999px] h-0 w-0 overflow-hidden">
+                <label>
+                  Website
+                  <input type="text" name="website" tabIndex={-1} autoComplete="off" />
+                </label>
+              </div>
+
               {/* Name */}
               <div>
                 <label htmlFor="name" className="block text-[13px] text-sabbia/80 mb-2 font-medium">
@@ -213,6 +231,16 @@ ${tools.length > 0 ? `${t('form.emailLabels.tools')}: ${tools.join(', ')}` : ''}
                     <ArrowRight size={18} />
                   </button>
                 </div>
+
+                {status === 'success' && (
+                  <p role="status" className="text-[14px] text-oliva">{msg.success}</p>
+                )}
+                {status === 'error' && (
+                  <p role="alert" className="text-[14px] text-red-400">
+                    {msg.error}{' '}
+                    <a href="mailto:contact@atavicolabs.com" className="underline">contact@atavicolabs.com</a>
+                  </p>
+                )}
               </form>
             </div>
           </section>

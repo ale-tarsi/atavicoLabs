@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 400" fill="none" role="img" aria-hidden="true">
+  <rect width="640" height="400" fill="#141517"/>
+  <g stroke="#8A8C8E" stroke-opacity=".18"><path d="M0 100H640M0 200H640M0 300H640M160 0V400M320 0V400M480 0V400"/></g>
+  <!-- devices -->
+  <g stroke="#D3D1C8" stroke-opacity=".5" fill="#1B1C1D">
+    <rect x="40" y="52" width="104" height="82" rx="8"/><rect x="40" y="159" width="104" height="82" rx="8"/><rect x="40" y="266" width="104" height="82" rx="8"/>
+  </g>
+  <g fill="#7E987A"><path d="M92 74c8 12 13 19 13 26a13 13 0 0 1-26 0c0-7 5-14 13-26z" transform="translate(0 0)"/><path d="M92 181c8 12 13 19 13 26a13 13 0 0 1-26 0c0-7 5-14 13-26z"/><path d="M92 288c8 12 13 19 13 26a13 13 0 0 1-26 0c0-7 5-14 13-26z"/></g>
+  <g stroke="#8A8C8E" stroke-opacity=".7"><path d="M120 118a14 14 0 0 1 14-14M120 124a8 8 0 0 1 8-8" transform="translate(0 0)"/><path d="M120 225a14 14 0 0 1 14-14M120 231a8 8 0 0 1 8-8"/><path d="M120 332a14 14 0 0 1 14-14M120 338a8 8 0 0 1 8-8"/></g>
+  <!-- devices -> report -->
+  <path d="M146 93H190V200M146 200H206M146 307H190V200" stroke="#7E987A" stroke-width="1.5" stroke-dasharray="5 5"/>
+  <path d="M200 194l8 6-8 6" stroke="#7E987A" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+  <!-- report page -->
+  <rect x="216" y="36" width="220" height="328" rx="6" fill="#1B1C1D" stroke="#D3D1C8" stroke-opacity=".55" stroke-width="1.5"/>
+  <rect x="236" y="56" width="90" height="12" rx="3" fill="#D3D1C8" fill-opacity=".55"/>
+  <path d="M236 82H416" stroke="#8A8C8E" stroke-opacity=".4"/>
+  <g fill="#5A6D5A"><rect x="244" y="150" width="22" height="40"/><rect x="278" y="128" width="22" height="62"/><rect x="312" y="140" width="22" height="50"/><rect x="346" y="112" width="22" height="78"/><rect x="380" y="132" width="22" height="58"/></g>
+  <path d="M236 190H416" stroke="#8A8C8E" stroke-opacity=".6"/>
+  <path d="M236 250l34-14 34 8 34-24 34 10 44-20" stroke="#B8A88A" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M236 280H416M236 296H396M236 312H410M236 328H360" stroke="#8A8C8E" stroke-opacity=".5"/>
+  <!-- report -> mail -->
+  <path d="M440 200H488" stroke="#7E987A" stroke-width="1.5" stroke-dasharray="5 5"/>
+  <path d="M482 194l8 6-8 6" stroke="#7E987A" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+  <rect x="504" y="162" width="100" height="76" rx="8" fill="#1B1C1D" stroke="#D3D1C8" stroke-opacity=".5"/>
+  <path d="M506 166l48 40 48-40" stroke="#D3D1C8" stroke-opacity=".6" stroke-linejoin="round"/>
+  <circle cx="598" cy="166" r="9" fill="#5A6D5A"/><path d="M593 166l3 3 6-6" stroke="#EAEAE6" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>

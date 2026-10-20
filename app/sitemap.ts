@@ -3,27 +3,11 @@ import {MetadataRoute} from 'next';
 export default function sitemap(): MetadataRoute.Sitemap {
   const baseUrl = 'https://atavicolabs.com';
   
-  const offers = [
-    'ops-quick-win',
-    'continuity-retainer',
-    'product-build',
-  ];
-
   const projects = [
-    'ai-workflow-assistant',
-    'crispin',
-    'energy-intelligence',
-    'flowcanvas',
-    'helixops',
-    'hostid',
-    'insightgrid',
-    'loopin',
-    'lytera',
-    'nuvia',
-    'pulseshift',
-    'syncora',
-    'team-scheduler',
-    'vectis',
+    'hostid-web',
+    'nilm-domotica',
+    'hubwater',
+    'codfood',
   ];
   
   const homepages: MetadataRoute.Sitemap = [
@@ -80,33 +64,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
     },
   ];
   
-  const offerPages: MetadataRoute.Sitemap = offers.flatMap(offer => [
-    {
-      url: `${baseUrl}/it/offers/${offer}`,
-      lastModified: new Date(),
-      changeFrequency: 'monthly' as const,
-      priority: 0.8,
-      alternates: {
-        languages: {
-          it: `${baseUrl}/it/offers/${offer}`,
-          en: `${baseUrl}/en/offers/${offer}`,
-        },
-      },
-    },
-    {
-      url: `${baseUrl}/en/offers/${offer}`,
-      lastModified: new Date(),
-      changeFrequency: 'monthly' as const,
-      priority: 0.8,
-      alternates: {
-        languages: {
-          it: `${baseUrl}/it/offers/${offer}`,
-          en: `${baseUrl}/en/offers/${offer}`,
-        },
-      },
-    },
-  ]);
-
   const projectPages: MetadataRoute.Sitemap = projects.flatMap(project => [
     {
       url: `${baseUrl}/it/projects/${project}`,
@@ -134,5 +91,5 @@ export default function sitemap(): MetadataRoute.Sitemap {
     },
   ]);
   
-  return [...homepages, ...contactPages, ...offerPages, ...projectPages];
+  return [...homepages, ...contactPages, ...projectPages];
 }

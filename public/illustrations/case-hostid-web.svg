@@ -1,0 +1,38 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 400" fill="none" role="img" aria-hidden="true">
+  <rect width="640" height="400" fill="#141517"/>
+  <g stroke="#8A8C8E" stroke-opacity=".18"><path d="M0 100H640M0 200H640M0 300H640M160 0V400M320 0V400M480 0V400"/></g>
+  <!-- phone -->
+  <rect x="70" y="48" width="150" height="304" rx="24" fill="#1B1C1D" stroke="#D3D1C8" stroke-opacity=".5" stroke-width="1.5"/>
+  <rect x="124" y="60" width="42" height="6" rx="3" fill="#8A8C8E" fill-opacity=".4"/>
+  <rect x="90" y="96" width="110" height="74" rx="6" stroke="#D3D1C8" stroke-opacity=".45"/>
+  <circle cx="116" cy="124" r="13" stroke="#D3D1C8" stroke-opacity=".45"/>
+  <path d="M138 114H188M138 128H178M138 142H188" stroke="#8A8C8E" stroke-opacity=".6"/>
+  <path d="M84 104V92H96M194 92H206V104M206 162V174H194M96 174H84V162" stroke="#7E987A" stroke-width="2" transform="translate(-2 -2)"/>
+  <rect x="90" y="196" width="110" height="10" rx="3" fill="#8A8C8E" fill-opacity=".25"/>
+  <rect x="90" y="216" width="110" height="10" rx="3" fill="#8A8C8E" fill-opacity=".25"/>
+  <rect x="90" y="236" width="70" height="10" rx="3" fill="#8A8C8E" fill-opacity=".25"/>
+  <rect x="90" y="292" width="110" height="32" rx="6" fill="#5A6D5A"/>
+  <path d="M134 308l7 7 14-14" stroke="#EAEAE6" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+  <!-- phone -> chip -->
+  <path d="M222 200H284" stroke="#7E987A" stroke-width="1.5" stroke-dasharray="5 5"/>
+  <path d="M278 194l8 6-8 6" stroke="#7E987A" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+  <!-- chip -->
+  <rect x="296" y="164" width="72" height="72" rx="10" fill="#1B1C1D" stroke="#7E987A" stroke-width="1.5"/>
+  <rect x="314" y="182" width="36" height="36" rx="5" stroke="#D3D1C8" stroke-opacity=".6"/>
+  <path d="M308 178V164M332 178V164M356 178V164M308 236V222M332 236V222M356 236V222M296 190H282M296 212H282M368 190H382M368 212H382" stroke="#8A8C8E" stroke-opacity=".7"/>
+  <path d="M325 195l3 7 7 3-7 3-3 7-3-7-7-3 7-3z" fill="#7E987A"/>
+  <!-- chip -> portals -->
+  <path d="M382 200H410V140H452M410 200V260H452" stroke="#7E987A" stroke-width="1.5" stroke-dasharray="5 5"/>
+  <path d="M446 134l8 6-8 6M446 254l8 6-8 6" stroke="#7E987A" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+  <!-- portals -->
+  <g>
+    <rect x="458" y="100" width="130" height="80" rx="6" fill="#1B1C1D" stroke="#D3D1C8" stroke-opacity=".5"/>
+    <rect x="458" y="100" width="130" height="18" rx="6" fill="#8A8C8E" fill-opacity=".2"/>
+    <path d="M474 136H540M474 150H520" stroke="#8A8C8E" stroke-opacity=".6"/>
+    <circle cx="562" cy="154" r="11" fill="#5A6D5A"/><path d="M556 154l4 4 8-8" stroke="#EAEAE6" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+    <rect x="458" y="220" width="130" height="80" rx="6" fill="#1B1C1D" stroke="#D3D1C8" stroke-opacity=".5"/>
+    <rect x="458" y="220" width="130" height="18" rx="6" fill="#8A8C8E" fill-opacity=".2"/>
+    <path d="M474 256H540M474 270H520" stroke="#8A8C8E" stroke-opacity=".6"/>
+    <circle cx="562" cy="274" r="11" fill="#5A6D5A"/><path d="M556 274l4 4 8-8" stroke="#EAEAE6" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+  </g>
+</svg>

@@ -3,7 +3,6 @@ import {getMessages} from 'next-intl/server';
 import {notFound} from 'next/navigation';
 import {locales} from '@/src/i18n/config';
 import {Metadata} from 'next';
-import CustomCursor from '../components/CustomCursor';
 import "../globals.css";
 
 export const metadata: Metadata = {
@@ -89,7 +88,6 @@ export default async function LocaleLayout({
         />
       </head>
       <body className="antialiased" suppressHydrationWarning>
-        <CustomCursor />
         <NextIntlClientProvider messages={messages} locale={locale}>
           {children}
         </NextIntlClientProvider>

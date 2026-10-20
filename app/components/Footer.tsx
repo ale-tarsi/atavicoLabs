@@ -8,6 +8,7 @@ import { FEATURES } from '../constants/features';
 export default function Footer() {
   const currentYear = new Date().getFullYear();
   const t = useTranslations('footer');
+  const tOff = useTranslations('home.startingPoints');
   const locale = useLocale();
   const { ref, isRevealed } = useReveal();
 
@@ -42,18 +43,13 @@ export default function Footer() {
             </h4>
             <ul className="space-y-3">
               <li>
-                <Link href={`/${locale}/offers/ops-quick-win`} className="text-[13px] text-sabbia/70 hover:text-oliva transition-colors duration-300">
-                  Ops Quick Win
+                <Link href={`/${locale}#starting-points`} className="text-[13px] text-sabbia/70 hover:text-oliva transition-colors duration-300">
+                  {tOff('analysis.title')}
                 </Link>
               </li>
               <li>
-                <Link href={`/${locale}/offers/continuity-retainer`} className="text-[13px] text-sabbia/70 hover:text-oliva transition-colors duration-300">
-                  Continuity Retainer
-                </Link>
-              </li>
-              <li>
-                <Link href={`/${locale}/offers/product-build`} className="text-[13px] text-sabbia/70 hover:text-oliva transition-colors duration-300">
-                  Product Build
+                <Link href={`/${locale}#starting-points`} className="text-[13px] text-sabbia/70 hover:text-oliva transition-colors duration-300">
+                  {tOff('build.title')}
                 </Link>
               </li>
             </ul>

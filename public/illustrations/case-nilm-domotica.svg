@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 400" fill="none" role="img" aria-hidden="true">
+  <rect width="640" height="400" fill="#141517"/>
+  <g stroke="#8A8C8E" stroke-opacity=".14"><path d="M60 40V370M150 40V370M240 40V370M330 40V370M420 40V370M510 40V370M600 40V370"/></g>
+  <!-- aggregate -->
+  <path d="M60 170H600" stroke="#8A8C8E" stroke-opacity=".35"/>
+  <path d="M60 150H100V118H150V92H220V126H290V74H370V132H450V100H530V150H600" stroke="#D3D1C8" stroke-opacity=".85" stroke-width="2" stroke-linejoin="round"/>
+  <circle cx="44" cy="96" r="5" fill="#D3D1C8"/>
+  <!-- split arrow -->
+  <path d="M320 182V204" stroke="#7E987A" stroke-width="1.5"/>
+  <path d="M313 198l7 8 7-8" stroke="#7E987A" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+  <!-- disaggregated -->
+  <path d="M60 245H600" stroke="#8A8C8E" stroke-opacity=".25"/>
+  <path d="M60 245H130V222H260V245H420V222H540V245H600" stroke="#7E987A" stroke-width="2" stroke-linejoin="round"/>
+  <circle cx="44" cy="226" r="5" fill="#7E987A"/>
+  <path d="M60 303H200V282H300V303H460V282H600" stroke="#9DB39A" stroke-width="2" stroke-linejoin="round"/>
+  <path d="M60 303H600" stroke="#8A8C8E" stroke-opacity=".25"/>
+  <circle cx="44" cy="286" r="5" fill="#9DB39A"/>
+  <path d="M60 361H110V344H160V361H340V338H410V361H520V344H560V361H600" stroke="#B8A88A" stroke-width="2" stroke-linejoin="round"/>
+  <path d="M60 361H600" stroke="#8A8C8E" stroke-opacity=".25"/>
+  <circle cx="44" cy="345" r="5" fill="#B8A88A"/>
+</svg>

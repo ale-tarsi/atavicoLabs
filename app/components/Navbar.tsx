@@ -168,12 +168,6 @@ export default function Navbar() {
               {t('startHere')}
             </Link>
             <Link
-              href={`/${locale}/offers/ops-quick-win`}
-              className="text-[13px] font-medium tracking-wide text-sabbia/90 hover:text-accent-primary focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent-primary/60 focus-visible:ring-offset-2 focus-visible:ring-offset-bg-primary transition-colors duration-300"
-            >
-              {t('offers')}
-            </Link>
-            <Link
               href={`/${locale}/contact`}
               className="text-[13px] font-medium tracking-wide text-sabbia/90 hover:text-accent-primary focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent-primary/60 focus-visible:ring-offset-2 focus-visible:ring-offset-bg-primary transition-colors duration-300"
             >
@@ -332,15 +326,6 @@ export default function Navbar() {
                 {t('process')}
               </Link>
 
-              <Link
-                href={`/${locale}/offers/ops-quick-win`}
-                onClick={() => setMenuOpen(false)}
-                className="text-[32px] font-light tracking-[-0.02em] text-sabbia hover:text-oliva transition-colors duration-200"
-                tabIndex={menuOpen ? 0 : -1}
-              >
-                {t('offers')}
-              </Link>
-
             {/* Divider */}
             <div className="h-px bg-grigio/20" style={{ margin: '1rem 0' }} />
 
@@ -370,8 +355,6 @@ export default function Navbar() {
               <div className="flex items-center gap-2 text-[11px] font-light text-sabbia/60">
                 <span className="text-oliva">●</span>
                 <span>Remote-first</span>
-                <span className="text-oliva">●</span>
-                <span>{t('since')}</span>
               </div>
             </div>
           </div>

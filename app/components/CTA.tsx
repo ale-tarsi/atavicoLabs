@@ -9,10 +9,8 @@ import { Mail } from 'lucide-react';
 
 export default function CTA() {
   const t = useTranslations('cta');
-  const tProof = useTranslations('proofPoints');
   const locale = useLocale() as 'it' | 'en';
   const { ref, isRevealed } = useReveal();
-  const proofItems = tProof.raw('items') as { title: string; description: string }[];
 
   return (
     <section 
@@ -28,9 +26,6 @@ export default function CTA() {
           backgroundAttachment: 'fixed'
         }}
       />
-
-      {/* Section Number */}
-      <div className="absolute top-12 right-6 lg:right-16 text-[11px] font-mono text-oliva/30">[07]</div>
 
       <div className="relative max-w-6xl mx-auto px-6 grid lg:grid-cols-2 gap-16 lg:gap-20">
         {/* Left Column - Content */}
@@ -51,14 +46,6 @@ export default function CTA() {
             style={{ animationDelay: '100ms' }}
           >
             {t('subtitle')}
-          </p>
-
-          {/* What happens next */}
-          <p 
-            className={`text-[14px] leading-[1.7] text-sabbia/50 font-light max-w-[520px] fade-up ${isRevealed ? 'revealed' : ''}`}
-            style={{ animationDelay: '160ms' }}
-          >
-            {t('nextSteps')}
           </p>
 
           {/* CTA Buttons */}
@@ -89,18 +76,6 @@ export default function CTA() {
             </a>
           </div>
 
-          {/* Stats Row */}
-          <div 
-            className={`grid grid-cols-4 gap-4 pt-8 border-t border-grigio/20 fade-up ${isRevealed ? 'revealed' : ''}`}
-            style={{ animationDelay: '300ms' }}
-          >
-            {proofItems.map((item, index) => (
-              <div key={index}>
-                <div className="text-[28px] font-medium text-oliva leading-[1.2]">{item.title}</div>
-                <div className="text-[11px] text-grigio/70 uppercase tracking-wider mt-1 leading-relaxed">{item.description}</div>
-              </div>
-            ))}
-          </div>
         </div>
 
         {/* Right Column - Contact Info Box */}

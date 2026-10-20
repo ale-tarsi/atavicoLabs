@@ -1,19 +1,14 @@
 import {getTranslations} from 'next-intl/server';
 import Hero from '@/app/components/Hero';
 import About from '@/app/components/About';
-import ProcessSection from '@/app/components/ProcessSection';
+import HomeProcess from '@/app/components/HomeProcess';
 import Portfolio from '@/app/components/Portfolio';
-import Testimonials from '@/app/components/Testimonials';
-import Blog from '@/app/components/Blog';
 import CTA from '@/app/components/CTA';
 import Footer from '@/app/components/Footer';
 import Navbar from '@/app/components/Navbar';
-import ProofsSection from '@/app/components/ProofsSection';
-import { FEATURES } from '@/app/constants/features';
 import { ArrowRight } from 'lucide-react';
-import StartingPoints from '@/app/components/StartingPoints';
+import Offerings from '@/app/components/Offerings';
 import SectionHeader from '@/app/components/SectionHeader';
-import AuditLink from '@/app/components/AuditLink';
 import LanguageSwitcher from '@/app/components/LanguageSwitcher';
 
 export async function generateMetadata({params}: {params: Promise<{locale: string}>}) {
@@ -86,9 +81,6 @@ export default async function HomePage({ params }: { params: Promise<{ locale: s
       {/* 1. Hero */}
       <Hero />
       
-      {/* 2. Automation Proofs - Proof of reliability */}
-      <ProofsSection />
-      
       {/* 3. Ways to Start - Entry points */}
       <section id="starting-points" className="relative pt-24 lg:pt-32 pb-20 lg:pb-28 bg-grafite scroll-mt-24">
         <div className="max-w-6xl mx-auto px-6">
@@ -99,18 +91,7 @@ export default async function HomePage({ params }: { params: Promise<{ locale: s
             subtitle={tHome('startingPoints.description')}
             className="mb-12 [&_h2]:text-[36px] [&_h2]:lg:text-[48px] [&_p]:max-w-2xl [&_p]:mx-auto [&_p]:text-sabbia/80"
           />
-          <StartingPoints />
-
-          <div className="mt-12 flex justify-center">
-            <AuditLink
-              locale={locale}
-              source="starting_points"
-              className="inline-flex items-center gap-2 px-7 py-3 bg-oliva text-carbone text-[14px] font-medium hover:bg-oliva/90 transition-all focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-oliva/60 focus-visible:ring-offset-2 focus-visible:ring-offset-carbone"
-            >
-              {tHome('startingPoints.requestAudit')}
-              <ArrowRight size={16} />
-            </AuditLink>
-          </div>
+          <Offerings />
         </div>
       </section>
       
@@ -120,25 +101,12 @@ export default async function HomePage({ params }: { params: Promise<{ locale: s
       </section>
       
       {/* 5. Process */}
-      <ProcessSection variant="opsQuickWin" id="process" />
+      <HomeProcess />
       
       {/* 6. About */}
       <section id="about" className="scroll-mt-24">
         <About />
       </section>
-      
-      {/* 6. Testimonials - Fiducia (disabled: placeholder data) */}
-      {FEATURES.TESTIMONIALS_ENABLED && <Testimonials />}
-      
-      {/* 7. Blog - Valore (disabled: placeholder articles) */}
-      {FEATURES.BLOG_ENABLED && (
-        <section id="blog" className="scroll-mt-24">
-          <Blog />
-        </section>
-      )}
-      
-      {/* Newsletter - Disabled */}
-      {/* <Newsletter /> */}
       
       {/* 8. CTA finale - Conversione */}
       <section id="contact" className="scroll-mt-24">

@@ -13,8 +13,7 @@
     "offers": "Offerte",
     "contact": "Contatti",
     "requestAudit": "Prenota audit 30 min",
-    "studioDescriptor": "Studio di automazione",
-    "since": "Dal 2017"
+    "studioDescriptor": "Studio di automazione"
   },
   "contact": {
     "meta": {
@@ -32,25 +31,9 @@
       "emailPlaceholder": "mario@azienda.com",
       "company": "Azienda",
       "companyPlaceholder": "La tua azienda (opzionale)",
-      "interest": "Ti interessa",
-      "interestPlaceholder": "Seleziona un'offerta",
-      "options": {
-        "quickWin": "Ops Quick Win (7 giorni)",
-        "retainer": "Continuity Retainer (mensile)",
-        "product": "Product Build (6-14 settimane)",
-        "other": "Altro / Non so ancora"
-      },
       "workflow": "Descrivi il flusso critico da automatizzare",
       "workflowPlaceholder": "Es: Sincronizzare i lead dal CRM a Sheets + alert Slack; Generare email di outreach con AI + approvazione; Estrarre dati da fatture PDF in Airtable…",
       "tools": "Quali strumenti usi già? (opzionale)",
-      "budget": "Budget (opzionale)",
-      "budgetPlaceholder": "Seleziona un range",
-      "budgetOptions": {
-        "lt1k": "< €1k",
-        "1to3k": "€1k–€3k",
-        "3to10k": "€3k–€10k",
-        "gt10k": "€10k+"
-      },
       "toolOptions": {
         "sheets": "Google Sheets",
         "slack": "Slack",
@@ -92,142 +75,46 @@
   "hero": {
     "label": "Automazioni. Strumenti. Sistemi che durano.",
     "title": "Prodotti digitali solidi, progettati con cura.",
-    "description": "Costruiamo strumenti operativi che eliminano lavoro ripetitivo, riducono errori e scalano con il tuo team. Piccolo studio, qualità costante, sistemi sempre online.",
-    "bullets": {
-      "audit": "Audit 30 min",
-      "proposal": "Proposta in 48h",
-      "delivery": "Delivery in 7 giorni (Quick Win)"
-    },
+    "description": "Aiutiamo le PMI a eliminare il lavoro manuale ripetitivo: mappiamo il processo, poi costruiamo l'automazione che lo sostituisce.",
     "ctaPrimary": "Avvia l'audit gratuito",
     "ctaTertiary": "Come partiamo",
     "ctaSecondary": "Vedi i progetti",
     "available": "Disponibili per progetti",
-    "since": "Dal 2017",
     "remote": "Remote-first",
     "onsite": "On-site su richiesta",
     "deliveryNote": "Delivery da remoto, supporto in presenza solo per fasi critiche."
   },
   "home": {
     "startingPoints": {
-      "eyebrow": "Dove vuoi arrivare?",
-      "title": "Tre percorsi, in base a dove sei",
-      "description": "Automazione rapida, supporto continuativo o prodotto completo. Scegli in base alla fase del tuo sistema operativo.",
-      "learnMore": "Scopri l'offerta",
-      "requestAudit": "Prenota audit gratuito",
-      "selector": {
-        "automateProcess": "Ho un processo manuale da automatizzare",
-        "stabilizeAutomation": "Ho automazioni già live da stabilizzare",
-        "buildProduct": "Devo costruire un prodotto completo"
-      }
+      "eyebrow": "Come lavoriamo insieme",
+      "title": "Si parte dal tuo processo",
+      "description": "Prima capiamo come funziona oggi il lavoro manuale. Poi decidiamo insieme se e cosa conviene automatizzare.",
+      "analysis": {
+        "title": "Analisi del flusso",
+        "tagline": "Capiamo dove il lavoro manuale costa tempo ed errori, e cosa conviene automatizzare per primo.",
+        "bullets": [
+          "Mappa del processo com'è oggi, passaggio per passaggio",
+          "Punti in cui si perde tempo o si sbaglia",
+          "Piano scritto: cosa automatizzare, con quali strumenti e in che ordine"
+        ]
+      },
+      "build": {
+        "title": "Automazione su misura",
+        "tagline": "Costruiamo e mettiamo in produzione l'automazione scelta, collegata agli strumenti che già usi.",
+        "bullets": [
+          "Integrazione con i tuoi gestionali e fogli di lavoro",
+          "Controlli, avvisi e gestione degli errori",
+          "Documentazione e passaggio di consegne al tuo team"
+        ]
+      },
+      "support": "Dopo il rilascio puoi affidarci monitoraggio e piccole modifiche nel tempo.",
+      "cta": "Prenota una call di 30 minuti"
     }
-  },
-  "proofs": {
-    "section": {
-      "eyebrow": "Casi interni",
-      "title": "Tre automazioni che usiamo ogni giorno",
-      "description": "Progetti reali del nostro workflow quotidiano. Se funzionano per noi, funzionano per te."
-    },
-    "badges": {
-      "internal": "Uso interno",
-      "inProgress": "In sviluppo",
-      "production": "In produzione"
-    },
-    "stack": {
-      "aiOutreach": "n8n • Google Sheets • OpenAI",
-      "slackAlerts": "Webhook • Slack API • n8n",
-      "docToData": "Email/PDF • Parser • Review Queue"
-    },
-    "output": {
-      "aiOutreach": "bozze + log + digest follow-up",
-      "slackAlerts": "dedupe + retry + escalation",
-      "docToData": "Schema JSON + flag di confidenza"
-    },
-    "labels": {
-      "problem": "Problema",
-      "solution": "Soluzione",
-      "result": "Risultato",
-      "timeline": "Timeline"
-    },
-    "aiOutreach": {
-      "title": "AI Outreach Personalizzato",
-      "description": "Generazione automatica di email outreach personalizzate tramite AI, con invio programmato e tracking.",
-      "problem": "Outreach manuale lento e poco scalabile",
-      "solution": "AI + Sheets + n8n per generazione e invio automatico",
-      "result": "200+ email personalizzate/settimana, −90% tempo manuale",
-      "timeline": "5 giorni",
-      "stack": {
-        "0": "Google Sheets",
-        "1": "n8n",
-        "2": "OpenAI API",
-        "3": "Slack"
-      }
-    },
-    "slackAlerts": {
-      "title": "Alert Slack Multi-Tool",
-      "description": "Sistema centralizzato di notifiche: downtime, errori API, limiti quota, tutto su Slack con escalation automatica.",
-      "problem": "Alert sparsi in 5 tool diversi, nessuno li vede",
-      "solution": "Uptime Robot + Slack API + n8n per aggregazione",
-      "result": "Incident response da 2h a 15min, 0 downtime perso",
-      "timeline": "3 giorni",
-      "stack": {
-        "0": "Uptime Robot",
-        "1": "Slack API",
-        "2": "n8n",
-        "3": "PagerDuty"
-      }
-    },
-    "docToData": {
-      "title": "Doc → Data Extraction",
-      "description": "Estrazione automatica di dati strutturati da PDF/email con OCR e AI, poi inserimento diretto in Airtable.",
-      "problem": "Inserimento manuale dati da fatture/contratti (5h/settimana)",
-      "solution": "Zapier + Google Cloud Vision + AI parsing",
-      "result": "In sviluppo: target −80% tempo manuale entro 2 settimane",
-      "timeline": "7 giorni",
-      "stack": {
-        "0": "Zapier",
-        "1": "Google Cloud Vision",
-        "2": "Airtable",
-        "3": "Python"
-      }
-    },
-    "eyebrow": "Sistemi che usiamo ogni giorno",
-    "title": "Tre automazioni costruite per noi",
-    "subtitle": "Strumenti reali del nostro workflow. Se funzionano internamente, funzionano per i clienti.",
-    "items": [
-      {
-        "title": "AI Outreach Personalizzato",
-        "description": "Generazione automatica di email outreach personalizzate tramite AI, con invio programmato e tracking.",
-        "highlights": [
-          "Outreach manuale lento e poco scalabile",
-          "AI + Sheets + n8n per generazione e invio automatico",
-          "200+ email personalizzate/settimana, −90% tempo manuale"
-        ]
-      },
-      {
-        "title": "Alert Slack Multi-Tool",
-        "description": "Sistema centralizzato di notifiche: downtime, errori API, limiti quota, tutto su Slack con escalation automatica.",
-        "highlights": [
-          "Alert sparsi in 5 tool diversi, nessuno li vede",
-          "Uptime Robot + Slack API + n8n per aggregazione",
-          "Incident response da 2h a 15min, 0 downtime perso"
-        ]
-      },
-      {
-        "title": "Doc → Data Extraction",
-        "description": "Estrazione automatica di dati strutturati da PDF/email con OCR e AI, poi inserimento diretto in Airtable.",
-        "highlights": [
-          "Inserimento manuale dati da fatture/contratti (5h/settimana)",
-          "Zapier + Google Cloud Vision + AI parsing",
-          "In sviluppo: target −80% tempo manuale entro 2 settimane"
-        ]
-      }
-    ],
-    "disclaimer": "Esempi interni: niente numeri inventati, solo sistemi reali."
   },
   "about": {
     "eyebrow": "Studio",
     "title": "Piccolo studio, standard alti, continuità.",
-    "subtitle": "Attivi dal 2017. Costruiamo sistemi che durano: documentazione, monitoring e handover inclusi in ogni progetto.",
+    "subtitle": "Costruiamo sistemi che durano: documentazione, monitoring e handover inclusi in ogni progetto.",
     "expertiseLabel": "Stack",
     "expertiseTags": [
       "Design UX/UI",
@@ -299,8 +186,8 @@
     ]
   },
   "portfolio": {
-    "title": "Strumenti operativi per team reali.",
-    "subtitle": "Dashboard, piattaforme interne e automazioni live. Alcuni pubblici, altri sotto NDA.",
+    "title": "Lavori scelti.",
+    "subtitle": "Prodotti e sistemi reali, in produzione.",
     "labels": {
       "timeline": "Timeline",
       "status": "Status",
@@ -419,7 +306,7 @@
     "methodologyText": "Agile · TDD · Integrazione continua",
     "finalNudge": "Vuoi vedere questo processo applicato al tuo sistema?",
     "opsQuickWin": {
-      "title": "Ops Quick Win — automazione in 7 giorni",
+      "title": "Come lavoriamo",
       "subtitle": "Automatizziamo un workflow critico end-to-end con monitoring, non una patch.",
       "deliverablesLabel": "Consegne",
       "methodologyLabel": "Metodo",
@@ -513,185 +400,6 @@
           ]
         }
       ]
-    },
-    "continuityRetainer": {
-      "title": "Continuity Retainer — automazioni stabili",
-      "subtitle": "Monitoring, fix e miglioramenti mensili con SLA chiaro.",
-      "deliverablesLabel": "Cosa consegniamo",
-      "methodologyLabel": "Metodo",
-      "methodologyText": "SLO, playbook, change log. Misuriamo errori/tempo risparmiato e teniamo gli owner allineati.",
-      "tools": [
-        "Grafana/Metabase",
-        "Postman",
-        "Linear/Jira",
-        "Statuspage",
-        "Slack"
-      ],
-      "finalNudge": "Ti serve una regia stabile sulle automazioni? Definiamo i tuoi SLO.",
-      "steps": [
-        {
-          "phaseLabel": "SETT. 1",
-          "percent": "25%",
-          "title": "Baseline & monitoring",
-          "description": "Attiviamo log/alert, definiamo SLO + escalation.",
-          "duration": "Settimana 1",
-          "next": "Vedi dashboard e sai chi è on-call.",
-          "deliverables": [
-            "Dashboard uptime/errori",
-            "Regole alert + escalation",
-            {
-              "text": "SLO e owner documentati",
-              "done": true
-            }
-          ]
-        },
-        {
-          "phaseLabel": "OGNI SETTIMANA",
-          "percent": "25%",
-          "title": "Check proattivi",
-          "description": "Health check, triage incidenti, fix rapidi prima che esplodano.",
-          "duration": "Cadenza settimanale",
-          "next": "Incident risolti o ticketati entro SLA.",
-          "deliverables": [
-            "Health check automatici",
-            "Bugfix entro SLA",
-            {
-              "text": "Changelog settimanale",
-              "done": true
-            }
-          ]
-        },
-        {
-          "phaseLabel": "CONTINUO",
-          "percent": "30%",
-          "title": "Migliorie & richieste",
-          "description": "Nuove regole, campi, integrazioni entro la quota mensile.",
-          "duration": "Continuo",
-          "next": "Richieste priorizzate e pianificate con ETA.",
-          "deliverables": [
-            "Backlog grooming + ETA",
-            "Regole/integrazioni rilasciate",
-            {
-              "text": "Note di ottimizzazione costi/tempi",
-              "done": true
-            }
-          ]
-        },
-        {
-          "phaseLabel": "FINE MESE",
-          "percent": "20%",
-          "title": "Report & roadmap",
-          "description": "Metriche, incidenti, prossime mosse; aggiustiamo lo scope.",
-          "duration": "Fine mese",
-          "next": "Approvi il focus del mese successivo.",
-          "deliverables": [
-            "Report mensile",
-            "Roadmap per il mese dopo",
-            {
-              "text": "Runbook aggiornati",
-              "done": true
-            }
-          ]
-        }
-      ]
-    },
-    "productBuild": {
-      "title": "Product Build — da workflow a prodotto",
-      "subtitle": "Design, sviluppo e rilascio. Web-first, mobile opzionale.",
-      "deliverablesLabel": "Consegne",
-      "methodologyLabel": "Metodo",
-      "methodologyText": "Design + engineering in sprint settimanali. TDD dove serve, PR review, CI/CD con preview.",
-      "tools": [
-        "Figma",
-        "Storybook",
-        "TypeScript/Next.js",
-        "PostgreSQL/Supabase",
-        "GitHub + CI",
-        "Linear/Slack"
-      ],
-      "finalNudge": "Vuoi questo percorso sul tuo prodotto? Prenota un audit di 30 minuti.",
-      "steps": [
-        {
-          "phaseLabel": "FASE 01",
-          "percent": "15%",
-          "title": "Discovery & scope",
-          "description": "Workshop, priorità, metriche di successo, scelte tecnologiche.",
-          "duration": "Settimane 1–2",
-          "next": "Hai scope approvato, architettura di massima e piano di delivery.",
-          "deliverables": [
-            "Scope + criteri di accettazione",
-            "Architettura + stack",
-            {
-              "text": "Mappa rischi e vincoli",
-              "done": true
-            }
-          ]
-        },
-        {
-          "phaseLabel": "FASE 02",
-          "percent": "20%",
-          "title": "Design system & flow",
-          "description": "Wireframe, UI kit, stati; prototipo cliccabile.",
-          "duration": "Settimane 3–4",
-          "next": "Review con stakeholder; componenti pronti per dev.",
-          "deliverables": [
-            "User flow e wireframe",
-            "Design system (token + componenti)",
-            {
-              "text": "Prototipo cliccabile",
-              "done": true
-            }
-          ]
-        },
-        {
-          "phaseLabel": "FASE 03",
-          "percent": "35%",
-          "title": "Build",
-          "description": "Implementazione full-stack, integrazioni, modello dati, accessi.",
-          "duration": "Settimane 5–10",
-          "next": "Demo settimanali; staging sempre aggiornato.",
-          "deliverables": [
-            "Feature slice in staging",
-            "API + schema DB",
-            {
-              "text": "Instrumentation + log",
-              "done": true
-            }
-          ]
-        },
-        {
-          "phaseLabel": "FASE 04",
-          "percent": "20%",
-          "title": "QA & hardening",
-          "description": "Test end-to-end, performance, accessibilità e sicurezza.",
-          "duration": "Settimane 11–12",
-          "next": "Release candidate con evidenze di test.",
-          "deliverables": [
-            "Test E2E + coverage",
-            "Fix performance/accessibilità",
-            {
-              "text": "Piano rollback + runbook",
-              "done": true
-            }
-          ]
-        },
-        {
-          "phaseLabel": "FASE 05",
-          "percent": "10%",
-          "title": "Launch & handover",
-          "description": "Deploy produzione, monitoring, training, roadmap successiva.",
-          "duration": "Settimane 13–14",
-          "next": "Il team possiede il prodotto; retainer opzionale.",
-          "deliverables": [
-            "Deploy produzione + monitoring",
-            "Documentazione + training",
-            {
-              "text": "Checklist di lancio chiusa",
-              "done": true
-            }
-          ]
-        }
-      ]
     }
   },
   "testimonials": {
@@ -763,30 +471,9 @@
     "responseTimeLabel": "Tempo di risposta",
     "responseTime": "Entro 24 ore"
   },
-  "proofPoints": {
-    "label": "Numeri reali",
-    "items": [
-      {
-        "title": "Dal 2017",
-        "description": "Attivi da oltre 7 anni. Stessi standard dal primo progetto."
-      },
-      {
-        "title": "15+ prodotti",
-        "description": "Rilasciati end-to-end: web app, mobile, automazioni, dashboard."
-      },
-      {
-        "title": "99.9% uptime",
-        "description": "Media su tutti i sistemi in produzione. Monitoring incluso."
-      },
-      {
-        "title": "7 giorni",
-        "description": "Da analisi a primo automazione live con Ops Quick Win."
-      }
-    ]
-  },
   "footer": {
     "brand": "AtavicoLabs",
-    "description": "Studio di automazione e strumenti operativi. Attivi dal 2017.",
+    "description": "Studio di automazione e strumenti operativi.",
     "nav": {
       "offers": "Offerte",
       "resources": "Risorse"
@@ -1750,472 +1437,6 @@
         "description": "Lavoriamo insieme a un portale che il tuo team amerà.",
         "button": "Prenota audit 30 min"
       }
-    }
-  },
-  "offers": {
-    "meta": {
-      "title": "Offerte — AtavicoLabs",
-      "description": "Scegli come partire: automazione rapida, continuità mensile o prodotto completo."
-    },
-    "hub": {
-      "eyebrow": "Offerte",
-      "title": "Scegli come partire",
-      "description": "Tre modi per automatizzare, migliorare e scalare i tuoi processi. Risultati concreti, tempi chiari, no sorprese.",
-      "intro": "Inizia con una Quick Win (7 giorni), continua con il Retainer mensile per evoluzioni iterative, poi passa al Product Build quando serve un'interfaccia dedicata o un prodotto scalabile.",
-      "learnMore": "Scopri di più",
-      "meta": {
-        "timeline": "Timeline",
-        "from": "Da"
-      },
-      "offers": {
-        "quickWin": {
-          "title": "Ops Quick Win",
-          "tagline": "Un processo critico automatizzato in 7 giorni",
-          "timeline": "7 giorni",
-          "price": "€1.200 – €3.000",
-          "badge": "Partenza rapida"
-        },
-        "retainer": {
-          "title": "Continuity Retainer",
-          "tagline": "Monitoriamo e miglioriamo le tue automazioni ogni mese",
-          "timeline": "Mensile",
-          "price": "€400 – €1.500/mese",
-          "badge": "Più scelto"
-        },
-        "product": {
-          "title": "Product Build",
-          "tagline": "Da workflow a prodotto: design, sviluppo, rilascio",
-          "timeline": "6–14 settimane",
-          "price": "€8.000 – €25.000+",
-          "badge": "End-to-end"
-        }
-      },
-      "cta": {
-        "title": "Non sai da dove iniziare?",
-        "description": "Prenota un audit gratuito di 30 minuti. Ti aiutiamo a identificare il processo critico e la soluzione migliore.",
-        "button": "Prenota audit 30 min"
-      }
-    },
-    "badges": {
-      "quickStart": "Partenza rapida",
-      "mostPopular": "Più scelto",
-      "endToEnd": "End-to-end"
-    },
-    "quickWin": {
-      "title": "Ops Quick Win",
-      "promise": "In 7 giorni automatizziamo un processo critico (1 flusso end-to-end) tra i tuoi strumenti e lo rendiamo affidabile.",
-      "timeline": "7 giorni",
-      "price": "€1.200 – €3.000",
-      "badge": "Partenza rapida",
-      "highlights": [
-        "Automazione di 1 flusso critico in 7 giorni",
-        "Monitoraggio + alert, zero babysitting",
-        "Piano e stima inviati entro 48h"
-      ],
-      "cta": "Prenota audit 30 min",
-      "ctaFinal": "Partiamo",
-      "meta": {
-        "timeline": "Timeline",
-        "investment": "Investimento"
-      },
-      "summary": {
-        "priceNote": "Il range dipende da numero di integrazioni e complessità della logica.",
-        "note": "Piano + stima entro 24–48h. Nessun impegno finché non approvi."
-      },
-      "hero": {
-        "eyebrow": "Quick Win — 7 giorni",
-        "bullets": [
-          "Automazione end-to-end di 1 flusso critico, non una patch.",
-          "Log, alert e fallback per ridurre errori e lavoro manuale.",
-          "Piano dettagliato entro 24–48h, go-live in 7 giorni."
-        ]
-      },
-      "sections": {
-        "outcomes": "Cosa ottieni",
-        "included": "Cosa include",
-        "boundaries": "Confini",
-        "examples": "Esempi / Use case",
-        "process": "Processo & timeline",
-        "readyToStart": "Pronto a partire?",
-        "readyDescription": "Prenota un audit di 30 minuti. Identifichiamo il processo critico e ti diciamo come automatizzarlo."
-      },
-      "outcomes": [
-        {
-          "title": "Riduci errori",
-          "description": "Alert e fallback rendono l'automazione affidabile, senza check manuali.",
-          "bullets": [
-            "Monitoring e log centralizzati",
-            "Alert automatici su failure",
-            "Fallback manuale quando serve"
-          ]
-        },
-        {
-          "title": "Risparmia tempo",
-          "description": "Elimini copia/incolla, CSV e follow-up manuali tra team e tool.",
-          "bullets": [
-            "Aggiornamenti push su Slack/CRM",
-            "Automazioni schedulate o real-time",
-            "Consegna in 7 giorni"
-          ]
-        },
-        {
-          "title": "Tracciabilità",
-          "description": "Sai sempre cosa è successo, dove è bloccato e chi deve intervenire.",
-          "bullets": [
-            "Dashboard/Sheet di controllo",
-            "SLA e ownership chiari",
-            "Audit trail per QA"
-          ]
-        }
-      ],
-      "process": [
-        {
-          "title": "Audit e analisi",
-          "description": "Mappiamo il flusso attuale, identifichiamo gli strumenti coinvolti e definiamo l'automazione ottimale."
-        },
-        {
-          "title": "Sviluppo e integrazione",
-          "description": "Creiamo le integrazioni tra i tuoi strumenti e implementiamo la logica di automazione."
-        },
-        {
-          "title": "Test e deploy",
-          "description": "Testiamo il flusso end-to-end, gestiamo casi limite e mettiamo in produzione."
-        },
-        {
-          "title": "Handover e monitoring",
-          "description": "Consegniamo documentazione completa, dashboard di monitoring e formiamo il team."
-        }
-      ],
-      "useCases": [
-        {
-          "title": "Reporting automatico (CRM → Slack/Email)",
-          "output": "Report settimanale inviato al team con metriche chiave.",
-          "tools": "HubSpot, Slack, Gmail"
-        },
-        {
-          "title": "Alert / incident notification",
-          "output": "Ticket creato con contesto + escalation sul canale giusto.",
-          "tools": "Statuspage, Slack, Linear/Jira"
-        },
-        {
-          "title": "Onboarding clienti",
-          "output": "Dati in CRM, welcome email e task creati per delivery.",
-          "tools": "Typeform, HubSpot, ClickUp, Gmail"
-        },
-        {
-          "title": "Handoff sales → delivery",
-          "output": "Scheda progetto con checklist, owner e scadenze.",
-          "tools": "HubSpot, Notion, Slack"
-        },
-        {
-          "title": "Sync CRM ↔ Sheets ↔ Slack",
-          "output": "Sync bidirezionale + alert su cambi stato/valore.",
-          "tools": "HubSpot, Google Sheets, Slack"
-        },
-        {
-          "title": "Estrazione email/PDF → database",
-          "output": "Record strutturati pronti per analisi e report.",
-          "tools": "Gmail, Make/Zapier, Google Sheets"
-        }
-      ],
-      "deliverables": [
-        "Flusso automatizzato end-to-end (1 processo)",
-        "Log errori + fallback/manual review",
-        "Mini dashboard o Google Sheet per monitoraggio",
-        "Handover completo con documentazione"
-      ],
-      "boundaries": [
-        "Max 2–3 integrazioni (API/webhook)",
-        "Niente refactor infrastrutturale",
-        "Focus su 1 flusso critico, no multipli"
-      ],
-      "steps": [
-        {
-          "day": "Giorno 1-2",
-          "activity": "Audit flusso + mapping tools"
-        },
-        {
-          "day": "Giorno 3-5",
-          "activity": "Setup automazione + test"
-        },
-        {
-          "day": "Giorno 6",
-          "activity": "Deploy + monitoring"
-        },
-        {
-          "day": "Giorno 7",
-          "activity": "Handover + documentazione"
-        }
-      ],
-      "faqs": [
-        {
-          "question": "Cosa succede se serve più di un flusso?",
-          "answer": "Partiamo dal più critico. Poi valutiamo Continuity Retainer per i successivi."
-        },
-        {
-          "question": "Posso chiedere modifiche dopo?",
-          "answer": "Sì, con Continuity Retainer (mensile) gestiamo evoluzioni e nuove regole."
-        },
-        {
-          "question": "Supportate tool custom?",
-          "answer": "Se hanno API/webhook documentate, sì. Altrimenti valutiamo alternative."
-        },
-        {
-          "question": "Include training?",
-          "answer": "Include handover documentato. Training esteso opzionale (a richiesta)."
-        },
-        {
-          "question": "Tempi fissi o flessibili?",
-          "answer": "7 giorni lavorativi. Se serve urgenza, parliamone in audit."
-        }
-      ],
-      "finalCta": {
-        "title": "Pronto a partire?",
-        "bullets": [
-          "1 flusso critico automatizzato end-to-end con monitoring.",
-          "Timeline di 7 giorni con check-in al giorno 5.",
-          "Range €1.200–€3.000, definito su complessità e integrazioni."
-        ],
-        "note": "Prenota un audit: piano + stima entro 24–48h."
-      }
-    },
-    "retainer": {
-      "title": "Continuity Retainer",
-      "promise": "Monitoriamo, manteniamo e miglioriamo le automazioni: bugfix, nuove regole, nuove integrazioni, ottimizzazione costi/tempi, report mensile.",
-      "timeline": "Mensile",
-      "price": "€400 – €1.500/mese",
-      "badge": "Più scelto",
-      "highlights": [
-        "Fix, migliorie e nuove regole ogni mese",
-        "Monitoraggio proattivo e incident response",
-        "Backlog prioritizzato con update async"
-      ],
-      "cta": "Prenota audit 30 min",
-      "ctaFinal": "Partiamo",
-      "meta": {
-        "timeline": "Timeline",
-        "investment": "Investimento"
-      },
-      "sections": {
-        "examples": "Casi d'uso",
-        "included": "Cosa include",
-        "boundaries": "Confini",
-        "howItWorks": "Come funziona",
-        "readyToStart": "Pronto a partire?",
-        "readyDescription": "Prenota un audit di 30 minuti per discutere le tue esigenze di continuità.",
-        "plans": "Piani"
-      },
-      "examples": [
-        "Aggiungere nuova fonte dati (es. nuovo CRM)",
-        "Modificare logica alert (soglie, destinatari)",
-        "Fix errori improvvisi (API change, rate limit)",
-        "Ottimizzare flussi lenti o costosi",
-        "Estendere dashboard con nuove metriche"
-      ],
-      "deliverables": [
-        "Monitoring continuo (uptime, errori, performance)",
-        "Bugfix prioritari entro 24-48h",
-        "Nuove regole/integrazioni (quota mensile)",
-        "Ottimizzazione costi API e tempi esecuzione",
-        "Report mensile con metriche e suggerimenti"
-      ],
-      "boundaries": [
-        "Quota ore mensile (varia per piano)",
-        "Scope su automazioni esistenti (no new product)",
-        "Response time: 24-48h (non real-time support)"
-      ],
-      "steps": [
-        {
-          "title": "Settimana 1",
-          "description": "Setup monitoring e baseline"
-        },
-        {
-          "title": "Ogni settimana",
-          "description": "Check proattivo e fix"
-        },
-        {
-          "title": "Fine mese",
-          "description": "Report e roadmap"
-        },
-        {
-          "title": "In continuo",
-          "description": "Iterazioni e nuove richieste"
-        }
-      ],
-      "faqs": [
-        {
-          "question": "Cosa include il piano base (€400)?",
-          "answer": "Monitoring + bugfix + 2-3h/mese per piccole modifiche."
-        },
-        {
-          "question": "Posso passare da Quick Win a Retainer?",
-          "answer": "Assolutamente. È il percorso consigliato: automazione rapida → continuità."
-        },
-        {
-          "question": "Cosa succede se non uso tutte le ore?",
-          "answer": "Non si accumulano. Ma usiamo il tempo per ottimizzare proattivamente."
-        },
-        {
-          "question": "Posso cancellare?",
-          "answer": "Sì, con preavviso 30 giorni. Nessun vincolo annuale."
-        },
-        {
-          "question": "Include nuove automazioni da zero?",
-          "answer": "Sì, se rientrano nella quota ore. Altrimenti valutiamo Quick Win add-on."
-        }
-      ],
-      "hero": {
-        "eyebrow": "Continuità"
-      },
-      "plans": {
-        "recommended": "Consigliato",
-        "perMonth": "al mese",
-        "care": {
-          "name": "Care",
-          "price": "€400/mese",
-          "features": [
-            "2-3h/mese per fix e piccoli tweak",
-            "Monitoring + report mensile",
-            "Risposta entro 48h"
-          ]
-        },
-        "growth": {
-          "name": "Growth",
-          "price": "€900/mese",
-          "features": [
-            "6-8h/mese per nuove regole e integrazioni",
-            "Roadmap di ottimizzazioni proattive",
-            "Risposta entro 36h"
-          ]
-        },
-        "opsPlus": {
-          "name": "Ops+",
-          "price": "€1.500/mese",
-          "features": [
-            "12-15h/mese per cambiamenti complessi",
-            "Fix prioritari e sperimentazioni",
-            "Risposta entro 24h"
-          ]
-        }
-      }
-    },
-    "product": {
-      "title": "Product Build",
-      "promise": "Quando il workflow diventa prodotto (dashboard, portale, web app), lo progettiamo e lo portiamo live end-to-end. Mobile come opzione quando serve.",
-      "timeline": "6–14 settimane",
-      "price": "€8.000 – €25.000+",
-      "badge": "End-to-end",
-      "highlights": [
-        "Progettiamo e sviluppiamo la web app dal flow",
-        "Integrazioni, API e opzione mobile",
-        "Pilot online in 6–14 settimane con milestone"
-      ],
-      "cta": "Prenota audit 30 min",
-      "ctaFinal": "Partiamo",
-      "meta": {
-        "timeline": "Timeline",
-        "investment": "Investimento"
-      },
-      "sections": {
-        "examples": "Casi d'uso",
-        "included": "Cosa include",
-        "boundaries": "Confini",
-        "howItWorks": "Come funziona",
-        "readyToStart": "Pronto a partire?",
-        "readyDescription": "Prenota un audit di 30 minuti per discutere il tuo progetto prodotto.",
-        "timeline": "Timeline"
-      },
-      "examples": [
-        "Dashboard analytics per team interni",
-        "Portale clienti con login e data access",
-        "Tool interno per gestione operazioni",
-        "Web app SaaS (MVP o v1)",
-        "Admin panel per automazioni esistenti",
-        "App mobile per operazioni sul campo (opzionale)"
-      ],
-      "deliverables": [
-        "Product design (UX/UI, wireframe, design system)",
-        "Sviluppo full-stack (frontend + backend + database)",
-        "Infrastruttura production-ready (hosting, CI/CD)",
-        "Testing + QA pre-release",
-        "Documentazione tecnica + handover",
-        "Opzione mobile (native o cross-platform) se necessaria"
-      ],
-      "boundaries": [
-        "Scope definito pre-sviluppo (no scope creep)",
-        "Focus web-first, mobile come add-on",
-        "No AI/ML training custom (solo integrazioni)"
-      ],
-      "steps": [
-        {
-          "phase": "Sett. 1-2",
-          "activity": "Discovery, wireframe, definizione stack"
-        },
-        {
-          "phase": "Sett. 3-4",
-          "activity": "Design UI e prototipo interattivo"
-        },
-        {
-          "phase": "Sett. 5-10",
-          "activity": "Sviluppo iterativo (sprint settimanali)"
-        },
-        {
-          "phase": "Sett. 11-12",
-          "activity": "Testing, QA, performance"
-        },
-        {
-          "phase": "Sett. 13-14",
-          "activity": "Launch, handover, documentazione"
-        }
-      ],
-      "faqs": [
-        {
-          "question": "Quando scegliere Product Build vs Quick Win?",
-          "answer": "Quick Win = automazione rapida. Product = interfaccia utente, multi-user, scalabilità."
-        },
-        {
-          "question": "Include hosting e dominio?",
-          "answer": "Setup incluso. Costi hosting ricorrenti a carico cliente (ti consigliamo)."
-        },
-        {
-          "question": "Posso richiedere modifiche durante sviluppo?",
-          "answer": "Sì, in sprint review settimanali. Modifiche di scope maggiori = re-stima."
-        },
-        {
-          "question": "Mobile è sempre necessario?",
-          "answer": "No. Lo includiamo solo se serve davvero (es. operazioni sul campo)."
-        },
-        {
-          "question": "Supporto post-release?",
-          "answer": "Handover incluso. Per manutenzione ongoing: Continuity Retainer."
-        }
-      ],
-      "hero": {
-        "eyebrow": "Product build"
-      },
-      "mobileNote": "Mobile opzionale se serve davvero. Lo confermiamo in discovery.",
-      "process": [
-        {
-          "title": "Discovery e scope",
-          "description": "Workshop, priorità e metriche di successo."
-        },
-        {
-          "title": "Design system",
-          "description": "Flow, wireframe, UI kit e prototipo interattivo."
-        },
-        {
-          "title": "Build & integrazioni",
-          "description": "Sviluppo full-stack, API e modelli dati."
-        },
-        {
-          "title": "QA & hardening",
-          "description": "Test, performance e accessibilità."
-        },
-        {
-          "title": "Go-live & handover",
-          "description": "Deploy, documentazione, training e piano supporto."
-        }
-      ]
     }
   },
   "audit": {
