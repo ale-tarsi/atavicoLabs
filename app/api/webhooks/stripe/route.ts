@@ -1,6 +1,6 @@
 import { NextResponse } from 'next/server';
 import Stripe from 'stripe';
-import { supabase } from '@/lib/supabase';
+import { getReport, updateReport } from '@/lib/store';
 import { analyzeWithClaude } from '@/lib/audit/analyze';
 
 const getStripe = () => new Stripe(process.env.STRIPE_SECRET_KEY!);
@@ -45,13 +45,16 @@ export async function POST(request: Request) {
     return NextResponse.json({ error: 'Missing reportId in session metadata' }, { status: 400 });
   }
 
-  const { data: report, error: fetchError } = await supabase
-    .from('audit_reports')
-    .select('id, url, locale, pagespeed_data, unlocked')
-    .eq('id', reportId)
-    .single();
+  let report;
+  try {
+    report = await getReport(reportId);
+  } catch (err) {
+    // 500 so Stripe retries the webhook
+    console.error('[webhook:store]', err);
+    return NextResponse.json({ error: 'Store unavailable' }, { status: 500 });
+  }
 
-  if (fetchError || !report) {
+  if (!report) {
     console.error('[webhook] report not found for reportId', reportId);
     return NextResponse.json({ error: 'Report not found' }, { status: 404 });
   }
@@ -75,16 +78,13 @@ export async function POST(request: Request) {
       (report.locale as 'it' | 'en') ?? 'it'
     );
 
-    await supabase
-      .from('audit_reports')
-      .update({
-        ai_report: aiReport,
-        status: 'done',
-        unlocked: true,
-        paid_at: new Date().toISOString(),
-        stripe_session_id: session.id,
-      })
-      .eq('id', reportId);
+    await updateReport(reportId, {
+      ai_report: aiReport,
+      status: 'done',
+      unlocked: true,
+      paid_at: new Date().toISOString(),
+      stripe_session_id: session.id,
+    });
 
     console.log('[webhook] report unlocked successfully', reportId);
   } catch (err) {
@@ -92,10 +92,9 @@ export async function POST(request: Request) {
     console.error('[webhook:claude]', message);
     // Store the error so the user can see something went wrong,
     // but return 500 so Stripe retries the webhook.
-    await supabase
-      .from('audit_reports')
-      .update({ error_message: `Claude error after payment: ${message}` })
-      .eq('id', reportId);
+    await updateReport(reportId, {
+      error_message: `Claude error after payment: ${message}`,
+    }).catch(() => {});
     return NextResponse.json({ error: 'Claude analysis failed' }, { status: 500 });
   }
 

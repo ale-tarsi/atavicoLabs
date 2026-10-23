@@ -1,5 +1,5 @@
 import { NextResponse } from 'next/server';
-import { supabase } from '@/lib/supabase';
+import { getReport } from '@/lib/store';
 import type { AuditReport } from '@/types/audit';
 
 export async function GET(
@@ -8,15 +8,15 @@ export async function GET(
 ) {
   const { reportId } = await params;
 
-  const { data, error } = await supabase
-    .from('audit_reports')
-    .select(
-      'id, url, email, locale, status, unlocked, stripe_session_id, paid_at, ip_address, pagespeed_data, ai_report, error_message, created_at'
-    )
-    .eq('id', reportId)
-    .single();
+  let data;
+  try {
+    data = await getReport(reportId);
+  } catch (err) {
+    console.error('[audit:get]', err);
+    return NextResponse.json({ error: 'Store unavailable' }, { status: 502 });
+  }
 
-  if (error || !data) {
+  if (!data) {
     return NextResponse.json({ error: 'Report not found' }, { status: 404 });
   }
 

@@ -1,5 +1,5 @@
 import { NextResponse } from 'next/server';
-import { supabase } from '@/lib/supabase';
+import { createReport, countRecent, updateReport } from '@/lib/store';
 import { fetchPageSpeed } from '@/lib/audit/pagespeed';
 
 export const maxDuration = 60;
@@ -46,69 +46,54 @@ export async function POST(request: Request) {
 
   const ip = getIp(request);
   const since = new Date(Date.now() - 24 * 60 * 60 * 1000).toISOString();
+  const reportId = crypto.randomUUID();
 
-  // Rate limit by email: max 1 request per 24h
-  const { count: emailCount } = await supabase
-    .from('audit_reports')
-    .select('id', { count: 'exact', head: true })
-    .eq('email', email)
-    .gte('created_at', since);
+  try {
+    // Rate limit: max 1 request per email and 3 per IP in 24h
+    const { emailCount, ipCount } = await countRecent({
+      email,
+      ip: ip === 'unknown' ? null : ip,
+      since,
+    });
 
-  if ((emailCount ?? 0) >= 1) {
-    return NextResponse.json(
-      { error: 'Hai già richiesto un audit nelle ultime 24 ore. Riprova domani.' },
-      { status: 429 }
-    );
-  }
-
-  // Rate limit by IP: max 3 requests per 24h
-  if (ip !== 'unknown') {
-    const { count: ipCount } = await supabase
-      .from('audit_reports')
-      .select('id', { count: 'exact', head: true })
-      .eq('ip_address', ip)
-      .gte('created_at', since);
-
-    if ((ipCount ?? 0) >= 3) {
+    if (emailCount >= 1) {
+      return NextResponse.json(
+        { error: 'Hai già richiesto un audit nelle ultime 24 ore. Riprova domani.' },
+        { status: 429 }
+      );
+    }
+    if (ip !== 'unknown' && ipCount >= 3) {
       return NextResponse.json(
         { error: 'Troppe richieste dalla tua rete. Riprova più tardi.' },
         { status: 429 }
       );
     }
-  }
 
-  // Insert row with status 'pending'
-  const { data: row, error: insertError } = await supabase
-    .from('audit_reports')
-    .insert({ url, email, locale, status: 'pending', ip_address: ip })
-    .select('id')
-    .single();
-
-  if (insertError || !row) {
-    console.error('[audit:insert]', insertError);
+    // Insert row with status 'pending'
+    await createReport({
+      id: reportId,
+      url,
+      email,
+      locale,
+      ip_address: ip === 'unknown' ? null : ip,
+    });
+  } catch (err) {
+    console.error('[audit:store]', err);
     return NextResponse.json({ error: 'Failed to create report' }, { status: 500 });
   }
-
-  const reportId = row.id;
 
   try {
     // FASE 1 only: run PageSpeed, save preview — Claude is NOT called here.
     // Claude is called only after Stripe payment is confirmed via webhook.
     const pagespeedData = await fetchPageSpeed(url);
 
-    await supabase
-      .from('audit_reports')
-      .update({ status: 'preview', pagespeed_data: pagespeedData })
-      .eq('id', reportId);
+    await updateReport(reportId, { status: 'preview', pagespeed_data: pagespeedData });
 
     return NextResponse.json({ reportId });
   } catch (err) {
     const message = err instanceof Error ? err.message : String(err);
     console.error('[audit:pagespeed]', message);
-    await supabase
-      .from('audit_reports')
-      .update({ status: 'error', error_message: message })
-      .eq('id', reportId);
+    await updateReport(reportId, { status: 'error', error_message: message }).catch(() => {});
     return NextResponse.json({ error: 'PageSpeed analysis failed', reportId }, { status: 500 });
   }
 }

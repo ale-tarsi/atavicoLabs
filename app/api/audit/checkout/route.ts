@@ -1,6 +1,6 @@
 import { NextResponse } from 'next/server';
 import Stripe from 'stripe';
-import { supabase } from '@/lib/supabase';
+import { getReport, updateReport } from '@/lib/store';
 
 const getStripe = () => new Stripe(process.env.STRIPE_SECRET_KEY!);
 
@@ -18,13 +18,15 @@ export async function POST(request: Request) {
     return NextResponse.json({ error: 'Missing reportId' }, { status: 400 });
   }
 
-  const { data: report, error } = await supabase
-    .from('audit_reports')
-    .select('id, url, unlocked, status')
-    .eq('id', reportId)
-    .single();
+  let report;
+  try {
+    report = await getReport(reportId);
+  } catch (err) {
+    console.error('[checkout:store]', err);
+    return NextResponse.json({ error: 'Store unavailable' }, { status: 502 });
+  }
 
-  if (error || !report) {
+  if (!report) {
     return NextResponse.json({ error: 'Report not found' }, { status: 404 });
   }
 
@@ -63,10 +65,9 @@ export async function POST(request: Request) {
   });
 
   // Persist the session ID for traceability and idempotency checks in the webhook.
-  await supabase
-    .from('audit_reports')
-    .update({ stripe_session_id: session.id })
-    .eq('id', reportId);
+  await updateReport(reportId, { stripe_session_id: session.id }).catch((err) =>
+    console.error('[checkout:store]', err)
+  );
 
   return NextResponse.json({ checkoutUrl: session.url });
 }
