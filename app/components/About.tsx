@@ -38,6 +38,13 @@ export default function About() {
           >
             {t('subtitle')}
           </p>
+          <p
+            className={`mt-4 text-[15px] leading-[1.65] text-sabbia/50 font-light fade-up ${
+              isRevealed ? 'revealed' : ''
+            }`}
+          >
+            {t('network')}
+          </p>
         </div>
 
         <ul className="grid grid-cols-1 md:grid-cols-3 gap-px bg-grigio/20 border border-grigio/20">
