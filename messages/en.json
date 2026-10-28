@@ -12,7 +12,7 @@
     "startHere": "Start here",
     "offers": "Offers",
     "contact": "Contact",
-    "requestAudit": "Book a 30-min audit",
+    "requestAudit": "Book a 30-minute call",
     "studioDescriptor": "Digital Product Studio"
   },
   "contact": {
@@ -21,7 +21,7 @@
       "description": "Let's talk about your project. Free 30-minute audit to identify the best solution."
     },
     "eyebrow": "Contact",
-    "title": "Book a 30-min audit",
+    "title": "Book a 30-minute call",
     "description": "Book a free 30-minute call. We analyze your critical process and tell you how to automate it or build the product you need.",
     "helper": "Estimated time: 60–90 sec",
     "form": {
@@ -47,7 +47,7 @@
       "messagePlaceholder": "Tell us about the process you want to automate or the product you have in mind...",
       "submit": "Send request",
       "submitting": "Sending email...",
-      "bookCall": "Book a 30-min audit",
+      "bookCall": "Book a 30-minute call",
       "preferWrite": "Prefer to write instead?",
       "errors": {
         "nameRequired": "Name is required",
@@ -55,7 +55,7 @@
         "interestRequired": "Please select an offer",
         "workflowRequired": "Please describe the critical workflow"
       },
-      "emailSubject": "30-min audit — {name}",
+      "emailSubject": "30-minute call — {name}",
       "emailLabels": {
         "name": "Name",
         "email": "Email",
@@ -76,7 +76,7 @@
     "label": "Digital product studio for SMEs",
     "title": "Solid digital products, built with care.",
     "description": "We help small and medium businesses remove repetitive manual work: we map the process, then build the automation that replaces it.",
-    "ctaPrimary": "Start your free audit",
+    "ctaPrimary": "Book a 30-minute call",
     "ctaTertiary": "How we start",
     "ctaSecondary": "View projects",
     "available": "Available for projects",
@@ -91,6 +91,7 @@
       "description": "First we understand how the manual work runs today. Then we decide together whether and what is worth automating.",
       "analysis": {
         "title": "Workflow analysis",
+        "example": "See an example analysis",
         "tagline": "We find where manual work costs time and errors, and what to automate first.",
         "bullets": [
           "A step-by-step map of the process as it runs today",
@@ -319,7 +320,7 @@
         "Linear",
         "Slack"
       ],
-      "finalNudge": "Want to see how this process fits your stack? Book a 30-min audit.",
+      "finalNudge": "Want to see how this process fits your stack? Book a 30-minute call.",
       "steps": [
         {
           "phaseLabel": "DAY 1-2",
@@ -458,11 +459,11 @@
     ]
   },
   "cta": {
-    "title": "Start with a free audit.",
+    "title": "Start with a 30-minute call.",
     "subtitle": "30 minutes to analyze your critical process, identify waste and propose a concrete solution.",
-    "nextSteps": "We reply within 24h with the audit report and a clear action plan.",
-    "cta": "Book free audit",
-    "bookCall": "Book a call",
+    "nextSteps": "After the call we send you in writing what we saw and what we would do.",
+    "cta": "Book a 30-minute call",
+    "bookCall": "Write to us instead",
     "email": "contact@atavicolabs.com",
     "eyebrow": "Let's start",
     "emailLabel": "Send a message",
@@ -1282,7 +1283,7 @@
       "cta": {
         "title": "Want similar results?",
         "description": "Let's plan a sprint to modernize your operations platform.",
-        "button": "Book a 30-min audit"
+        "button": "Book a 30-minute call"
       }
     },
     "lytera": {
@@ -1359,7 +1360,7 @@
       "cta": {
         "title": "Need a workflow platform?",
         "description": "Let's design and ship it together.",
-        "button": "Book a 30-min audit"
+        "button": "Book a 30-minute call"
       }
     },
     "crispin": {
@@ -1436,9 +1437,171 @@
       "cta": {
         "title": "Need a control tower?",
         "description": "Let's ship a portal your ops team will love.",
-        "button": "Book a 30-min audit"
+        "button": "Book a 30-minute call"
       }
     }
+  },
+  "exampleAnalysis": {
+    "meta": {
+      "title": "Example of a workflow analysis",
+      "description": "Example on a fictional company: where time is lost and what is worth automating."
+    },
+    "notice": "The company and numbers below are made up: they only show what the result looks like.",
+    "eyebrow": "Workflow analysis",
+    "title": "Orders retyped by hand",
+    "subtitle": "Food distributor, 8 employees. Orders arrive by email and WhatsApp and someone retypes them into the management system.",
+    "stats": [
+      {
+        "value": "13 hours",
+        "label": "a week on entry and fixes"
+      },
+      {
+        "value": "€15,000",
+        "label": "a year of working time"
+      },
+      {
+        "value": "1 in 20",
+        "label": "orders with an error to redo"
+      }
+    ],
+    "legend": {
+      "manual": "Manual",
+      "auto": "Automatic",
+      "person": "Checked by a person"
+    },
+    "today": {
+      "title": "Today",
+      "steps": [
+        {
+          "label": "Order arrives",
+          "caption": "Email, WhatsApp, phone"
+        },
+        {
+          "label": "Look up codes",
+          "caption": "Each customer names them differently"
+        },
+        {
+          "label": "Retype by hand",
+          "caption": "35 orders, 4 minutes each"
+        },
+        {
+          "label": "Fix errors",
+          "caption": "Find and redo"
+        },
+        {
+          "label": "Confirm",
+          "caption": "Write to the customer"
+        }
+      ]
+    },
+    "after": {
+      "title": "After",
+      "steps": [
+        {
+          "label": "Order arrives",
+          "caption": "All in a single queue"
+        },
+        {
+          "label": "Data extracted",
+          "caption": "Codes and quantities suggested"
+        },
+        {
+          "label": "Targeted check",
+          "caption": "Only the doubtful cases"
+        },
+        {
+          "label": "Goes into the system",
+          "caption": "No retyping"
+        },
+        {
+          "label": "Confirm",
+          "caption": "Sent automatically"
+        }
+      ]
+    },
+    "time": {
+      "title": "Where the time goes",
+      "bars": [
+        {
+          "label": "Order entry",
+          "value": "11.7 hours / week",
+          "share": 100
+        },
+        {
+          "label": "Fixing errors",
+          "value": "1.5 hours / week",
+          "share": 13
+        }
+      ],
+      "note": "Estimate: €25 an hour, 46 weeks a year."
+    },
+    "manual": {
+      "title": "Stays manual",
+      "items": [
+        {
+          "text": "Urgent phone orders"
+        },
+        {
+          "text": "Customers with unusual formats"
+        }
+      ]
+    },
+    "needs": {
+      "title": "What we need from you",
+      "items": [
+        {
+          "text": "Read-only access to the system"
+        },
+        {
+          "text": "20 recent real orders"
+        },
+        {
+          "text": "One contact, 1 hour a week"
+        }
+      ]
+    },
+    "next": {
+      "title": "First step",
+      "text": "A trial on one channel (email) and a few customers, then we measure."
+    },
+    "cta": {
+      "button": "Book a 30-minute call"
+    },
+    "transform": {
+      "title": "From email to data, in practice",
+      "emailLabel": "Email received",
+      "from": "From: Bar Mario",
+      "subject": "Order for Thursday",
+      "body": "Hi Luca, here is the order for Thursday: 12 kg of cod, 3 cases of peeled tomatoes and 20 litres of extra virgin oil. If the large cod is out, the small cut works too. Thanks!",
+      "dataLabel": "Structured order",
+      "check": "to check",
+      "fields": [
+        {
+          "k": "Customer",
+          "v": "Bar Mario"
+        },
+        {
+          "k": "Delivery",
+          "v": "Thursday"
+        },
+        {
+          "k": "Cod",
+          "v": "12 kg · code 0412"
+        },
+        {
+          "k": "Peeled tomatoes",
+          "v": "3 cases · code 0187"
+        },
+        {
+          "k": "Extra virgin oil",
+          "v": "20 l · uncertain code",
+          "flag": true
+        }
+      ],
+      "sign": "Mario"
+    },
+    "deliverable": "This is the format of the document you receive after the workflow analysis.",
+    "statsLabel": "The example company, in three numbers"
   },
   "calculator": {
     "meta": {

@@ -89,6 +89,30 @@ export default function sitemap(): MetadataRoute.Sitemap {
         },
       },
     },
+    {
+      url: `${baseUrl}/it/esempio-analisi`,
+      lastModified: new Date(),
+      changeFrequency: 'yearly',
+      priority: 0.6,
+      alternates: {
+        languages: {
+          it: `${baseUrl}/it/esempio-analisi`,
+          en: `${baseUrl}/en/esempio-analisi`,
+        },
+      },
+    },
+    {
+      url: `${baseUrl}/en/esempio-analisi`,
+      lastModified: new Date(),
+      changeFrequency: 'yearly',
+      priority: 0.6,
+      alternates: {
+        languages: {
+          it: `${baseUrl}/it/esempio-analisi`,
+          en: `${baseUrl}/en/esempio-analisi`,
+        },
+      },
+    },
   ];
 
   const projectPages: MetadataRoute.Sitemap = projects.flatMap(project => [

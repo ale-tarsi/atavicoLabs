@@ -1,7 +1,8 @@
 'use client';
 
+import Link from 'next/link';
 import { useLocale, useTranslations } from 'next-intl';
-import { ArrowRight, Search, Workflow } from 'lucide-react';
+import { ArrowRight, ArrowUpRight, Search, Workflow } from 'lucide-react';
 import { getCalendlyUrl } from '../constants/links';
 import { trackCtaClick } from '../utils/track';
 import Reveal from './Reveal';
@@ -36,6 +37,15 @@ export default function Offerings() {
                 </li>
               ))}
             </ul>
+            {key === 'analysis' && (
+              <Link
+                href={`/${locale}/esempio-analisi`}
+                className="mt-6 inline-flex items-center gap-2 text-[14px] text-oliva hover:text-oliva/80 transition-colors"
+              >
+                {t('analysis.example')}
+                <ArrowUpRight size={16} />
+              </Link>
+            )}
           </div>
           </Reveal>
         ))}

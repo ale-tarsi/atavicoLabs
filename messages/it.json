@@ -12,7 +12,7 @@
     "startHere": "Come partiamo",
     "offers": "Offerte",
     "contact": "Contatti",
-    "requestAudit": "Prenota audit 30 min",
+    "requestAudit": "Prenota una call di 30 minuti",
     "studioDescriptor": "Digital Product Studio"
   },
   "contact": {
@@ -21,7 +21,7 @@
       "description": "Parliamo del tuo progetto. Audit gratuito di 30 minuti per identificare la soluzione migliore."
     },
     "eyebrow": "Contatti",
-    "title": "Prenota audit 30 min",
+    "title": "Prenota una call di 30 minuti",
     "description": "Prenota una chiamata gratuita di 30 minuti. Analizziamo il tuo processo critico e ti diciamo come automatizzarlo o costruire il prodotto che serve.",
     "helper": "Tempo stimato: 60–90 sec",
     "form": {
@@ -47,7 +47,7 @@
       "messagePlaceholder": "Raccontaci del processo che vuoi automatizzare o del prodotto che hai in mente...",
       "submit": "Invia richiesta",
       "submitting": "Invio email...",
-      "bookCall": "Prenota audit 30 min",
+      "bookCall": "Prenota una call di 30 minuti",
       "preferWrite": "Preferisci scriverci?",
       "errors": {
         "nameRequired": "Il nome è obbligatorio",
@@ -55,7 +55,7 @@
         "interestRequired": "Seleziona un'offerta",
         "workflowRequired": "Descrivi il flusso critico"
       },
-      "emailSubject": "Audit 30 min — {name}",
+      "emailSubject": "Call di 30 minuti — {name}",
       "emailLabels": {
         "name": "Nome",
         "email": "Email",
@@ -76,7 +76,7 @@
     "label": "Digital product studio per le PMI",
     "title": "Prodotti digitali solidi, progettati con cura.",
     "description": "Aiutiamo le PMI a eliminare il lavoro manuale ripetitivo: mappiamo il processo, poi costruiamo l'automazione che lo sostituisce.",
-    "ctaPrimary": "Avvia l'audit gratuito",
+    "ctaPrimary": "Prenota una call di 30 minuti",
     "ctaTertiary": "Come partiamo",
     "ctaSecondary": "Vedi i progetti",
     "available": "Disponibili per progetti",
@@ -91,6 +91,7 @@
       "description": "Prima capiamo come funziona oggi il lavoro manuale. Poi decidiamo insieme se e cosa conviene automatizzare.",
       "analysis": {
         "title": "Analisi del flusso",
+        "example": "Guarda un esempio di analisi",
         "tagline": "Capiamo dove il lavoro manuale costa tempo ed errori, e cosa conviene automatizzare per primo.",
         "bullets": [
           "Mappa del processo com'è oggi, passaggio per passaggio",
@@ -319,7 +320,7 @@
         "Linear",
         "Slack"
       ],
-      "finalNudge": "Vuoi vedere questo processo sul tuo stack? Prenota un audit di 30 minuti.",
+      "finalNudge": "Vuoi vedere questo processo sul tuo stack? Prenota una call di 30 minuti.",
       "steps": [
         {
           "phaseLabel": "GIORNI 1-2",
@@ -458,11 +459,11 @@
     ]
   },
   "cta": {
-    "title": "Partiamo da un audit gratuito.",
+    "title": "Partiamo da una call di 30 minuti.",
     "subtitle": "30 minuti per analizzare il tuo processo critico, identificare sprechi e proporre una soluzione concreta.",
-    "nextSteps": "Ti rispondiamo entro 24h con il report dell'audit e un piano d'azione chiaro.",
-    "cta": "Prenota audit gratuito",
-    "bookCall": "Prenota una call",
+    "nextSteps": "Dopo la call ti mandiamo per iscritto cosa abbiamo visto e cosa faremmo.",
+    "cta": "Prenota una call di 30 minuti",
+    "bookCall": "Scrivici invece",
     "email": "contact@atavicolabs.com",
     "eyebrow": "Iniziamo",
     "emailLabel": "Scrivici",
@@ -1282,7 +1283,7 @@
       "cta": {
         "title": "Vuoi un risultato simile?",
         "description": "Pianifichiamo uno sprint per modernizzare la tua piattaforma operativa.",
-        "button": "Prenota audit 30 min"
+        "button": "Prenota una call di 30 minuti"
       }
     },
     "lytera": {
@@ -1359,7 +1360,7 @@
       "cta": {
         "title": "Serve una piattaforma di workflow?",
         "description": "Progettiamola e lanciamola insieme.",
-        "button": "Prenota audit 30 min"
+        "button": "Prenota una call di 30 minuti"
       }
     },
     "crispin": {
@@ -1436,9 +1437,171 @@
       "cta": {
         "title": "Serve un control tower?",
         "description": "Lavoriamo insieme a un portale che il tuo team amerà.",
-        "button": "Prenota audit 30 min"
+        "button": "Prenota una call di 30 minuti"
       }
     }
+  },
+  "exampleAnalysis": {
+    "meta": {
+      "title": "Esempio di Analisi del flusso",
+      "description": "Esempio su un'azienda fittizia: dove si perde tempo e cosa conviene automatizzare."
+    },
+    "notice": "L'azienda e i numeri qui sotto sono inventati, servono solo a mostrare come si presenta il risultato.",
+    "eyebrow": "Analisi del flusso",
+    "title": "Ordini ricopiati a mano",
+    "subtitle": "Distributore alimentare, 8 dipendenti. Gli ordini arrivano per email e WhatsApp e qualcuno li ricopia nel gestionale.",
+    "stats": [
+      {
+        "value": "13 ore",
+        "label": "a settimana su inserimento e correzioni"
+      },
+      {
+        "value": "15.000 €",
+        "label": "l'anno di tempo di lavoro"
+      },
+      {
+        "value": "1 su 20",
+        "label": "ordini con un errore da rifare"
+      }
+    ],
+    "legend": {
+      "manual": "Manuale",
+      "auto": "Automatico",
+      "person": "Verifica di una persona"
+    },
+    "today": {
+      "title": "Oggi",
+      "steps": [
+        {
+          "label": "Arriva l'ordine",
+          "caption": "Email, WhatsApp, telefono"
+        },
+        {
+          "label": "Cerca i codici",
+          "caption": "Ogni cliente li chiama diversi"
+        },
+        {
+          "label": "Ricopia a mano",
+          "caption": "35 ordini, 4 minuti ciascuno"
+        },
+        {
+          "label": "Corregge gli errori",
+          "caption": "Individua e rifà"
+        },
+        {
+          "label": "Conferma",
+          "caption": "Scrive al cliente"
+        }
+      ]
+    },
+    "after": {
+      "title": "Dopo",
+      "steps": [
+        {
+          "label": "Arriva l'ordine",
+          "caption": "Tutto in un'unica coda"
+        },
+        {
+          "label": "Dati estratti",
+          "caption": "Codici e quantità proposti"
+        },
+        {
+          "label": "Controllo mirato",
+          "caption": "Solo i casi dubbi"
+        },
+        {
+          "label": "Va nel gestionale",
+          "caption": "Senza ricopiare"
+        },
+        {
+          "label": "Conferma",
+          "caption": "Inviata in automatico"
+        }
+      ]
+    },
+    "time": {
+      "title": "Dove va il tempo",
+      "bars": [
+        {
+          "label": "Inserimento ordini",
+          "value": "11,7 ore / settimana",
+          "share": 100
+        },
+        {
+          "label": "Correzione errori",
+          "value": "1,5 ore / settimana",
+          "share": 13
+        }
+      ],
+      "note": "Stima: 25 € l'ora, 46 settimane l'anno."
+    },
+    "manual": {
+      "title": "Resta manuale",
+      "items": [
+        {
+          "text": "Ordini telefonici urgenti"
+        },
+        {
+          "text": "Clienti con formati insoliti"
+        }
+      ]
+    },
+    "needs": {
+      "title": "Cosa serve da voi",
+      "items": [
+        {
+          "text": "Accesso in lettura al gestionale"
+        },
+        {
+          "text": "20 ordini reali recenti"
+        },
+        {
+          "text": "Un referente, 1 ora a settimana"
+        }
+      ]
+    },
+    "next": {
+      "title": "Primo passo",
+      "text": "Prova su un solo canale (le email) e pochi clienti, poi si misura."
+    },
+    "cta": {
+      "button": "Prenota una call di 30 minuti"
+    },
+    "transform": {
+      "title": "Da email a dati, in pratica",
+      "emailLabel": "Email ricevuta",
+      "from": "Da: Bar Mario",
+      "subject": "Ordine per giovedì",
+      "body": "Ciao Luca, ti mando l'ordine per giovedì: 12 kg di merluzzo, 3 casse di pomodori pelati e 20 litri di olio evo. Se il merluzzo grande non c'è va bene anche il taglio piccolo. Grazie!",
+      "dataLabel": "Ordine strutturato",
+      "check": "da verificare",
+      "fields": [
+        {
+          "k": "Cliente",
+          "v": "Bar Mario"
+        },
+        {
+          "k": "Consegna",
+          "v": "Giovedì"
+        },
+        {
+          "k": "Merluzzo",
+          "v": "12 kg · cod. 0412"
+        },
+        {
+          "k": "Pomodori pelati",
+          "v": "3 casse · cod. 0187"
+        },
+        {
+          "k": "Olio evo",
+          "v": "20 l · codice incerto",
+          "flag": true
+        }
+      ],
+      "sign": "Mario"
+    },
+    "deliverable": "Questo è il formato del documento che ricevi dopo l'Analisi del flusso.",
+    "statsLabel": "L'azienda dell'esempio, in tre numeri"
   },
   "calculator": {
     "meta": {
