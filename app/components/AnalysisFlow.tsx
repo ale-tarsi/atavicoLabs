@@ -53,10 +53,10 @@ export default function AnalysisFlow({ today, after, legend }: Props) {
             </button>
           ))}
         </div>
-        <div className="flex flex-wrap gap-4 text-[12px] text-sabbia/70">
-          <span className="flex items-center gap-2"><i className="w-3 h-3 border border-[#7A5340]" /> {legend.manual}</span>
-          <span className="flex items-center gap-2"><i className="w-3 h-3 border border-[#5A6D5A]" /> {legend.auto}</span>
-          <span className="flex items-center gap-2"><i className="w-3 h-3 border border-sabbia/50" /> {legend.person}</span>
+        <div className="flex flex-wrap gap-5 text-[12px] text-sabbia/70">
+          <span className="flex items-center gap-2"><i className="w-6 h-[3px] bg-[#C0855F]" /> {legend.manual}</span>
+          <span className="flex items-center gap-2"><i className="w-6 h-[3px] bg-[#6D8369]" /> {legend.auto}</span>
+          <span className="flex items-center gap-2"><i className="w-6 h-[3px] bg-sabbia/70" /> {legend.person}</span>
         </div>
       </div>
 

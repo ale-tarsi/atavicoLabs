@@ -37,7 +37,10 @@ export default async function ExampleAnalysisSection({ locale }: { locale: strin
   const t = await getTranslations({ locale, namespace: NS });
 
   return (
-    <section id="esempio" className="mt-24 lg:mt-32 border-t border-grigio/20 pt-16 lg:pt-20">
+    <section
+      id="esempio"
+      className="scroll-mt-24 lg:scroll-mt-28 mt-24 lg:mt-32 border-t border-grigio/20 pt-16 lg:pt-20"
+    >
       <Reveal>
         <div className="text-[11px] uppercase tracking-[0.15em] text-grigio/60 mb-4">
           {t('sectionEyebrow')}
