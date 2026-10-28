@@ -1440,6 +1440,56 @@
       }
     }
   },
+  "calculator": {
+    "meta": {
+      "title": "Calcolatore: quanto ti costa un processo fatto a mano",
+      "description": "Inserisci ore, costo orario e quota automatizzabile: vedi quanto pesa ogni anno un processo manuale e in quanto tempo un'automazione si ripaga."
+    },
+    "eyebrow": "Strumento gratuito",
+    "title": "Quanto ti costa un processo fatto a mano?",
+    "subtitle": "Inserisci qualche numero. Vedi quanto pesa ogni anno e quanto tempo potresti recuperare automatizzandolo. Nessuna registrazione.",
+    "inputs": {
+      "hours": {
+        "label": "Ore a settimana dedicate al processo",
+        "hint": "Somma di tutte le persone coinvolte. Esempio: 2 persone per 5 ore = 10."
+      },
+      "rate": {
+        "label": "Costo orario medio per l'azienda (€)",
+        "hint": "Retribuzione più oneri, divisa per le ore lavorate. Il valore iniziale è solo un punto di partenza: sostituiscilo con il tuo."
+      },
+      "share": {
+        "label": "Quota che pensi si possa automatizzare",
+        "hint": "È una tua ipotesi: ogni processo è diverso. La verifichiamo insieme guardando il flusso."
+      },
+      "budget": {
+        "label": "Budget che penseresti di investire (€, facoltativo)",
+        "hint": "Serve solo a calcolare in quanto tempo l'investimento rientra."
+      }
+    },
+    "results": {
+      "title": "Il risultato",
+      "annualCost": "Costo annuo oggi",
+      "hoursSaved": "Ore recuperabili all'anno",
+      "moneySaved": "Valore del tempo recuperabile",
+      "payback": "Tempo di rientro",
+      "paybackNone": "Inserisci un budget per vederlo",
+      "months": "circa {value} mesi",
+      "lessThanMonth": "meno di un mese",
+      "overYears": "oltre 5 anni",
+      "note": "Stima indicativa basata solo sui numeri che inserisci, su {weeks} settimane lavorative l'anno. Non è una promessa di risparmio: i valori reali si verificano analizzando il processo."
+    },
+    "cta": {
+      "title": "Vuoi capire quanto vale per il tuo processo?",
+      "text": "In 30 minuti guardiamo il flusso e ti dico se vale la pena automatizzarlo.",
+      "button": "Prenota una call di 30 minuti",
+      "secondary": "Oppure scrivimi"
+    },
+    "band": {
+      "title": "Quanto ti costa un processo fatto a mano?",
+      "text": "Calcolalo in un minuto, senza registrarti.",
+      "button": "Apri il calcolatore"
+    }
+  },
   "audit": {
     "meta": {
       "title": "Audit sito gratuito",

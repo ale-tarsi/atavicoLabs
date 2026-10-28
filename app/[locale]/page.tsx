@@ -1,6 +1,7 @@
 import {getTranslations} from 'next-intl/server';
 import Hero from '@/app/components/Hero';
 import About from '@/app/components/About';
+import CalculatorBand from '@/app/components/CalculatorBand';
 import HomeProcess from '@/app/components/HomeProcess';
 import Portfolio from '@/app/components/Portfolio';
 import CTA from '@/app/components/CTA';
@@ -102,6 +103,8 @@ export default async function HomePage({ params }: { params: Promise<{ locale: s
       
       {/* 5. Process */}
       <HomeProcess />
+
+      <CalculatorBand />
       
       {/* 6. About */}
       <section id="about" className="scroll-mt-24">

@@ -64,6 +64,33 @@ export default function sitemap(): MetadataRoute.Sitemap {
     },
   ];
   
+  const toolPages: MetadataRoute.Sitemap = [
+    {
+      url: `${baseUrl}/it/calcolatore`,
+      lastModified: new Date(),
+      changeFrequency: 'yearly',
+      priority: 0.7,
+      alternates: {
+        languages: {
+          it: `${baseUrl}/it/calcolatore`,
+          en: `${baseUrl}/en/calcolatore`,
+        },
+      },
+    },
+    {
+      url: `${baseUrl}/en/calcolatore`,
+      lastModified: new Date(),
+      changeFrequency: 'yearly',
+      priority: 0.7,
+      alternates: {
+        languages: {
+          it: `${baseUrl}/it/calcolatore`,
+          en: `${baseUrl}/en/calcolatore`,
+        },
+      },
+    },
+  ];
+
   const projectPages: MetadataRoute.Sitemap = projects.flatMap(project => [
     {
       url: `${baseUrl}/it/projects/${project}`,
@@ -91,5 +118,5 @@ export default function sitemap(): MetadataRoute.Sitemap {
     },
   ]);
   
-  return [...homepages, ...contactPages, ...projectPages];
+  return [...homepages, ...contactPages, ...toolPages, ...projectPages];
 }

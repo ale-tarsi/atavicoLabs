@@ -34,7 +34,7 @@ export const CASE_STUDIES: CaseStudy[] = [
         summary:
           'Pre-check-in online per strutture ricettive, con invio automatico dei dati ad Alloggiati Web e Ross Mille.',
         role: 'Prodotto, design e sviluppo',
-        status: 'Online, in uso',
+        status: 'Usato in due strutture, ora in pausa',
         challenge:
           'Registrare gli ospiti e comunicare le presenze è un adempimento obbligatorio e ripetitivo: raccolta dei documenti, trascrizione dei dati, invio ai portali. Per una piccola struttura è tempo sottratto all’accoglienza e una fonte di errori.',
         solution:
@@ -47,7 +47,7 @@ export const CASE_STUDIES: CaseStudy[] = [
           'Invio ad Alloggiati Web e Ross Mille',
         ],
         outcome: [
-          'Online e in uso reale in due strutture ricettive.',
+          'Usato in condizioni reali in due strutture ricettive; al momento in pausa.',
           'Dati inviati ai portali senza trascrizione manuale.',
           'Tracciato regionale implementato dalle specifiche ufficiali dell’ente.',
         ],
@@ -58,7 +58,7 @@ export const CASE_STUDIES: CaseStudy[] = [
         summary:
           'Online pre-check-in for accommodation providers, with automatic submission of guest data to Alloggiati Web and Ross Mille.',
         role: 'Product, design and development',
-        status: 'Live, in use',
+        status: 'Used at two properties, now paused',
         challenge:
           'Registering guests and reporting arrivals is a mandatory, repetitive task: collecting documents, retyping data, submitting to the portals. For a small property it takes time away from hosting and introduces errors.',
         solution:
@@ -71,7 +71,7 @@ export const CASE_STUDIES: CaseStudy[] = [
           'Submission to Alloggiati Web and Ross Mille',
         ],
         outcome: [
-          'Live and in real use at two accommodation properties.',
+          'Used in real conditions at two accommodation properties; currently paused.',
           'Data submitted to the portals without manual retyping.',
           'Regional format implemented from the body’s official specifications.',
         ],

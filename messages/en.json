@@ -1440,6 +1440,56 @@
       }
     }
   },
+  "calculator": {
+    "meta": {
+      "title": "Calculator: what a manual process costs you",
+      "description": "Enter hours, hourly cost and the share you could automate: see what a manual process costs each year and how long automation takes to pay back."
+    },
+    "eyebrow": "Free tool",
+    "title": "What does a manual process cost you?",
+    "subtitle": "Enter a few numbers. See what it weighs each year and how much time you could win back by automating it. No sign-up.",
+    "inputs": {
+      "hours": {
+        "label": "Hours per week spent on the process",
+        "hint": "Total across everyone involved. Example: 2 people for 5 hours = 10."
+      },
+      "rate": {
+        "label": "Average hourly cost to the company (€)",
+        "hint": "Pay plus employer costs, divided by hours worked. The starting value is only a placeholder: replace it with your own."
+      },
+      "share": {
+        "label": "Share you think can be automated",
+        "hint": "It is your assumption: every process is different. We check it together by looking at the workflow."
+      },
+      "budget": {
+        "label": "Budget you would consider investing (€, optional)",
+        "hint": "Only used to work out how long the investment takes to pay back."
+      }
+    },
+    "results": {
+      "title": "Result",
+      "annualCost": "Annual cost today",
+      "hoursSaved": "Hours recoverable per year",
+      "moneySaved": "Value of the time recovered",
+      "payback": "Payback time",
+      "paybackNone": "Enter a budget to see it",
+      "months": "about {value} months",
+      "lessThanMonth": "less than a month",
+      "overYears": "over 5 years",
+      "note": "Indicative estimate based only on the numbers you enter, over {weeks} working weeks a year. It is not a promise of savings: real values are checked by analysing the process."
+    },
+    "cta": {
+      "title": "Want to know what it is worth for your process?",
+      "text": "In 30 minutes we look at the workflow and I tell you whether automating it makes sense.",
+      "button": "Book a 30-minute call",
+      "secondary": "Or write to me"
+    },
+    "band": {
+      "title": "What does a manual process cost you?",
+      "text": "Work it out in a minute, no sign-up.",
+      "button": "Open the calculator"
+    }
+  },
   "audit": {
     "meta": {
       "title": "Free Website Audit",
