@@ -15,6 +15,11 @@ const nextConfig = {
   async redirects() {
     return [
       {
+        source: '/:locale(it|en)/esempio-analisi',
+        destination: '/:locale/calcolatore#esempio',
+        permanent: true,
+      },
+      {
         source: '/:locale(it|en)/offers/:path*',
         destination: '/:locale#starting-points',
         permanent: true,

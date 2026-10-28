@@ -1,13 +1,10 @@
 'use client';
 
 import { useMemo, useState } from 'react';
-import Link from 'next/link';
 import { useLocale, useTranslations } from 'next-intl';
 import { ArrowRight } from 'lucide-react';
 import { motion, useReducedMotion } from 'framer-motion';
 import useCountUp from '../hooks/useCountUp';
-import { getCalendlyUrl } from '../constants/links';
-import { trackCtaClick } from '../utils/track';
 
 const WEEKS_PER_YEAR = 46;
 
@@ -257,35 +254,6 @@ export default function Calculator() {
           </p>
         </div>
 
-        <div className="border border-grigio/20 bg-grafite/30 p-8">
-          <h2 className="text-[20px] font-medium text-sabbia mb-2">{t('cta.title')}</h2>
-          <p className="text-[15px] leading-[1.65] text-sabbia/70 font-light mb-6">{t('cta.text')}</p>
-          <div className="flex flex-col sm:flex-row sm:items-center gap-4">
-            <a
-              href={getCalendlyUrl(locale)}
-              target="_blank"
-              rel="noopener noreferrer"
-              onClick={() => trackCtaClick('calculator', locale)}
-              className="inline-flex items-center justify-center gap-2 px-7 py-3 bg-oliva text-carbone text-[14px] font-medium hover:bg-oliva/90 transition-all focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-oliva/60 focus-visible:ring-offset-2 focus-visible:ring-offset-carbone"
-            >
-              {t('cta.button')}
-              <ArrowRight size={16} />
-            </a>
-            <Link
-              href={`/${locale}/contact`}
-              className="text-[14px] text-sabbia/70 hover:text-oliva transition-colors"
-            >
-              {t('cta.secondary')}
-            </Link>
-          </div>
-          <Link
-            href={`/${locale}/esempio-analisi`}
-            className="mt-6 inline-flex items-center gap-2 text-[14px] text-[#6D8369] hover:text-[#6D8369]/80 transition-colors"
-          >
-            {t('cta.example')}
-            <ArrowRight size={15} />
-          </Link>
-        </div>
       </div>
     </div>
     </div>

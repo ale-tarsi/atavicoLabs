@@ -1442,28 +1442,9 @@
     }
   },
   "exampleAnalysis": {
-    "meta": {
-      "title": "Esempio di Analisi del flusso",
-      "description": "Esempio su un'azienda fittizia: dove si perde tempo e cosa conviene automatizzare."
-    },
     "notice": "L'azienda e i numeri qui sotto sono inventati, servono solo a mostrare come si presenta il risultato.",
-    "eyebrow": "Analisi del flusso",
-    "title": "Ordini ricopiati a mano",
+    "title": "Esempio: ordini ricopiati a mano",
     "subtitle": "Distributore alimentare, 8 dipendenti. Gli ordini arrivano per email e WhatsApp e qualcuno li ricopia nel gestionale.",
-    "stats": [
-      {
-        "value": "13 ore",
-        "label": "a settimana su inserimento e correzioni"
-      },
-      {
-        "value": "15.000 €",
-        "label": "l'anno di tempo di lavoro"
-      },
-      {
-        "value": "1 su 20",
-        "label": "ordini con un errore da rifare"
-      }
-    ],
     "legend": {
       "manual": "Manuale",
       "auto": "Automatico",
@@ -1519,22 +1500,6 @@
         }
       ]
     },
-    "time": {
-      "title": "Dove va il tempo",
-      "bars": [
-        {
-          "label": "Inserimento ordini",
-          "value": "11,7 ore / settimana",
-          "share": 100
-        },
-        {
-          "label": "Correzione errori",
-          "value": "1,5 ore / settimana",
-          "share": 13
-        }
-      ],
-      "note": "Stima: 25 € l'ora, 46 settimane l'anno."
-    },
     "manual": {
       "title": "Resta manuale",
       "items": [
@@ -1563,9 +1528,6 @@
     "next": {
       "title": "Primo passo",
       "text": "Prova su un solo canale (le email) e pochi clienti, poi si misura."
-    },
-    "cta": {
-      "button": "Prenota una call di 30 minuti"
     },
     "transform": {
       "title": "Da email a dati, in pratica",
@@ -1601,16 +1563,17 @@
       "sign": "Mario"
     },
     "deliverable": "Questo è il formato del documento che ricevi dopo l'Analisi del flusso.",
-    "statsLabel": "L'azienda dell'esempio, in tre numeri"
+    "sectionEyebrow": "Cosa ricevi dopo la call",
+    "sectionTitle": "Ecco com'è fatta l'analisi di un caso così"
   },
   "calculator": {
     "meta": {
       "title": "Calcolatore: quanto ti costa un processo fatto a mano",
-      "description": "Inserisci ore, costo orario e quota automatizzabile: vedi quanto pesa ogni anno un processo manuale e in quanto tempo un'automazione si ripaga."
+      "description": "Calcola quanto ti costa ogni anno un processo manuale e guarda un esempio completo di analisi del flusso."
     },
     "eyebrow": "Strumento gratuito",
     "title": "Quanto ti costa un processo fatto a mano?",
-    "subtitle": "Inserisci qualche numero. Vedi quanto pesa ogni anno e quanto tempo potresti recuperare automatizzandolo. Nessuna registrazione.",
+    "subtitle": "Inserisci qualche numero e vedi quanto pesa ogni anno. Sotto trovi un esempio completo di come lavoriamo su un caso del genere. Nessuna registrazione.",
     "inputs": {
       "hours": {
         "label": "Ore a settimana dedicate al processo",

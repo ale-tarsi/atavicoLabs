@@ -39,7 +39,7 @@ export default function Offerings() {
             </ul>
             {key === 'analysis' && (
               <Link
-                href={`/${locale}/esempio-analisi`}
+                href={`/${locale}/calcolatore#esempio`}
                 className="mt-6 inline-flex items-center gap-2 text-[14px] text-oliva hover:text-oliva/80 transition-colors"
               >
                 {t('analysis.example')}

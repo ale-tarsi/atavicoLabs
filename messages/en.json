@@ -1442,28 +1442,9 @@
     }
   },
   "exampleAnalysis": {
-    "meta": {
-      "title": "Example of a workflow analysis",
-      "description": "Example on a fictional company: where time is lost and what is worth automating."
-    },
     "notice": "The company and numbers below are made up: they only show what the result looks like.",
-    "eyebrow": "Workflow analysis",
-    "title": "Orders retyped by hand",
+    "title": "Example: orders retyped by hand",
     "subtitle": "Food distributor, 8 employees. Orders arrive by email and WhatsApp and someone retypes them into the management system.",
-    "stats": [
-      {
-        "value": "13 hours",
-        "label": "a week on entry and fixes"
-      },
-      {
-        "value": "€15,000",
-        "label": "a year of working time"
-      },
-      {
-        "value": "1 in 20",
-        "label": "orders with an error to redo"
-      }
-    ],
     "legend": {
       "manual": "Manual",
       "auto": "Automatic",
@@ -1519,22 +1500,6 @@
         }
       ]
     },
-    "time": {
-      "title": "Where the time goes",
-      "bars": [
-        {
-          "label": "Order entry",
-          "value": "11.7 hours / week",
-          "share": 100
-        },
-        {
-          "label": "Fixing errors",
-          "value": "1.5 hours / week",
-          "share": 13
-        }
-      ],
-      "note": "Estimate: €25 an hour, 46 weeks a year."
-    },
     "manual": {
       "title": "Stays manual",
       "items": [
@@ -1563,9 +1528,6 @@
     "next": {
       "title": "First step",
       "text": "A trial on one channel (email) and a few customers, then we measure."
-    },
-    "cta": {
-      "button": "Book a 30-minute call"
     },
     "transform": {
       "title": "From email to data, in practice",
@@ -1601,16 +1563,17 @@
       "sign": "Mario"
     },
     "deliverable": "This is the format of the document you receive after the workflow analysis.",
-    "statsLabel": "The example company, in three numbers"
+    "sectionEyebrow": "What you receive after the call",
+    "sectionTitle": "This is what the analysis of a case like this looks like"
   },
   "calculator": {
     "meta": {
       "title": "Calculator: what a manual process costs you",
-      "description": "Enter hours, hourly cost and the share you could automate: see what a manual process costs each year and how long automation takes to pay back."
+      "description": "Work out what a manual process costs you each year, and see a full example of a workflow analysis."
     },
     "eyebrow": "Free tool",
     "title": "What does a manual process cost you?",
-    "subtitle": "Enter a few numbers. See what it weighs each year and how much time you could win back by automating it. No sign-up.",
+    "subtitle": "Enter a few numbers and see what it costs each year. Below you will find a full example of how we work on a case like this. No sign-up.",
     "inputs": {
       "hours": {
         "label": "Hours per week spent on the process",

@@ -3,6 +3,8 @@ import { getTranslations } from 'next-intl/server';
 import Navbar from '@/app/components/Navbar';
 import Footer from '@/app/components/Footer';
 import Calculator from '@/app/components/Calculator';
+import ExampleAnalysisSection from '@/app/components/ExampleAnalysisSection';
+import CalculatorCta from '@/app/components/CalculatorCta';
 
 const BASE_URL = 'https://atavicolabs.com';
 
@@ -57,6 +59,10 @@ export default async function CalculatorPage({
             <p className="text-[17px] leading-[1.65] text-sabbia/70 font-light">{t('subtitle')}</p>
           </header>
           <Calculator />
+          <ExampleAnalysisSection locale={locale} />
+          <div className="mt-16">
+            <CalculatorCta />
+          </div>
         </div>
       </main>
       <Footer />
