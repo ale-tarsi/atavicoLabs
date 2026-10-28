@@ -1639,18 +1639,42 @@
       "months": "about {value} months",
       "lessThanMonth": "less than a month",
       "overYears": "over 5 years",
-      "note": "Indicative estimate based only on the numbers you enter, over {weeks} working weeks a year. It is not a promise of savings: real values are checked by analysing the process."
+      "note": "Indicative estimate based only on the numbers you enter, over {weeks} working weeks a year. It is not a promise of savings: real values are checked by analysing the process.",
+      "today": "Cost today",
+      "after": "Cost after automation",
+      "delay": "Every month you wait"
     },
     "cta": {
       "title": "Want to know what it is worth for your process?",
       "text": "In 30 minutes we look at the workflow and I tell you whether automating it makes sense.",
       "button": "Book a 30-minute call",
-      "secondary": "Or write to me"
+      "secondary": "Or write to me",
+      "example": "See a full example analysis"
     },
     "band": {
       "title": "What does a manual process cost you?",
       "text": "Work it out in a minute, no sign-up.",
       "button": "Open the calculator"
+    },
+    "presets": {
+      "title": "Which manual work are you starting from?",
+      "hint": "Pick the closest case: it fills the form with starting numbers, then replace them with yours.",
+      "orders": {
+        "title": "Orders retyped into the system",
+        "text": "They arrive by email or WhatsApp and someone re-enters them."
+      },
+      "invoices": {
+        "title": "Invoices and documents keyed in by hand",
+        "text": "Data read from a PDF and rewritten elsewhere."
+      },
+      "reports": {
+        "title": "Reports pieced together from several sheets",
+        "text": "Every week someone copies and pastes between files."
+      },
+      "replies": {
+        "title": "Emails and confirmations written every time",
+        "text": "Recurring replies rewritten from scratch."
+      }
     }
   },
   "audit": {

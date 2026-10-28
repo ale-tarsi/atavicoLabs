@@ -1639,18 +1639,42 @@
       "months": "circa {value} mesi",
       "lessThanMonth": "meno di un mese",
       "overYears": "oltre 5 anni",
-      "note": "Stima indicativa basata solo sui numeri che inserisci, su {weeks} settimane lavorative l'anno. Non è una promessa di risparmio: i valori reali si verificano analizzando il processo."
+      "note": "Stima indicativa basata solo sui numeri che inserisci, su {weeks} settimane lavorative l'anno. Non è una promessa di risparmio: i valori reali si verificano analizzando il processo.",
+      "today": "Costo oggi",
+      "after": "Costo dopo l'automazione",
+      "delay": "Ogni mese che rimandi"
     },
     "cta": {
       "title": "Vuoi capire quanto vale per il tuo processo?",
       "text": "In 30 minuti guardiamo il flusso e ti dico se vale la pena automatizzarlo.",
       "button": "Prenota una call di 30 minuti",
-      "secondary": "Oppure scrivimi"
+      "secondary": "Oppure scrivimi",
+      "example": "Vedi un esempio completo di analisi"
     },
     "band": {
       "title": "Quanto ti costa un processo fatto a mano?",
       "text": "Calcolalo in un minuto, senza registrarti.",
       "button": "Apri il calcolatore"
+    },
+    "presets": {
+      "title": "Da quale lavoro manuale parti?",
+      "hint": "Scegli il caso più simile al tuo: riempie il modulo con numeri di partenza, poi correggili con i tuoi.",
+      "orders": {
+        "title": "Ordini ricopiati nel gestionale",
+        "text": "Arrivano per email o WhatsApp e qualcuno li reinserisce."
+      },
+      "invoices": {
+        "title": "Fatture e documenti inseriti a mano",
+        "text": "Dati letti da un PDF e riscritti altrove."
+      },
+      "reports": {
+        "title": "Report messi insieme da più fogli",
+        "text": "Ogni settimana si copia e incolla tra file diversi."
+      },
+      "replies": {
+        "title": "Email e conferme scritte ogni volta",
+        "text": "Risposte ricorrenti riscritte da zero."
+      }
     }
   },
   "audit": {
